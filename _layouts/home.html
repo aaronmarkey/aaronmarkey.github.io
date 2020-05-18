@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% if site.paginate %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include story.html title=post.title layout=post.layout date=post.date url=post.url content=post.content %}
+{% endfor %}
+
+{% if site.paginate %}
+  {% include pagination.html paginator=paginator %}
+{% endif %}

@@ -1,0 +1,30 @@
+<head>
+
+  <!-- Meta - Start -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <!-- Meta - End -->
+
+
+  <!-- CSS - Start -->
+  <link rel="stylesheet" href="{{ "/assets/css/chota.min.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/mechanica.css" | relative_url }}">
+  <!-- CSS - End -->
+
+  <!-- Links - Start -->
+  <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}">
+  <link rel="canonical" href="{{ site.homepage }}">
+  <!-- Links - End -->
+
+  <!-- Twitter Stuff - Start -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.description }}">
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}">
+  <meta name="twitter:site" content="@{{ site.author.twitter }}">
+  <meta name="twitter:image" content="{{ site.homepage }}/assets/images/logo-1024.png">
+  <!-- Twitter Stuff - End -->
+
+  <title>{{ site.title }}{% if page.title %}:{% endif %} {{ page.title}}</title>
+</head>

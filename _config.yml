@@ -1,0 +1,39 @@
+title: mechanicalog
+description: mechanicalog is the effort of aaron markey. Bringing you decent content every so often.
+homepage: https://mechanicalog.com
+
+rmg:
+  themes:
+    colors:
+      - red
+    special:
+      rmg: rmg
+      none: none
+  defaultTheme: rmg
+
+
+paginate: 2
+paginate_path: "/page/:num/"
+
+author:
+  email: talk@mechanicalog.com
+  twitter: mechanicamarkey
+  github: aaronmarkey
+  name:
+    first:
+      - aaron
+      - a-a-ron
+      - erin
+      - aron
+      - arin
+      - airin
+    last:
+      - markey
+      - marque
+      - marky
+      - markee
+      - makey
+      - marke
+
+plugins:
+  - jekyll-paginate

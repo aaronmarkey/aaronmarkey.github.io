@@ -1,0 +1,39 @@
+<div class="row text-center">
+
+  <div class="col-12">
+    <a href="{{ "/" | relative_url }}" title="{{ site.title }} homepage" class="header flourishless">
+      <div class="header-logo">
+        <svg
+          viewBox="0 0 270 270"
+          xml:space="preserve"
+          xmlns:serif="http://www.serif.com/"
+          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
+        >
+          <defs>
+            <linearGradient id="logo-grad" x1="20%" y1="20%" x2="80%" y2="80%">
+              <stop class="gradient-start" offset="0%" />
+              <stop class="gradient-end" offset="100%" />
+            </linearGradient>
+          </defs>
+          <circle cx="135" cy="135" r="127" stroke="#ffffff" stroke-width="10" fill="url(#logo-grad)" />
+          <path transform="translate(80, 76)" d="M0,110.105l0,-102.605l113.573,102.558l0.058,-102.467l-77.22,70.803" style="fill:none;stroke:#ffffff;stroke-width:15px;"/>
+          Your browser does not support SVGs. :/
+        </svg>
+      </div>
+
+      <div class="header">
+        <div class="header-title">{{ site.title }}</div>
+        <div
+          class="by-line text-gradient"
+          title="by {{ site.author.name.first[0] }} {{ site.author.name.last[0] }}"
+        >
+          <span>
+            by
+            <span class="by-line__name">{{ site.author.name.first[0] }} {{ site.author.name.last[0] }}</span>
+          </span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
