@@ -25,8 +25,8 @@ author:
 rmg:
   themes:
      red: Roses
-     rmg: Random
-     bw: Black & White
+     rmg: Shuffle
+     bw: Monochrome
   defaultTheme: rmg
 
 paginate: 20
@@ -35,3 +35,8 @@ sass:
   style: compressed
 plugins:
   - jekyll-paginate
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - mechanica-ui.gemspec

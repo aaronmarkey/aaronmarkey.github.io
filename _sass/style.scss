@@ -20,9 +20,6 @@ a:not(.flourishless)::after {
 .cursor-pointer {
   cursor: pointer;
 }
-.noscroll {
-  overflow-y: hidden;
-}
 .noselect {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -70,7 +67,7 @@ a:not(.flourishless)::after {
   font-size: $base-font-size * 2;
   height: 100%;
 
-  .by-line {
+  .byline {
     text-align: right;
     font-size: $base-font-size;
   }
@@ -81,7 +78,7 @@ a:not(.flourishless)::after {
 // Overlay -- Start
 .overlay {
   z-index: 2;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0px;
   left: 0px;
