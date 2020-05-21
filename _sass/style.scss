@@ -1,6 +1,9 @@
 body {
   overflow-x: hidden;
 }
+code {
+  padding: .1em .2em;
+}
 a, a:hover {
   text-decoration: none;
 }
@@ -31,6 +34,9 @@ a:not(.flourishless)::after {
 }
 .m-b-sm {
   margin-bottom: $spacing;
+}
+.m-b-xl {
+  margin-bottom: $spacing * 8;
 }
 .m-t-sm, {
   margin-top: $spacing;
@@ -90,6 +96,22 @@ a:not(.flourishless)::after {
   max-height: 90%;
 }
 // Overlay -- End
+
+
+// Picker -- Start
+.picker {
+  position: fixed;
+  bottom: $spacing;
+  left: $spacing;
+}
+.picker > div {
+  width: $spacing * 10;
+}
+.picker > div > div {
+  padding: $spacing;
+  cursor: pointer;
+}
+// Picker -- End
 
 
 // Story -- Start
@@ -185,5 +207,20 @@ a,
 }
 .gradient-end {
   stop-color: $orange;
+}
+.picker > div {
+  border: 2px solid $black;
+}
+.picker > div > div {
+  color: $black;
+  background: $white;
+}
+.picker > div > div:hover {
+  background-color: $gray-light;
+}
+.picker hr {
+  margin: 0px;
+  border: 0px;
+  border-top: 1px solid $black;
 }
 // RMG -- End

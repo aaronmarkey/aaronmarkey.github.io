@@ -15,6 +15,7 @@ const SITE = {
 const SELECTORS = {
   body: "body",
   byLineName: ".by-line__name",
+  picker: ".picker",
   head: "head",
   headerTitle: ".header-title",
   menuLinks: ".menu-links",
@@ -107,6 +108,97 @@ function overlayClick() {
   });
 };
 
+
+// Picker -- Start
+class ThemePicker {
+  constructor({ options, active, selectedAction }) {
+    this.options = options;
+    this.active = active;
+    this.selectedAction = selectedAction;
+
+    this.uid = this.randomId();
+    this.selectors = {
+      picker: `picker-${this.uid}`,
+      button: `btn-${this.uid}`,
+      content: `content-${this.uid}`,
+    }
+
+    this.element = null;
+    this.isOpen = false;
+  }
+
+  mount(selector) {
+    this.element = document.querySelector(selector);
+    this.createPicker();
+  }
+
+  createPicker () {
+    const dropup = document.createElement("div");
+    const button = this.createButton();
+
+    dropup.classList.add(this.selectors.picker);
+    dropup.appendChild(button);
+
+    this.element.innerHTML = "";
+    this.element.appendChild(dropup);
+  }
+
+  createButton() {
+    const button = document.createElement("div");
+    button.classList.add(this.selectors.button);
+    button.innerHTML = this.options[this.active]
+
+    button.addEventListener("click", _ => {
+      if (this.isOpen) {
+        this.close()
+      } else {
+        this.open()
+      }
+    });
+
+    return button;
+  }
+
+  createOption(value, display) {
+    const option = document.createElement("div");
+    option.innerHTML = display;
+
+    option.addEventListener("click", el => {
+      this.selectedAction(value, display);
+      this.updatePicker(value);
+      this.close();
+    });
+
+    return option;
+  }
+
+  updatePicker(active) {
+    this.active = active;
+  }
+
+  randomId() {
+    const min = 100000;
+    const max = 999999;
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  open() {
+    const picker = this.element.querySelector(`.${this.selectors.picker}`);
+    picker.prepend(document.createElement("hr"))
+    for (let key of Object.keys(this.options)) {
+      const option = this.createOption(key, this.options[key]);
+      picker.prepend(option);
+    }
+
+    this.isOpen = true;
+  }
+
+  close() {
+    this.isOpen = false;
+    this.createPicker();
+  }
+}
+// Picker -- End
 
 
 // Fonts -- Start
@@ -613,177 +705,91 @@ const rmgFontFunctions = {
 const rmgCOLORS = {
   theme: {
     red: {
-      background: "#ffe6f7",
-      codeBackground: "#ffcccc",
-      codeColor: "#990066",
-      gradientStart: "#cc0000",
-      gradientEnd: "#ff66cc",
-      primaryOne: "#800000",
-      primaryTwo: "#990066"
+      background: "rgb(255, 230, 247)",
+      codeBackground: "rgb(255, 204, 204)",
+      codeColor: "rgb(153, 0, 102)",
+      gradientStart: "rgb(204, 0, 0)",
+      gradientEnd: "rgb(255, 102, 204)",
+      primaryOne: "rgb(128, 0, 0)",
+      primaryTwo: "rgb(153, 0, 102)"
     }
   },
   shade: {
     light: {
-      background: {
-        level: "lightest",
-        interval: 120
-      },
-      codeBackground: {
-        level: "lightest",
-        intervel: 180
-      },
-      codeColor: {
-        level: "darkest",
-        interval: 180
-      },
-      gradient: {
-        level: "light",
-        interval: 90
-      },
-      primary: {
-        level: "medium",
-        interval: 90
-      }
+      background: "light",
+      codeBackground: "dark",
+      codeColor: "light",
+      gradientStart: "medium",
+      gradientEnd: "medium",
+      primaryOne: "dark",
+      primaryTwo: "dark"
     },
     dark: {
-      background: {
-        level: "darkest",
-        interval: 90
-      },
-      codeBackground: {
-        level: "darkest",
-        intervel: 90
-      },
-      codeColor: {
-        level: "lighter",
-        interval: 180
-      },
-      gradient: {
-        level: "lighter",
-        interval: 90
-      },
-      primary: {
-        level: "lighter",
-        interval: 90
-      }
+      background: "dark",
+      codeBackground: "light",
+      codeColor: "dark",
+      gradientStart: "medium",
+      gradientEnd: "medium",
+      primaryOne: "light",
+      primaryTwo: "light"
     }
   }
 };
 const rmgColorFunctions = {
-  randomRbg(min, max) {
-    const red = Math.floor(Math.random() * (max - min + 1)) + min;
-    const blue = Math.floor(Math.random() * (max - min + 1)) + min;
-    const green = Math.floor(Math.random() * (max - min + 1)) + min;
-    return [red, blue, green];
-  },
-  rgbCss(red, green, blue) {
-    return `rgb(${red}, ${green}, ${blue})`;
-  },
-  /**
-   * Generate a random hue.
-   *
-   * interval: number
-   *   A minimal distance, in degrees the two hues should be apart on the HSL
-   *   color wheel.
-   * seed: number
-   *   Some number the resulting hue cant be within 'interval' of.
-   */
-  randomHue (interval, seed) {
-    const circle = 360;
-    let hue = Math.floor(Math.random() * circle + 1);
-
-    if (seed) {
-      const maxDistance = circle - interval;
-      while (Math.abs(hue - seed) < interval || Math.abs(hue - seed) > maxDistance) {
-        hue = Math.floor(Math.random() * circle + 1);
+  randomRbg(shade, grayScale) {
+    const shadeRange = {
+      light: {
+        min: 200,
+        max: 255
+      },
+      medium: {
+        min: 0,
+        max: 255
+      },
+      dark: {
+        min: 0,
+        max: 55
       }
-    }
-    return hue;
-  },
-  /**
-   * Generate an array of hue, sat, val to represent a color.
-   *
-   * hue: int
-   *   The hue part of HSL.
-   * level: string
-   *   'light', 'medium', or 'dark'. Determines general shade of the color.
-   *   If none is provided shade will be random.
-   */
-  hsl (hue, level) {
-    let satMax = 100
-    let satMin = 40
-
-    let valMax = 0
-    let valMin = 0
-    switch (level) {
-      case 'darkest':
-        valMax = 15
-        valMin = 8
-        break
-      case 'medium':
-        valMax = 55
-        valMin = 25
-        break
-      case 'light':
-        valMax = 70
-        valMin = 30
-        break
-      case 'lighter':
-        valMax = 65
-        valMin = 85
-        break
-      case 'lightest':
-        valMax = 99
-        valMin = 95
-        break
-      default:
-        valMax = 100
-        valMin = 0
-    }
-
-    const sat = Math.floor(Math.random() * (satMax - satMin + 1)) + satMin
-    const val = Math.floor(Math.random() * (valMax - valMin + 1)) + valMin
-    return [hue, sat, val]
-  },
-  /**
-   * Helper function to turn an array of hue, sat,val numbers into a CSS
-   * readable hsl function string.
-   */
-  hslCss (hsl) {
-    return `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`;
-  },
-  generateRmgColors (shade) {
-    const source = rmgCOLORS.shade[shade];
-
-    const backgroundHue = this.randomHue(source.background.interval);
-    const codeBackgroundHue = this.randomHue(source.codeBackground.interval, backgroundHue);
-    const backgroundHsl = this.hsl(backgroundHue, source.background.level);
-    const codeBackgroundHsl = this.hsl(codeBackgroundHue, source.codeBackground.level);
-
-    const codeColorHue = this.randomHue(source.codeColor.interval, codeBackgroundHue);
-    const codeColorHsl = this.hsl(codeColorHue, source.codeColor.level);
-
-    const gradStartHue = this.randomHue(source.gradient.interval);
-    const gradEndHue = this.randomHue(source.gradient.interval, gradStartHue);
-    const gradStartHsl = this.hsl(gradStartHue, source.gradient.level);
-    const gradEndHsl = this.hsl(gradEndHue, source.gradient.level);
-
-    const primaryOneHue = this.randomHue(source.primary.interval);
-    const primaryTwoHue = this.randomHue(source.primary.interval, primaryOneHue);
-    const primaryOneHsl = this.hsl(primaryOneHue, source.primary.level);
-    const primaryTwoHsl = this.hsl(primaryTwoHue, source.primary.level);
-
-    const colors = {
-      background: this.hslCss(backgroundHsl),
-      codeBackground: this.hslCss(codeBackgroundHsl),
-      codeColor: this.hslCss(codeColorHsl),
-      gradientStart: this.hslCss(gradStartHsl),
-      gradientEnd: this.hslCss(gradEndHsl),
-      primaryOne: this.hslCss(primaryOneHsl),
-      primaryTwo: this.hslCss(primaryTwoHsl)
     };
-    console.log(colors);
-    return colors;
+    const range = shadeRange[shade];
+
+    if (grayScale) {
+      const value = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+      return [value, value, value]
+    } else {
+      const red = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+      const blue = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+      const green = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+      return [red, blue, green];
+    }
+  },
+  rgbCss(colorArray) {
+    return `rgb(${colorArray[0]}, ${colorArray[1]}, ${colorArray[2]})`;
+  },
+  generateRmgColors (shade, grayScale) {
+    return {
+      background: this.rgbCss(this.randomRbg(shade.background, grayScale)),
+      codeBackground: this.rgbCss(this.randomRbg(shade.codeBackground, grayScale)),
+      codeColor: this.rgbCss(this.randomRbg(shade.codeColor, grayScale)),
+      gradientStart: this.rgbCss(this.randomRbg(shade.gradientStart, grayScale)),
+      gradientEnd: this.rgbCss(this.randomRbg(shade.gradientEnd, grayScale)),
+      primaryOne: this.rgbCss(this.randomRbg(shade.primaryOne, grayScale)),
+      primaryTwo: this.rgbCss(this.randomRbg(shade.primaryTwo, grayScale)),
+    };
+  },
+  generatePickerColors (shade) {
+    const isLight = shade === rmgCOLORS.shade.light;
+    const pickerFont = isLight ? 0 : 255;
+    const pickerBorder = isLight ? 0 : 255;
+    const pickerBackground = isLight ? 255 : 0;
+    const pickerHighlight = isLight ? 230 : 25;
+
+    return {
+      pickerBorder: this.rgbCss([pickerBorder, pickerBorder, pickerBorder]),
+      pickerBackground: this.rgbCss([pickerBackground, pickerBackground, pickerBackground]),
+      pickerFont: this.rgbCss([pickerFont, pickerFont, pickerFont]),
+      pickerHighlight: this.rgbCss([pickerHighlight, pickerHighlight, pickerHighlight]),
+    };
   }
 };
 // Colors -- End
@@ -803,10 +809,7 @@ const rmgStore = {
     header: null,
   },
   colors: {
-    theme: SITE.rmg.defaultTheme
-  },
-  setTheme (theme) {
-    self.colors.theme = theme;
+    theme: SITE.rmg.themes[SITE.rmg.defaultTheme]
   },
   setFonts () {
     this.fonts.body = rmgFontFunctions.get(rmgFONTS.families.body);
@@ -821,8 +824,8 @@ const rmgEngine = {
   setTitleFonts () {
     const headerTitle = document.querySelector(SELECTORS.headerTitle);
     const siteTitle = SITE.title.split("");
-    var fonts = [];
-    var nodes = [];
+    let fonts = [];
+    let nodes = [];
 
     siteTitle.forEach(char => {
       const font = rmgFontFunctions.get(rmgFONTS.families.header);
@@ -831,7 +834,7 @@ const rmgEngine = {
     });
     rmgDom.injectFontNodes(nodes);
 
-    var spans = [];
+    let spans = [];
     nodes.forEach((node, index) => {
       const span = document.createElement("span");
       span.style = `font-family: ${fonts[index]};`;
@@ -921,19 +924,45 @@ const rmgEngine = {
       .gradient-end {
         stop-color: ${colors.gradientEnd};
       }
+      .picker > div {
+        border: 2px solid ${colors.pickerBorder};
+      }
+      .picker > div > div {
+        color: ${colors.pickerFont};
+        background: ${colors.pickerBackground};
+      }
+      .picker > div > div:hover {
+        background-color: ${colors.pickerHighlight};
+      }
+      .picker hr {
+        border-top: 1px solid ${colors.pickerBorder};
+      }
     `;
   },
-  setPageColorStyles (theme) {
-    var styles = "";
-    if (SITE.rmg.themes.colors.includes(theme)) {
-      styles = this.generateColorStyles(rmgCOLORS.theme[theme]);
-    } else if (theme === SITE.rmg.themes.special.rmg) {
-      const shade = (Math.floor(Math.random() * 10) % 2 === 0) ? "dark" : "light";
-      const colors = rmgColorFunctions.generateRmgColors(shade);
-      styles = this.generateColorStyles(colors);
-    } else if (theme === SITE.rmg.themes.special.none) {
-      styles = "";
+  getShade(theme) {
+    let shade = rmgCOLORS.shade.light;
+
+    if (theme === SITE.rmg.themes.rmg || theme === SITE.rmg.themes.bw) {
+      if (Math.floor(Math.random() * 10) % 2 === 0)  {
+        shade = rmgCOLORS.shade.dark;
+      }
     }
+
+    return shade;
+  },
+  setPageColorStyles (theme) {
+    let styles = "";
+    let shade = this.getShade(theme);
+    let colors = null;
+    if (SITE.rmg.themes.red === theme) { // Red
+      colors = rmgCOLORS.theme.red;
+    } else if (theme === SITE.rmg.themes.rmg || theme === SITE.rmg.themes.bw) {
+      colors = rmgColorFunctions.generateRmgColors(
+        shade, theme === SITE.rmg.themes.bw
+      );
+    }
+    const pickerColors = rmgColorFunctions.generatePickerColors(shade);
+    styles = this.generateColorStyles({...colors, ...pickerColors});
     dom.setInnerContent(`.${CSS_CLASSES.mech.randColorStyle}`, styles);
   }
 };
@@ -944,6 +973,16 @@ dom.setInnerContent(SELECTORS.byLineName, getRandomizedByLine());
 menuToggle();
 storyImageClick();
 overlayClick();
+
+const tp = new ThemePicker({
+  options: SITE.rmg.themes,
+  active: SITE.rmg.defaultTheme,
+  selectedAction: (value, display) => {
+    rmgStore.colors.theme = SITE.rmg.themes[value];
+    rmgEngine.setPageColorStyles(rmgStore.colors.theme);
+  },
+});
+tp.mount(SELECTORS.picker);
 
 rmgStore.setFonts();
 rmgEngine.injectFontLinkElements(rmgStore.fonts);

@@ -3,7 +3,7 @@
     <h1 class="story-title is-marginless">{{ include.title }}</h1>
     {% if include.layout == "post" %}
       <p class="is-marginless">
-        <small class="date">{{ include.date | date: "%A, %B %-d, %Y" }}</small>
+        <strong class="date">{{ include.date | date: "%A, %B %-d, %Y" }}</strong>
         <a class="flourishless" href="{{ include.url }}" title="{{ include.title }}">&#x22C8</a>
       </p>
     {% endif %}
