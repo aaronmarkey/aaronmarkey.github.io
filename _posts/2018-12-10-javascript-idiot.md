@@ -90,7 +90,7 @@ typing. 'strings' are `string's but not Strings. What? Why?
 [1]: https://twitter.com/mechanicamarkey/status/1034188202821787649
 [2]: https://twitter.com/mechanicamarkey/status/866716811856928768
 [3]: https://johnkpaul.com/empirejs "John K. Paul's 'JavaScript The Real Bad Parts'"
-[4]: http://media.mechanicalog.com/stories/20181210-polygon.png
+[4]: https://s3.us-east-2.amazonaws.com/media.mechanicalog.com/stories/20181210-polygon.png
 [5]: https://polygon.com "Long at the length of that console scrollbar..."
 [6]: https://caniuse.com/
 [7]: https://www.typescriptlang.org/
