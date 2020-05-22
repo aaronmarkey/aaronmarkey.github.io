@@ -1,15 +1,9 @@
 class ThemePicker {
-  idRange = {
-    min: 100000,
-    max: 999999
-  }
-
   constructor({ options, active, selectedAction }) {
     this.options = options;
     this.active = active;
     this.selectedAction = selectedAction;
 
-    this.uid = randomInt(this.idRange.min, this.idRange.max);
     this.selectors = {
       picker: `picker-${this.uid}`,
       button: `btn-${this.uid}`,
@@ -18,6 +12,11 @@ class ThemePicker {
 
     this.element = null;
     this.isOpen = false;
+    this.idRange = {
+      min: 100000,
+      max: 999999
+    };
+    this.uid = randomInt(this.idRange.min, this.idRange.max);
   }
 
   mount(selector) {
