@@ -1,5 +1,11 @@
+// Chota Overrides -- Start
+.col-12 {
+  max-width: calc(100% - var(--grid-gutter));
+}
+// Chota Overrides -- End
+
 body {
-  overflow-x: hidden;
+  word-wrap: break-word;
 }
 code {
   padding: .1em .2em;

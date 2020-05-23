@@ -5,13 +5,12 @@
 
   <body>
 
-    <main class="container" aria-label="Content">
+    <div class="container">
       {% include header.html %}
 
       <div class="row">
         {% include menu.html %}
-        <div class="col-1 hide-md hide-lg"></div>
-        <div class="col-10 col-8-md">
+        <div class="col-12 col-8-md">
           {{ content }}
         </div>
       </div>
@@ -19,7 +18,7 @@
       <div class="picker"></div>
       {% include overlay.html %}
 
-    </main>
+    </div>
 
     <style class="rand-font-style"></style>
     <style class="rand-color-style"></style>
