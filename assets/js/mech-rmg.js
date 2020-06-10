@@ -69,7 +69,7 @@ class RmgEngine {
   getShade() {
     let shade = rmgCOLORS.shade.light;
 
-    if (this.theme === SITE.rmg.themes.rmg || this.theme === SITE.rmg.themes.bw) {
+    if (this.theme === SITE.rmg.themes.shuffle || this.theme === SITE.rmg.themes.monochrome) {
       if (randomInt(0, 9) % 2 === 0)  {
         shade = rmgCOLORS.shade.dark;
       }
@@ -151,11 +151,11 @@ class RmgEngine {
     let styles = "";
     let shade = this.getShade();
     let colors = null;
-    if (this.theme === SITE.rmg.themes.red) {
-      colors = rmgCOLORS.theme.red;
-    } else if (this.theme === SITE.rmg.themes.rmg || this.theme === SITE.rmg.themes.bw) {
+    if (this.theme === SITE.rmg.themes.roses) {
+      colors = rmgCOLORS.theme.roses;
+    } else if (this.theme === SITE.rmg.themes.shuffle || this.theme === SITE.rmg.themes.monochrome) {
       colors = rmgColorFunctions.generateRmgColors(
-        shade, this.theme === SITE.rmg.themes.bw
+        shade, this.theme === SITE.rmg.themes.monochrome
       );
     }
     const pickerColors = rmgColorFunctions.generatePickerColors(shade);

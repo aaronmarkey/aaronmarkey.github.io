@@ -68,6 +68,7 @@ class Page {
     });
   }
 
+
   initialize() {
     dom.setInnerContent(dot(SELECTORS.class.mech.bylineName), this.getRandomizedByLine());
     this.menuToggle();
@@ -77,18 +78,20 @@ class Page {
 }
 
 const page = new Page();
+const initialPalette = getCurrentPalette();
 const rmgEngine = new RmgEngine({
-  theme: SITE.rmg.themes[SITE.rmg.defaultTheme],
+  theme: SITE.rmg.themes[initialPalette],
   fonts: {
     body: null,
     code: null,
     header: null
   }
 });
-const picker = new ThemePicker({
+const picker = new PalettePicker({
   options: SITE.rmg.themes,
-  active: SITE.rmg.defaultTheme,
+  active: initialPalette,
   selectedAction: (value, display) => {
+    setCurrentPalette(value);
     rmgEngine.theme = SITE.rmg.themes[value];
     rmgEngine.setPageColorStyles();
   },

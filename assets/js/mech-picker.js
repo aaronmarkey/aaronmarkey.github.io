@@ -1,4 +1,4 @@
-class ThemePicker {
+class PalettePicker {
   constructor({ options, active, selectedAction }) {
     this.options = options;
     this.active = active;

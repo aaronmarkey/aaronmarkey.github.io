@@ -1,6 +1,6 @@
 const rmgCOLORS = {
   theme: {
-    red: {
+    roses: {
       background: "rgb(255, 230, 247)",
       codeBackground: "rgb(255, 204, 204)",
       codeColor: "rgb(153, 0, 102)",
@@ -39,8 +39,8 @@ const rmgColorFunctions = {
         max: 255
       },
       medium: {
-        min: 0,
-        max: 255
+        min: 56,
+        max: 200
       },
       dark: {
         min: 0,

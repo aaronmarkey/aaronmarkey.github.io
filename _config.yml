@@ -24,10 +24,10 @@ author:
 
 rmg:
   themes:
-     red: Roses
-     rmg: Shuffle
-     bw: Monochrome
-  defaultTheme: rmg
+    roses: Roses
+    shuffle: Shuffle
+    monochrome: Monochrome
+  defaultTheme: shuffle
 
 paginate: 20
 paginate_path: "/page/:num/"
