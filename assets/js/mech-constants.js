@@ -2,7 +2,7 @@
 ---
 
 const SITE = {
-  author: {{ site.author | jsonify}},
+  author: {{ site.rmg.author | jsonify}},
   rmg: {{ site.rmg | jsonify }},
   title: {{ site.title | jsonify }}
 };
@@ -47,24 +47,24 @@ function dot(value) {
 }
 
 
-function getCurrentPalette() {
+function getCurrentPaletteSlug() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
   if (urlParams.has(COLOR_QUERY_PARAM)) {
     const palette = urlParams.get(COLOR_QUERY_PARAM);
-    if (Object.keys(SITE.rmg.themes).includes(palette)) {
+    if (SITE.rmg.palettes.available.includes(palette)) {
       return palette;
     } else {
-      return SITE.rmg.defaultTheme;
+      return SITE.rmg.palettes.default;
     }
   } else {
-    return SITE.rmg.defaultTheme;
+    return SITE.rmg.palettes.default;
   }
 }
 
 
-function setCurrentPalette(palette) {
+function setCurrentPaletteSlug(palette) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 

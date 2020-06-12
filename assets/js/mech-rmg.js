@@ -1,6 +1,6 @@
 class RmgEngine {
-  constructor({ theme, fonts }) {
-    this.theme = theme;
+  constructor({ palette, fonts }) {
+    this.palette = palette;
     if (fonts.body === null || fonts.code === null || fonts.header === null) {
       this.fonts = rmgFont.getAll();
     } else {
@@ -66,16 +66,16 @@ class RmgEngine {
     headerTitle.innerHTML = spans.join("");
   }
 
-  getShade() {
-    let shade = rmgCOLORS.shade.light;
+  getTheme() {
+    let theme = ColorThemes.light;
 
-    if (this.theme === SITE.rmg.themes.shuffle || this.theme === SITE.rmg.themes.monochrome) {
+    if (this.palette === ColorPalettes.shuffle || this.palette === ColorPalettes.monochrome) {
       if (randomInt(0, 9) % 2 === 0)  {
-        shade = rmgCOLORS.shade.dark;
+        theme = ColorThemes.dark;
       }
     }
 
-    return shade;
+    return theme;
   }
 
   generateColorStyles (colors) {
@@ -149,17 +149,9 @@ class RmgEngine {
 
   setPageColorStyles () {
     let styles = "";
-    let shade = this.getShade();
-    let colors = null;
-    if (this.theme === SITE.rmg.themes.roses) {
-      colors = rmgCOLORS.theme.roses;
-    } else if (this.theme === SITE.rmg.themes.shuffle || this.theme === SITE.rmg.themes.monochrome) {
-      colors = rmgColorFunctions.generateRmgColors(
-        shade, this.theme === SITE.rmg.themes.monochrome
-      );
-    }
-    const pickerColors = rmgColorFunctions.generatePickerColors(shade);
-    styles = this.generateColorStyles({...colors, ...pickerColors});
+    let theme = this.getTheme();
+    let colors = this.palette.colors(theme);
+    styles = this.generateColorStyles(colors);
     dom.setInnerContent(dot(SELECTORS.class.mech.randColorStyle), styles);
   }
 }

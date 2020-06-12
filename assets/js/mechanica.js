@@ -23,9 +23,9 @@ const dom = {
 
 class Page {
   getRandomizedByLine() {
-    const firstIndex = randomInt(0, SITE.author.name.first.length - 1);
-    const lastIndex = randomInt(0, SITE.author.name.last.length - 1);
-    return `${SITE.author.name.first[firstIndex]} ${SITE.author.name.last[lastIndex]}`;
+    const firstIndex = randomInt(0, SITE.rmg.author.name.first.length - 1);
+    const lastIndex = randomInt(0, SITE.rmg.author.name.last.length - 1);
+    return `${SITE.rmg.author.name.first[firstIndex]} ${SITE.rmg.author.name.last[lastIndex]}`;
   }
 
   menuToggle() {
@@ -78,9 +78,9 @@ class Page {
 }
 
 const page = new Page();
-const initialPalette = getCurrentPalette();
+const initialPaletteSlug = getCurrentPaletteSlug();
 const rmgEngine = new RmgEngine({
-  theme: SITE.rmg.themes[initialPalette],
+  palette: ColorPalettes[initialPaletteSlug],
   fonts: {
     body: null,
     code: null,
@@ -88,11 +88,11 @@ const rmgEngine = new RmgEngine({
   }
 });
 const picker = new PalettePicker({
-  options: SITE.rmg.themes,
-  active: initialPalette,
-  selectedAction: (value, display) => {
-    setCurrentPalette(value);
-    rmgEngine.theme = SITE.rmg.themes[value];
+  paletteOptions: ColorPalettes,
+  activePalette: ColorPalettes[initialPaletteSlug],
+  selectedAction: (selectedPalette) => {
+    setCurrentPaletteSlug(selectedPalette.slug);
+    rmgEngine.palette = selectedPalette;
     rmgEngine.setPageColorStyles();
   },
 });

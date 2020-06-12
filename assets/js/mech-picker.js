@@ -1,7 +1,7 @@
 class PalettePicker {
-  constructor({ options, active, selectedAction }) {
-    this.options = options;
-    this.active = active;
+  constructor({ paletteOptions, activePalette, selectedAction }) {
+    this.paletteOptions = paletteOptions;
+    this.activePalette = activePalette;
     this.selectedAction = selectedAction;
 
     this.selectors = {
@@ -38,7 +38,7 @@ class PalettePicker {
   createButton() {
     const button = document.createElement("div");
     button.classList.add(this.selectors.button);
-    button.innerHTML = this.options[this.active]
+    button.innerHTML = this.activePalette.name
 
     button.addEventListener("click", _ => {
       if (this.isOpen) {
@@ -51,29 +51,32 @@ class PalettePicker {
     return button;
   }
 
-  createOption(value, display) {
+  createOption(palette) {
     const option = document.createElement("div");
-    option.innerHTML = display;
+    option.innerHTML = palette.name;
 
-    option.addEventListener("click", el => {
-      this.selectedAction(value, display);
-      this.updatePicker(value);
+    option.addEventListener("click", _ => {
+      this.selectedAction(palette);
+      this.updatePicker(palette);
       this.close();
     });
 
     return option;
   }
 
-  updatePicker(active) {
-    this.active = active;
+  updatePicker(activePalette) {
+    this.activePalette = activePalette;
   }
 
   open() {
     this.isOpen = true;
     const picker = this.element.querySelector(dot(this.selectors.picker));
     picker.prepend(document.createElement("hr"))
-    for (let key of Object.keys(this.options)) {
-      const option = this.createOption(key, this.options[key]);
+    let keys = Object.keys(this.paletteOptions);
+    keys.sort()
+    keys.reverse()
+    for (let key of keys) {
+      const option = this.createOption(this.paletteOptions[key]);
       picker.prepend(option);
     }
   }

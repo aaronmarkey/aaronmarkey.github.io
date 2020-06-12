@@ -1,40 +1,50 @@
 title: mechanicalog
 description: mechanicalog is the effort of aaron markey. Bringing you decent content every so often.
-homepage: https://mechanicalog.com
+lang: en_US
+logo: /assets/images/logo-1024.png
+twitter:
+  username: mechanicamarkey
+  card: summary
+url: https://mechanicalog.com
 
 author:
   email: talk@mechanicalog.com
-  twitter: mechanicamarkey
   github: aaronmarkey
-  name:
-    first:
-      - aaron
-      - a-a-ron
-      - erin
-      - aron
-      - arin
-      - airin
-    last:
-      - markey
-      - marque
-      - marky
-      - markee
-      - makey
-      - marke
+  name: aaron markey
+  twitter: mechanicamarkey
 
 rmg:
-  themes:
-    roses: Roses
-    shuffle: Shuffle
-    monochrome: Monochrome
-  defaultTheme: shuffle
+  author:
+    name:
+      first:
+        - aaron
+        - a-a-ron
+        - erin
+        - aron
+        - arin
+        - airin
+      last:
+        - markey
+        - marque
+        - marky
+        - markee
+        - makey
+        - marke
+  palettes:
+    available:
+      - monochrome
+      - roses
+      - shuffle
+    default: shuffle
 
 paginate: 20
 paginate_path: "/page/:num/"
 sass:
   style: compressed
+
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
 
 exclude:
   - README.md

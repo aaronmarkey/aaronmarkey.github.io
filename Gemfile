@@ -5,3 +5,4 @@ gemspec
 
 gem 'bundler', '~> 2.1'
 gem 'jekyll-paginate'
+gem 'jekyll-seo-tag'
