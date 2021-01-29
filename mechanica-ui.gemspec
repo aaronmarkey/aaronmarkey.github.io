@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "mechanica-ui"
   spec.version       = "0.1.0"
   spec.authors       = ["aaron markey"]
-  spec.email         = ["markeyaaron@gmail.com"]
+  spec.email         = ["markey@hey.com"]
 
   spec.summary       = "Write a short summary, because Rubygems requires one."
   spec.homepage      = "https://github.com/aaronmarkey/mechanica-ui"
