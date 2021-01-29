@@ -1,0 +1,31 @@
+{
+  "name": "aaronmarkey.github.io",
+  "version": "1.0.0",
+  "description": "JavaScript scripting for mechanicalog.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack --watch | jekyll serve --livereload --incremental",
+    "build": "./node_modules/.bin/webpack | bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronmarkey/aaronmarkey.github.io.git"
+  },
+  "author": "aaron markey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronmarkey/aaronmarkey.github.io/issues"
+  },
+  "homepage": "https://github.com/aaronmarkey/aaronmarkey.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "dependencies": {
+    "@stimulus/polyfills": "^2.0.0",
+    "stimulus": "^2.0.0"
+  }
+}
