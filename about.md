@@ -19,4 +19,4 @@ contact me again.
 
 ## geek stuff
 
-mechanicalog is a [Jekyll](https://jekyllrb.com/) static site.
+mechanicalog is a [Jekyll](https://jekyllrb.com/) static site, with some [Stimulus](https://stimulus.hotwire.dev/) magic.

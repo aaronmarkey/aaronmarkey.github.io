@@ -1,4 +1,8 @@
-<div class="row text-center">
+<div
+  class="row text-center"
+  data-controller="nameplate"
+  data-nameplate-author-names-value='{{ site.app_context.author.name | jsonify }}'
+>
 
   <div class="col-12">
     <a href="{{ "/" | relative_url }}" title="{{ site.title }} homepage" class="header flourishless">
@@ -22,14 +26,23 @@
       </div>
 
       <div class="header">
-        <div class="header-title text-gradient">{{ site.title }}</div>
+        <div
+          class="header-title text-gradient"
+          data-title="{{ site.title }}"
+          data-nameplate-target="title"
+        >{{ site.title }}
+        </div>
         <div
           class="byline text-gradient"
-          title="by {{ site.rmg.author.name.first[0] }} {{ site.rmg.author.name.last[0] }}"
+          title="by {{ site.app_context.author.name.first[0] }} {{ site.app_context.author.name.last[0] }}"
         >
           <span>
             by
-            <span class="byline-name">{{ site.rmg.author.name.first[0] }} {{ site.rmg.author.name.last[0] }}</span>
+            <span
+              class="byline-name"
+              data-nameplate-target="byline"
+            >{{ site.app_context.author.name.first[0] }} {{ site.app_context.author.name.last[0] }}
+            </span>
           </span>
         </div>
       </div>

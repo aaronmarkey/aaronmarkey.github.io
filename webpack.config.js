@@ -1,12 +1,13 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require("path");
 
 module.exports = {
   mode: "production",
-  watch: true,
-  entry: path.join(__dirname, "js_src", "main.js"),
+  watch: false,
+  entry: path.join(__dirname, "_webpack", "js/main.js"),
   output: {
     filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "assets/wp/js"),
+    path: path.resolve(__dirname, "assets"),
   },
   module: {
     rules: [
@@ -19,11 +20,14 @@ module.exports = {
         loader: "babel-loader",
         options: {
           presets: ["@babel/preset-env"],
+          plugins: ["@babel/plugin-syntax-class-properties", "@babel/plugin-proposal-class-properties"]
         },
       },
+      {
+         test:/\.(s*)css$/,
+         use:[MiniCssExtractPlugin.loader,'css-loader', 'sass-loader']
+      }
     ],
   },
-  resolve: {
-  extensions: [".json", ".js", ".jsx"],
-  },
+  plugins: [new MiniCssExtractPlugin({filename: "[name].css"})],
 };

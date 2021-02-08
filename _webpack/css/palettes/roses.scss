@@ -1,0 +1,13 @@
+body.palette-roses {
+  $backgroundOne: rgb(255, 230, 247);
+  $backgroundTwo: rgb(255, 230, 247);
+  $foreground: rgb(128, 0, 0);
+
+  $primary: rgb(204, 0, 0);
+  $primaryDark: rgb(153, 0, 102);
+  $secondaryDark: rgb(255, 102, 204);
+  $secondary: rgb(255, 204, 204);
+
+  @include base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
+
+}
