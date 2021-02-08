@@ -1,0 +1,31 @@
+<div
+  class="picker"
+  data-controller="picker"
+  data-picker-target="picker"
+  data-picker-is-open-value="false"
+  data-picker-hidden-class="is-hidden"
+>
+  <div
+    data-picker-target="options"
+    class="is-hidden"
+  >
+    {% for palette in site.app_context.palettes.available %}
+    <div
+      data-action="click->picker#changeThemeColors"
+      data-pallete="{{ palette[0] }}"
+      class="picker--item"
+    >{{ palette[1].name }}
+    </div>
+    {% endfor %}
+    <hr
+      class="picker--divider"
+    />
+  </div>
+  <div
+    data-action="click->picker#toggleMenu"
+    class="picker--item"
+    data-palette="{{ site.app_context.palettes.default }}"
+    data-picker-target="button"
+  >{{ site.app_context.palettes.available[site.app_context.palettes.default].name }}
+  </div>
+</div>

@@ -6,14 +6,23 @@ twitter:
   username: mechanicamarkey
   card: summary
 url: https://mechanicalog.com
-
 author:
   email: talk@mechanicalog.com
   github: aaronmarkey
   name: aaron markey
   twitter: mechanicamarkey
 
-rmg:
+
+app_context:
+  palettes:
+    available:
+      hyper:
+        name: Hyper
+      october:
+        name: October
+      roses:
+        name: Roses
+    default: hyper
   author:
     name:
       first:
@@ -30,24 +39,25 @@ rmg:
         - markee
         - makey
         - marke
-  palettes:
-    available:
-      - monochrome
-      - roses
-      - shuffle
-    default: shuffle
+
 
 paginate: 20
 paginate_path: "/page/:num/"
 sass:
   style: compressed
 
+
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
 
+
 exclude:
   - README.md
   - LICENSE.txt
   - mechanica-ui.gemspec
+  - assets/src
+  - package.json
+  - package-lock.json
+  - webpack.config.js

@@ -1,0 +1,13 @@
+body.palette-october {
+  $backgroundOne: rgb(255, 246, 229);
+  $backgoundTwo: rgb( 230, 208, 208 );
+  $foreground: rgb( 161, 65, 53 );
+
+  $primary: rgb( 185, 27, 8 );
+  $primaryDark: rgb( 97, 14, 4 );
+  $secondaryDark: rgb(255, 143, 0);
+  $secondary: rgb(255, 237, 204);
+
+  @include base-palette($foreground, $backgroundOne, $backgoundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
+
+}

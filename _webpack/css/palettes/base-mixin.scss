@@ -1,0 +1,55 @@
+@mixin base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark) {
+  $deg: 315deg;
+  $backgroundDeg: 0deg;
+
+  background: -webkit-linear-gradient($backgroundDeg, $backgroundOne, $backgroundTwo);
+
+  .story {
+  color: $foreground
+  }
+  .story blockquote {
+  border-left-color: $primaryDark
+  }
+  .story h1,
+  .story h2,
+  .story h3,
+  .story h4,
+  .story h5,
+  .story h6 {
+  color: $primaryDark;
+  }
+  .story hr {
+  background: $primaryDark;
+  }
+  .story code,
+  .story pre {
+  background: $secondary;
+  color: $primaryDark;
+  }
+  .story .date {
+  color: $primaryDark;
+  }
+  a,
+  .text-gradient {
+  background: -webkit-linear-gradient($deg, $primary, $secondaryDark);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  }
+  .border-gradient {
+  -webkit-border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
+  border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
+  }
+  .hr-gradient {
+  background-image: linear-gradient($deg, $primary, $secondaryDark);
+  }
+  .gradient-start {
+  stop-color: $primary;
+  }
+  .gradient-end {
+  stop-color: $secondaryDark;
+  }
+}

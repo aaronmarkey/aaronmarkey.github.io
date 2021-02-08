@@ -1,0 +1,39 @@
+{
+  "name": "aaronmarkey.github.io",
+  "version": "1.0.0",
+  "description": "JavaScript scripting for mechanicalog.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack --watch | jekyll serve --livereload --incremental",
+    "build": "./node_modules/.bin/webpack | jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronmarkey/aaronmarkey.github.io.git"
+  },
+  "author": "aaron markey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronmarkey/aaronmarkey.github.io/issues"
+  },
+  "homepage": "https://github.com/aaronmarkey/aaronmarkey.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.5",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-class-properties": "^7.12.1",
+    "@stimulus/polyfills": "^2.0.0",
+    "chota": "^0.8.0",
+    "stimulus": "^2.0.0"
+  }
+}

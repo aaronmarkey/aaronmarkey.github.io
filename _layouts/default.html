@@ -3,10 +3,17 @@
 
   {% include head.html %}
 
-  <body>
+  <body
+    class="palette-{{ site.app_context.palettes.default }}"
+  >
 
-    <div class="container">
-      {% include header.html %}
+    <div
+      class="container"
+      data-controller="page"
+      data-page-hidden-class="is-hidden"
+      data-page-story-content-class="story-content"
+    >
+      {% include nameplate.html %}
 
       <div class="row">
         {% include menu.html %}
@@ -15,15 +22,15 @@
         </div>
       </div>
       <div class="m-b-xl"></div>
-      <div class="picker"></div>
-      {% include overlay.html %}
+      {% include picker.html %}
+
+      <div
+        class="overlay is-hidden"
+        data-page-target="overlay"
+        data-action="click->page#hideOverlay"
+      ></div>
 
     </div>
-
-    <style class="rand-font-style"></style>
-    <style class="rand-color-style"></style>
-
-    {% include scripts.html %}
 
   </body>
 
