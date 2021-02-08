@@ -13,6 +13,6 @@ jobs:
       - uses: actions/setup-node@v2
       - uses: helaili/jekyll-action@v2
         with:
-          pre_build_commands: ./node_modules/.bin/webpack
+          pre_build_commands: npm i -D && ./node_modules/.bin/webpack
           token: ${{ secrets.JEKYLL_PAT }}
           target_branch: 'gh-pages'
