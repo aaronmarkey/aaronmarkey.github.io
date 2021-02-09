@@ -41,14 +41,18 @@ app_context:
         - marke
 
 
-paginate: 20
-paginate_path: "/page/:num/"
+pagination:
+  enabled: true
+  per_page: 20
+  permalink: "/page/:num/"
+  sort_reverse: true
+
 sass:
   style: compressed
 
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
 

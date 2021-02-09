@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if site.paginate %}
+{% if paginator.total_pages > 1 %}
   {% assign posts = paginator.posts %}
 {% else %}
   {% assign posts = site.posts %}
@@ -12,6 +12,6 @@ layout: default
   {% include story.html title=post.title layout=post.layout date=post.date url=post.url content=post.content %}
 {% endfor %}
 
-{% if site.paginate %}
+{% if paginator.total_pages > 1 %}
   {% include pagination.html paginator=paginator %}
 {% endif %}
