@@ -18,7 +18,17 @@
       <div class="row">
         {% include menu.html %}
         <div class="col-12 col-8-md">
+
+          {% if page.autopages %}
+          <div class="text-left">
+            <h2
+              class="page-header  is-marginless"
+            >{{ page.autopages.display_name }} stuff</h2>
+          </div>
+          {% endif %}
+
           {{ content }}
+
         </div>
       </div>
       <div class="m-b-xl"></div>

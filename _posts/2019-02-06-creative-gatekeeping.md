@@ -2,6 +2,7 @@
 layout: post
 title: Design Gatekeeping, Initial Thoughts
 date: 2019-02-06T14:00:00
+tags: tech
 ---
 
 I've been thinking a lot about "gatekeeping" in the workplace lately. As

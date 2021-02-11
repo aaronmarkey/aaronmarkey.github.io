@@ -2,6 +2,7 @@
 layout: post
 title: A Journey to Less
 date: 2017-02-01T02:16:00
+tags: misc
 ---
 For the last few years I have tried to practice the 'less is more' approach. Meaning that I have been trying to own less, buy less, and worry about less, i.e. minimalism.  Taco meat
 

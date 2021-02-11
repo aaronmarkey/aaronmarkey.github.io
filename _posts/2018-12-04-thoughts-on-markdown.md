@@ -2,7 +2,7 @@
 layout: post
 title: Some Thoughts on Markdown
 date: 2018-12-04T01:28:34
-
+tags: tech
 ---
 
 [John Gruber](https://daringfireball.net)'s [Markdown](https://daringfireball.net/projects/markdown/)

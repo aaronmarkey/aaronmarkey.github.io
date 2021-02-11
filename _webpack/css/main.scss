@@ -29,7 +29,9 @@ a:not(.flourishless)::after {
   vertical-align: center;
   margin: 0px $spacing / 5;
 }
-
+.divider {
+  margin: 0px 5px;
+}
 
 // Misc -- Start
 .cursor-pointer {
@@ -178,6 +180,9 @@ body {
 }
 code {
   font-family: monospace;
+}
+.page-header {
+  display: inline-block;
 }
 .story blockquote {
   border-left: 0.25em solid $pink-dark;

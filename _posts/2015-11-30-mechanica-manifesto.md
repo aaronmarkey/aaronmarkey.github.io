@@ -2,6 +2,7 @@
 layout: post
 title: Mechanica Manifesto
 date: 2015-11-30T00:14:00
+tags: misc
 ---
 ## an introduction
 
