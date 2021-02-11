@@ -40,6 +40,13 @@ app_context:
         - makey
         - marke
 
+autopages:
+  enabled: true
+  tags:
+    layouts:
+      - "tag.html"
+    title: ":tag stuff"
+    permalink: "/stuff/:tag"
 
 pagination:
   enabled: true
