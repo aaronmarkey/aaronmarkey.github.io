@@ -9,7 +9,7 @@
 
   <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}">
 
-  <title>{{ site.title }}{% if page.title %}: {% endif %}{{ page.title}}</title>
+  <title>{{ site.title }}{% if page.title != "" %}: {{ page.title }}{% endif %}</title>
 
   <style data-controller="head"></style>
 </head>

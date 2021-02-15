@@ -18,6 +18,8 @@ app_context:
     available:
       hyper:
         name: Hyper
+      night:
+        name: Night
       october:
         name: October
       roses:
