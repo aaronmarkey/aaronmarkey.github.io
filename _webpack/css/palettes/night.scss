@@ -1,0 +1,13 @@
+body.palette-night {
+      $backgroundOne: #120458;
+      $backgroundTwo: #120458;
+      $foreground: #fe75fe;
+
+      $primary: rgb(0, 248, 248);
+      $primaryDark: rgb(246, 239, 1);
+      $secondaryDark: #ff00a0;
+      $secondary: #7a04eb;
+
+      @include base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
+
+    }
