@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="JavaScript, From an Idiot’s Perspective" />
+<meta name="author" content="aaron markey" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve made no attempt at hiding my absolute distain for JavaScript throughout my career. It has many infuriating idiosyncratic gotchas’ (NaN === NaN is false?) it forces its users to learn, and nothing in the language is concrete (class v. prototype function, optional semicolons, etc.). JavaScript draws out the worse in developers by allowing them to make functional, pretty looking interfaces with relatively little effort or thought." />
+<meta property="og:description" content="I’ve made no attempt at hiding my absolute distain for JavaScript throughout my career. It has many infuriating idiosyncratic gotchas’ (NaN === NaN is false?) it forces its users to learn, and nothing in the language is concrete (class v. prototype function, optional semicolons, etc.). JavaScript draws out the worse in developers by allowing them to make functional, pretty looking interfaces with relatively little effort or thought." />
+<link rel="canonical" href="https://mechanicalog.com/2018/12/10/javascript-idiot.html" />
+<meta property="og:url" content="https://mechanicalog.com/2018/12/10/javascript-idiot.html" />
+<meta property="og:site_name" content="mechanicalog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-10T13:53:27+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JavaScript, From an Idiot’s Perspective" />
+<meta name="twitter:site" content="@mechanicamarkey" />
+<meta name="twitter:creator" content="@mechanicamarkey" />
+<script type="application/ld+json">
+{"datePublished":"2018-12-10T13:53:27+00:00","description":"I’ve made no attempt at hiding my absolute distain for JavaScript throughout my career. It has many infuriating idiosyncratic gotchas’ (NaN === NaN is false?) it forces its users to learn, and nothing in the language is concrete (class v. prototype function, optional semicolons, etc.). JavaScript draws out the worse in developers by allowing them to make functional, pretty looking interfaces with relatively little effort or thought.","url":"https://mechanicalog.com/2018/12/10/javascript-idiot.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://mechanicalog.com/2018/12/10/javascript-idiot.html"},"@type":"BlogPosting","dateModified":"2018-12-10T13:53:27+00:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://mechanicalog.com/assets/images/logo-1024.png"},"name":"aaron markey"},"author":{"@type":"Person","name":"aaron markey"},"headline":"JavaScript, From an Idiot’s Perspective","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="/assets/main-bundle.js"></script>
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <title>mechanicalog: JavaScript, From an Idiot's Perspective</title>
+
+  <style data-controller="head"></style>
+</head>
+
+
+  <body
+    class="palette-hyper"
+  >
+
+    <div
+      class="container"
+      data-controller="page"
+      data-page-hidden-class="is-hidden"
+      data-page-story-content-class="story-content"
+    >
+      <div
+  class="row text-center"
+  data-controller="nameplate"
+  data-nameplate-author-names-value='{"first":["aaron","a-a-ron","erin","aron","arin","airin"],"last":["markey","marque","marky","markee","makey","marke"]}'
+>
+
+  <div class="col-12">
+    <a href="/" title="mechanicalog homepage" class="header flourishless">
+      <div class="header-logo">
+        <svg
+          viewBox="0 0 270 270"
+          xml:space="preserve"
+          xmlns:serif="http://www.serif.com/"
+          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
+        >
+          <defs>
+            <linearGradient id="logo-grad" x1="20%" y1="20%" x2="80%" y2="80%">
+              <stop class="gradient-start" offset="0%" />
+              <stop class="gradient-end" offset="100%" />
+            </linearGradient>
+          </defs>
+          <circle cx="135" cy="135" r="127" stroke="#ffffff" stroke-width="10" fill="url(#logo-grad)" />
+          <path transform="translate(80, 76)" d="M0,110.105l0,-102.605l113.573,102.558l0.058,-102.467l-77.22,70.803" style="fill:none;stroke:#ffffff;stroke-width:15px;"/>
+          Your browser does not support SVGs. :/
+        </svg>
+      </div>
+
+      <div class="header">
+        <div
+          class="header-title text-gradient"
+          data-title="mechanicalog"
+          data-nameplate-target="title"
+        >mechanicalog
+        </div>
+        <div
+          class="byline text-gradient"
+          title="by aaron markey"
+        >
+          <span>
+            by
+            <span
+              class="byline-name"
+              data-nameplate-target="byline"
+            >aaron markey
+            </span>
+          </span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+      <div class="row">
+        <div
+  class="col-12 col-2-md text-center noselect"
+  data-controller="menu"
+  data-menu-hide-sm-class="hide-sm"
+  data-menu-hide-xs-class="hide-xs"
+  data-menu-is-open-value="false"
+>
+
+  <div
+    class="menu-spindown hide-lg hide-md cursor-pointer m-b-sm text-gradient"
+    data-action="click->menu#toggleMenu"
+  >
+    <span style="display: inline-block;">menu <span>⌄</span></span>
+  </div>
+
+  <div
+    class="menu-links hide-sm hide-xs"
+    data-menu-target="links"
+  >
+    <hr class="hide-md hide-lg m-auto hr-gradient">
+    <div class="m-t-sm">
+      <a href="/about" title="about mechanicalog">about</a>
+    </div>
+    <div class="m-t-sm">
+      <a href="https://twitter.com/mechanicamarkey" title="Twitter" target="_blank">twitter</a>
+    </div>
+    <div class="m-t-sm">
+      <a href="https://github.com/aaronmarkey" title="GitHub" target="_blank">github</a>
+    </div>
+  </div>
+
+</div>
+
+        <div class="col-12 col-8-md">
+
+          
+
+          <div class="story-container border-gradient">
+  <div class="story">
+    <h1 class="story-title is-marginless">JavaScript, From an Idiot's Perspective</h1>
+    
+      <p class="is-marginless">
+        <span class="date">Monday, December 10, 2018</span>
+        <span class="divider">|</span>
+        <a class="flourishless" href="/2018/12/10/javascript-idiot.html" title="JavaScript, From an Idiot's Perspective">&#x22C8</a>
+        
+        <span class="divider">|</span>
+        
+        
+        <a href="/stuff/tech">tech</a>
+        
+        
+      </p>
+    
+    <div class="story-content">
+      <p>I’ve made no attempt at hiding my <a href="https://twitter.com/mechanicamarkey/status/1034188202821787649">absolute</a> <a href="https://twitter.com/mechanicamarkey/status/866716811856928768">distain</a> for JavaScript
+throughout my career. It has many infuriating <a href="https://johnkpaul.com/empirejs" title="John K. Paul's 'JavaScript The Real Bad Parts'">idiosyncratic gotchas’</a>
+(<code class="language-plaintext highlighter-rouge">NaN === NaN is false</code>?) it forces its users to learn, and nothing in the
+language is concrete (class v. prototype function, optional semicolons, etc.).
+JavaScript draws out the worse in developers by allowing them to make
+functional, pretty looking interfaces with relatively little effort or thought.</p>
+
+<p>Not only this, but JS has some of the most widely recognized (and hated)
+libraries in the programming world. These libraries, though they are widely
+criticized both within the JS community and out, are used everywhere in the web.
+Every company I’ve ever worked for, every major UI framework, and even massive
+corporations like Google use these libraries.</p>
+
+<p>Specifically, the JS world has been plagued by jQuery for the better part of
+12 years. I’d wager jQuery is responsible for more unmaintainable code bases
+and software bugs than any other source. Ever. But the reasons for using jQuery
+are obvious. When jQuery came to consume the web, doing basic DOM manipulation
+with JavaScript was a nightmare. JavaScript was an immature dynamic page
+manipulator at best. So jQuery came along and everybody latched on it. And now
+every web developer from 2006 to 2106 will have to deal with maintaining and
+writing it.</p>
+
+<p>But I digress, JavaScript is the focus here. So what else do I hate about JS?
+How about that every time a dev needs to write a decently complex bit of code
+they have to <a href="https://caniuse.com/">check</a> to see which browsers support their code? Or how about that JS
+only “kind of” supports major programming paradigms like try/except, functional
+programing, or class inheritance. JS is a language forever stuck in a loop of
+catchup with every other good idea that’s out there.</p>
+
+<p>But what is it that <em>really</em> sucks about JS? It’s toolchain. The numerous and
+ever-growing list of terrible design decisions made by ECMA-402, Mozilla, and
+Google has built an entire language, ecosystem, and industry for building and
+understanding the JS toolchain. From transpiling to frameworks, the JS toolchain
+is vast and convoluted. Honestly, understanding the ins and outs of the C
+compiler is easier than jumping into the JS toolchain world.</p>
+
+<p>Want to build a dynamic site that works in 2018? Better learn how to use one of
+50 frameworks, Webpack, Babel, and ES6. Best learn what transpiling is
+and what the differences between Webpack, Gulp, and Babel are. Need to use an
+external library? Well choose between one of ~3 package managers. What are the
+differences? Who knows just go with NPM because…? What’s Node.js? Why does it
+power everything? What’s jQuery? It powers the whole web… but it’s bad?</p>
+
+<p>On top of that, in order to use any of that stuff, you should probably spend
+~80 hours learning the basics of Webpack, NPM, Yarn, and ESLinter config files.
+All of this is <em>just to get started</em> with web development in 2018.</p>
+
+<p>Again this is all from the perspective of an idiot.</p>
+
+<p>I’ve been working with ES6, Vue, Webpack, Bootstrap, Babel, Electron, NPM, Node,
+and about 20 other JS related things since beginning work on mechanicalog
+again earlier this year. All of this to force myself to learn
+to work in an ecosystem that every fiber of my professional being hates.</p>
+
+<p>And I have to say, JavaScript itself it a relatively nice language to work in.
+But I’ll continue to let <code class="language-plaintext highlighter-rouge">vue-cli</code> manage the toolchain disaster and rant
+endlessly about JavaScript.</p>
+
+<hr />
+
+<p>Some other things to think about.</p>
+
+<p>Go ahead and open basically any webpage and look at the number of JS files
+loaded into your browser. Here’s <a href="https://polygon.com" title="Long at the length of that console scrollbar...">Polygon</a>
+(297 JavaScript files for one page.):
+<img src="https://s3.us-east-2.amazonaws.com/media.mechanicalog.com/stories/20181210-polygon.png" alt="Polygon is a shitshow." /></p>
+
+<p>Terrible scoping:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function lookAtMeMichael(name) {
+    if(name === 'Jackie') {
+        var h = 'Hello'
+        console.log(h + ' ' + name)
+    }
+    return h  // h is still visible? Why?
+}
+</code></pre></div></div>
+
+<p><a href="https://www.typescriptlang.org/">TypeScript</a> exists solely to get past the insane shitstorm that is JS
+typing. ‘strings’ are `string’s but not Strings. What? Why?</p>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+      </div>
+      <div class="m-b-xl"></div>
+      <div
+  class="picker"
+  data-controller="picker"
+  data-picker-target="picker"
+  data-picker-is-open-value="false"
+  data-picker-hidden-class="is-hidden"
+>
+  <div
+    data-picker-target="options"
+    class="is-hidden"
+  >
+    
+    <div
+      data-action="click->picker#changeThemeColors"
+      data-pallete="hyper"
+      class="picker--item"
+    >Hyper
+    </div>
+    
+    <div
+      data-action="click->picker#changeThemeColors"
+      data-pallete="night"
+      class="picker--item"
+    >Night
+    </div>
+    
+    <div
+      data-action="click->picker#changeThemeColors"
+      data-pallete="october"
+      class="picker--item"
+    >October
+    </div>
+    
+    <div
+      data-action="click->picker#changeThemeColors"
+      data-pallete="roses"
+      class="picker--item"
+    >Roses
+    </div>
+    
+    <hr
+      class="picker--divider"
+    />
+  </div>
+  <div
+    data-action="click->picker#toggleMenu"
+    class="picker--item"
+    data-palette="hyper"
+    data-picker-target="button"
+  >Hyper
+  </div>
+</div>
+
+      <div
+        class="overlay is-hidden"
+        data-page-target="overlay"
+        data-action="click->page#hideOverlay"
+      ></div>
+
+    </div>
+
+  </body>
+
+</html>
