@@ -1,13 +1,13 @@
-title: mechanicalog
-description: mechanicalog is the effort of aaron markey. Bringing you decent content every so often.
+title: some person
+description: some person named aaron. Bringing you decent content every so often.
 lang: en_US
 logo: /assets/images/logo-1024.png
 twitter:
   username: mechanicamarkey
   card: summary
-url: https://mechanicalog.com
+url: https://someperson.me
 author:
-  email: talk@mechanicalog.com
+  email: aaron@someperson.me
   github: aaronmarkey
   name: aaron markey
   twitter: mechanicamarkey
@@ -17,14 +17,29 @@ app_context:
   palettes:
     available:
       hyper:
-        name: Hyper
+        name: "⌨️ Hyper"
       night:
-        name: Night
+        name: "🌒 Night"
       october:
-        name: October
+        name: "🍁 October"
       roses:
-        name: Roses
-    default: hyper
+        name: "🌹 Roses"
+    default: roses
+  hearts:
+    - "&#x1f498;"
+    - "&#x1f49d;"
+    - "&#x1f496;"
+    - "&#x1f497;"
+    - "&#x1f493;"
+    - "&#x2764;&#xfe0f;"
+    - "&#x1f9e1;"
+    - "&#x1f49b;"
+    - "&#x1f49a;"
+    - "&#x1f499;"
+    - "&#x1f49c;"
+    - "&#x1f90e;"
+    - "&#x1f5a4;"
+    - "&#x1f90d;"
   author:
     name:
       first:
@@ -74,3 +89,4 @@ exclude:
   - package.json
   - package-lock.json
   - webpack.config.js
+  - .nvmrc

@@ -15,10 +15,10 @@
   }
 
   .story {
-  color: $foreground
+    color: $foreground
   }
   .story blockquote {
-  border-left-color: $primaryDark
+    border-left-color: $primaryDark
   }
   .story h1,
   .story h2,
@@ -26,40 +26,40 @@
   .story h4,
   .story h5,
   .story h6 {
-  color: $primaryDark;
+    color: $primaryDark;
   }
   .story hr {
-  background: $primaryDark;
+    background: $primaryDark;
   }
   .story code,
   .story pre {
-  background: $secondary;
-  color: $primaryDark;
+    background: $secondary;
+    color: $primaryDark;
   }
   .story .date {
-  color: $primaryDark;
+    color: $primaryDark;
   }
   a,
   .text-gradient {
-  background: -webkit-linear-gradient($deg, $primary, $secondaryDark);
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient($deg, $primary, $secondaryDark);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
   .border-gradient {
-  -webkit-border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
-  border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
+    -webkit-border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
+    border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
   }
   .hr-gradient {
-  background-image: linear-gradient($deg, $primary, $secondaryDark);
+    background-image: linear-gradient($deg, $primary, $secondaryDark);
   }
   .gradient-start {
-  stop-color: $primary;
+    stop-color: $primary;
   }
   .gradient-end {
-  stop-color: $secondaryDark;
+    stop-color: $secondaryDark;
   }
 }
