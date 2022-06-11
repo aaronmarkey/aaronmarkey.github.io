@@ -13,8 +13,14 @@
     <div
       data-action="click->picker#changeThemeColors"
       data-pallete="{{ palette[0] }}"
-      class="picker--item"
-    >{{ palette[1].name }}
+      class="picker--item palette-{{ palette[0] }}"
+    >
+      <span class="text-gradient">
+        <span class="text-gradient-reset">
+          {{ palette[1].icon }}
+        </span>
+        {{ palette[1].name }}
+      </span>
     </div>
     {% endfor %}
     <hr
@@ -25,7 +31,14 @@
     data-action="click->picker#toggleMenu"
     class="picker--item"
     data-palette="{{ site.app_context.palettes.default }}"
-    data-picker-target="button"
-  >{{ site.app_context.palettes.available[site.app_context.palettes.default].name }}
+  >
+    <span class="text-gradient">
+      <span class="text-gradient-reset" data-picker-target="buttonIcon">
+        {{ site.app_context.palettes.available[site.app_context.palettes.default].icon }}
+      </span>
+      <span data-picker-target="buttonName">
+        {{ site.app_context.palettes.available[site.app_context.palettes.default].name }}
+      </span>
+    </span>
   </div>
 </div>

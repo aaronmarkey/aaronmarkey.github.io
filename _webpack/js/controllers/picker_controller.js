@@ -9,7 +9,8 @@ export default class extends Controller {
   ]
 
   static targets = [
-    "button",
+    "buttonName",
+    "buttonIcon",
     "options",
     "picker",
   ]
@@ -24,6 +25,7 @@ export default class extends Controller {
   }
 
   savePalette(palette, name) {
+    console.log(palette, name)
     this.storage.setItem("palette", {palette, name})
   }
 
@@ -33,7 +35,8 @@ export default class extends Controller {
       const body = document.querySelector("body");
       body.className = "";
       body.classList.add(`palette-${palette.palette}`)
-      this.buttonTarget.innerText = palette.name
+      this.buttonNameTarget.innerText = palette.name
+      this.buttonIconTarget.innerHTML = palette.icon
     }
   }
 

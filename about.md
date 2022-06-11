@@ -3,20 +3,16 @@ layout: page
 title: about
 ---
 
-mechanicalog is the effort of aaron markey. I am a software developer based
-in New York City. I like to think some of my writings are based in reality.
+👋 Hey-o internet,
 
-## contact
+I'm aaron markey, some person in NYC. Personally, I write hot takes. Professionally, I write software.
 
-mechanicalog can be reached at <talk@mechanicalog.com>.
-I try to respond as quickly as possible, but stuff can slip through
-the cracks. If I don't respond within 48 hours, please feel free to
-contact me again.
-
-[Follow me on Twitter](https://twitter.com/mechanicamarkey)
+Feel free to email me at <{{ site.author.email }}>.
+I'll try to respond as quickly as possible, but stuff can slip through
+the cracks. If I don't respond, try [Twitter](https://twitter.com/{{ site.author.twitter }}).
 
 ---
 
 ## geek stuff
 
-mechanicalog is a [Jekyll](https://jekyllrb.com/) static site, with some [Stimulus](https://stimulus.hotwire.dev/) magic.
+some person is [Jekyll](https://jekyllrb.com/) with some [Stimulus](https://stimulus.hotwire.dev/) magic.

@@ -134,8 +134,10 @@ a:not(.flourishless) {
 // Picker -- Start
 .picker {
   position: fixed;
-  bottom: $spacing;
-  left: $spacing;
+  bottom: $spacing * 2;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0px auto;
   border: 2px solid $black;
 }
 .picker--item {
@@ -214,7 +216,6 @@ code {
 .story h6 {
   font-family: serif;
 }
-a,
 .text-gradient {
   background-clip: text;
   -moz-background-clip: text;
@@ -222,6 +223,11 @@ a,
   text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-reset {
+  text-fill-color: black;
+  -moz-text-fill-color: black;
+  -webkit-text-fill-color: black;
 }
 
 // RMG -- End

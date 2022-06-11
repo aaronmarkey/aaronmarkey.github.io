@@ -17,13 +17,17 @@ app_context:
   palettes:
     available:
       hyper:
-        name: "⌨️ Hyper"
+        icon: "⌨️"
+        name: "Hyper"
       night:
-        name: "🌒 Night"
+        icon: "🌒"
+        name: "Night"
       october:
-        name: "🍁 October"
+        icon: "🍁"
+        name: "October"
       roses:
-        name: "🌹 Roses"
+        icon: "🌹"
+        name: "Roses"
     default: roses
   hearts:
     - "&#x1f498;"
