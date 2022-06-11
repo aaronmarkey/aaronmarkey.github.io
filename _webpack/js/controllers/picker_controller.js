@@ -49,11 +49,13 @@ export default class extends Controller {
   openMenu() {
     this.isOpenValue = true
     this.optionsTarget.classList.remove(this.hiddenClass)
+    document.querySelector("div#main").classList.add("defocus")
   }
 
   closeMenu() {
     this.isOpenValue = false
     this.optionsTarget.classList.add(this.hiddenClass)
+    document.querySelector("div#main").classList.remove("defocus")
   }
 
   toggleMenu(event) {

@@ -3,10 +3,10 @@
       $backgroundTwo: #120458;
       $foreground: #fe75fe;
 
-      $primary: rgb(0, 248, 248);
+      $primary: #ff00a0;
       $primaryDark: rgb(246, 239, 1);
-      $secondaryDark: #ff00a0;
-      $secondary: #7a04eb;
+      $secondaryDark:  rgb(0, 248, 248);
+      $secondary: #8853b9;
 
       @include base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
 

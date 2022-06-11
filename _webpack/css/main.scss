@@ -16,6 +16,15 @@
 
 body {
   word-wrap: break-word;
+
+}
+.defocus {
+  filter: blur(2px);
+}
+.content-container {
+  transition:
+    filter .5s;
+  transition-timing-function: ease-in-out;
 }
 .no-grad {
   text-fill-color: black;
@@ -37,12 +46,15 @@ a:not(.flourishless) {
   &:before {
     content: $preflourish;
     padding-right: calc($spacing / 5);
+    font-size: 0.7em;
+    vertical-align: middle;
   }
 
   &:after {
     content: $postflourish;
     padding-left: calc($spacing / 5);
-
+    font-size: 0.7em;
+    vertical-align: middle;
   }
 }
 .divider {
@@ -99,7 +111,7 @@ a:not(.flourishless) {
   line-height: 1.3;
 
   .byline {
-    text-align: right;
+    text-align: center;
     font-size: $base-font-size;
   }
 }
@@ -129,6 +141,7 @@ a:not(.flourishless) {
   max-width: 90%;
   max-height: 90%;
 }
+
 // Overlay -- End
 
 
@@ -147,9 +160,6 @@ a:not(.flourishless) {
   cursor: pointer;
   color: $black;
   background: $white;
-}
-.picker--item:hover {
-  background-color: $gray-light;
 }
 .picker--divider {
   margin: 0px;

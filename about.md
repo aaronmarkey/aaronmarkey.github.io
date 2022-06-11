@@ -15,4 +15,4 @@ the cracks. If I don't respond, try [Twitter](https://twitter.com/{{ site.author
 
 ## geek stuff
 
-some person is [Jekyll](https://jekyllrb.com/) with some [Stimulus](https://stimulus.hotwire.dev/) magic.
+some person is [Jekyll](https://jekyllrb.com/) with a bit of [Stimulus](https://stimulus.hotwire.dev/) magic.
