@@ -16,16 +16,16 @@ author:
 app_context:
   palettes:
     available:
-      hyper:
+      - id: hyper
         icon: "⌨️"
         name: "Hyper"
-      night:
+      - id: night
         icon: "🌒"
         name: "Night"
-      october:
+      - id: october
         icon: "🍁"
         name: "October"
-      roses:
+      - id: roses
         icon: "🌹"
         name: "Roses"
     default: roses

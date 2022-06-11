@@ -12,14 +12,14 @@
     {% for palette in site.app_context.palettes.available %}
     <div
       data-action="click->picker#changeThemeColors"
-      data-pallete="{{ palette[0] }}"
-      class="picker--item palette-{{ palette[0] }}"
+      data-pallete='{{ palette | jsonify }}'
+      class="picker--item"
     >
-      <span class="text-gradient">
-        <span class="text-gradient-reset">
-          {{ palette[1].icon }}
+      <span>
+        <span class="no-grad">
+          {{ palette.icon }}
         </span>
-        {{ palette[1].name }}
+        {{ palette.name }}
       </span>
     </div>
     {% endfor %}
@@ -27,17 +27,19 @@
       class="picker--divider"
     />
   </div>
+
+  {% assign default = site.app_context.palettes.available | where: "id", site.app_context.palettes.default %}
   <div
     data-action="click->picker#toggleMenu"
+    data-palette="{{ default.id }}"
     class="picker--item"
-    data-palette="{{ site.app_context.palettes.default }}"
   >
-    <span class="text-gradient">
-      <span class="text-gradient-reset" data-picker-target="buttonIcon">
-        {{ site.app_context.palettes.available[site.app_context.palettes.default].icon }}
+    <span>
+      <span class="no-grad" data-picker-target="buttonIcon">
+        {{ default[0].icon }}
       </span>
       <span data-picker-target="buttonName">
-        {{ site.app_context.palettes.available[site.app_context.palettes.default].name }}
+        {{ default[0].name }}
       </span>
     </span>
   </div>

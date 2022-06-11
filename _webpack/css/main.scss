@@ -32,16 +32,16 @@ a:not(.flourishless),
 a:not(.flourishless) {
   font-size: 1em;
   vertical-align: center;
-  margin: 0px $spacing / 5;
+  margin: 0px calc($spacing / 5);
 
   &:before {
     content: $preflourish;
-    padding-right: $spacing / 5;
+    padding-right: calc($spacing / 5);
   }
 
   &:after {
     content: $postflourish;
-    padding-left: $spacing / 5;
+    padding-left: calc($spacing / 5);
 
   }
 }
@@ -96,6 +96,7 @@ a:not(.flourishless) {
   display: inline-block;
   font-size: $base-font-size * 2;
   height: 100%;
+  line-height: 1.3;
 
   .byline {
     text-align: right;
@@ -224,10 +225,4 @@ code {
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.text-gradient-reset {
-  text-fill-color: black;
-  -moz-text-fill-color: black;
-  -webkit-text-fill-color: black;
-}
-
 // RMG -- End

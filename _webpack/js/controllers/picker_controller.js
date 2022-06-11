@@ -24,9 +24,8 @@ export default class extends Controller {
     this.changePalette()
   }
 
-  savePalette(palette, name) {
-    console.log(palette, name)
-    this.storage.setItem("palette", {palette, name})
+  savePalette(palette) {
+    this.storage.setItem("palette", palette)
   }
 
   changePalette() {
@@ -34,10 +33,17 @@ export default class extends Controller {
     if (palette !== null) {
       const body = document.querySelector("body");
       body.className = "";
-      body.classList.add(`palette-${palette.palette}`)
+      body.classList.add(`palette-${palette.id}`)
       this.buttonNameTarget.innerText = palette.name
       this.buttonIconTarget.innerHTML = palette.icon
     }
+  }
+
+  changeThemeColors(event) {
+    const palette = JSON.parse(event.currentTarget.dataset.pallete)
+    this.savePalette(palette)
+    this.changePalette()
+    this.closeMenu()
   }
 
   openMenu() {
@@ -48,14 +54,6 @@ export default class extends Controller {
   closeMenu() {
     this.isOpenValue = false
     this.optionsTarget.classList.add(this.hiddenClass)
-  }
-
-  changeThemeColors(event) {
-    const palette = event.target.dataset.pallete
-    const name = event.target.innerText
-    this.savePalette(palette, name)
-    this.changePalette()
-    this.closeMenu()
   }
 
   toggleMenu(event) {
