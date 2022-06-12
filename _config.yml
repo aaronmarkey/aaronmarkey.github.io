@@ -17,7 +17,7 @@ app_context:
   palettes:
     available:
       - id: hyper
-        icon: "⌨️"
+        icon: "🔮"
         name: "Hyper"
       # - id: night
       #   icon: "🌒"
