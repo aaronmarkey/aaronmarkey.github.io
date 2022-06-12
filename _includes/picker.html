@@ -4,16 +4,40 @@
   data-picker-target="picker"
   data-picker-is-open-value="false"
   data-picker-hidden-class="is-hidden"
+  data-action="click@window->picker#closeIfNeeded"
 >
+
   <div
-    data-picker-target="options"
-    class="is-hidden"
+    data-picker-target="links"
+    class="is-hidden picker-set m-b-sm"
+    style=""
+  >
+      <div
+        class="picker-item text-gradient"
+      >
+        <a href="{{ "/about" }}" title="about {{ site.title }}">about</a>
+      </div>
+      <div
+        class="picker-item text-gradient"
+      >
+        <a href="https://twitter.com/{{ site.author.twitter }}" title="Twitter" target="_blank">twitter</a>
+      </div>
+      <div
+        class="picker-item text-gradient"
+      >
+        <a href="https://github.com/{{ site.author.github }}" title="GitHub" target="_blank">github</a>
+      </div>
+  </div>
+
+  <div
+    data-picker-target="palettes"
+    class="is-hidden picker-set m-b-sm"
   >
     {% for palette in site.app_context.palettes.available %}
     <div
       data-action="click->picker#changeThemeColors"
       data-pallete='{{ palette | jsonify }}'
-      class="picker--item"
+      class="picker-item"
     >
       <span>
         <span class="no-grad">
@@ -23,24 +47,18 @@
       </span>
     </div>
     {% endfor %}
-    <hr
-      class="picker--divider"
-    />
   </div>
 
   {% assign default = site.app_context.palettes.available | where: "id", site.app_context.palettes.default %}
   <div
     data-action="click->picker#toggleMenu"
     data-palette="{{ default.id }}"
-    class="picker--item"
+    class="picker-set text-center no-select"
   >
-    <span>
-      <span class="no-grad" data-picker-target="buttonIcon">
-        {{ default[0].icon }}
+    <div class="picker-item">
+      <span>
+        some stuff
       </span>
-      <span data-picker-target="buttonName">
-        {{ default[0].name }}
-      </span>
-    </span>
+    </div>
   </div>
 </div>

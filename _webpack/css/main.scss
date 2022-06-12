@@ -152,19 +152,17 @@ a:not(.flourishless) {
   left: 50%;
   transform: translate(-50%, 0%);
   margin: 0px auto;
-  border: 2px solid $black;
 }
-.picker--item {
+.picker-set {
   width: $spacing * 10;
-  padding: $spacing;
+  padding: calc($spacing / 2);
   cursor: pointer;
   color: $black;
   background: $white;
+  border: 2px solid $black;
 }
-.picker--divider {
-  margin: 0px;
-  border: 0px;
-  border-top: 1px solid $black;
+.picker-item {
+  padding: calc($spacing / 2);
 }
 // Picker -- End
 

@@ -62,12 +62,9 @@
   .gradient-end {
     stop-color: $secondaryDark;
   }
-
-  .picker {
+  .picker-set {
     border: 2px solid $primary;
     box-shadow: calc($spacing / 3) calc($spacing / 3) $primary;
-  }
-  .picker--item {
     background: $secondary;
     color: $primaryDark;
   }

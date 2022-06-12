@@ -9,9 +9,8 @@ export default class extends Controller {
   ]
 
   static targets = [
-    "buttonName",
-    "buttonIcon",
-    "options",
+    "links",
+    "palettes",
     "picker",
   ]
 
@@ -34,8 +33,6 @@ export default class extends Controller {
       const body = document.querySelector("body");
       body.className = "";
       body.classList.add(`palette-${palette.id}`)
-      this.buttonNameTarget.innerText = palette.name
-      this.buttonIconTarget.innerHTML = palette.icon
     }
   }
 
@@ -43,18 +40,19 @@ export default class extends Controller {
     const palette = JSON.parse(event.currentTarget.dataset.pallete)
     this.savePalette(palette)
     this.changePalette()
-    this.closeMenu()
   }
 
   openMenu() {
     this.isOpenValue = true
-    this.optionsTarget.classList.remove(this.hiddenClass)
+    this.linksTarget.classList.remove(this.hiddenClass)
+    this.palettesTarget.classList.remove(this.hiddenClass)
     document.querySelector("div#main").classList.add("defocus")
   }
 
   closeMenu() {
     this.isOpenValue = false
-    this.optionsTarget.classList.add(this.hiddenClass)
+    this.linksTarget.classList.add(this.hiddenClass)
+    this.palettesTarget.classList.add(this.hiddenClass)
     document.querySelector("div#main").classList.remove("defocus")
   }
 
@@ -62,6 +60,12 @@ export default class extends Controller {
     if (!this.isOpenValue) {
       this.openMenu()
     } else {
+      this.closeMenu()
+    }
+  }
+
+  closeIfNeeded(event) {
+    if (!(this.element.contains(event.target)) && this.isOpenValue) {
       this.closeMenu()
     }
   }

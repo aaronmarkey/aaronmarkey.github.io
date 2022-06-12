@@ -19,9 +19,9 @@ app_context:
       - id: hyper
         icon: "⌨️"
         name: "Hyper"
-      - id: night
-        icon: "🌒"
-        name: "Night"
+      # - id: night
+      #   icon: "🌒"
+      #   name: "Night"
       - id: october
         icon: "🍁"
         name: "October"
