@@ -9,13 +9,25 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - run: npm i -D && ./node_modules/.bin/webpack
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.JEKYLL_PAT }}
-          target_branch: 'gh-pages'
+      - name: 📂 setup
+        uses: actions/checkout@v2
 
+      - name: ⬢ setup node
+        uses: actions/setup-node@v2
+      - run: npm i -D && ./node_modules/.bin/webpack
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.JEKYLL_PAT }}
+          publish_dir: ./_site
