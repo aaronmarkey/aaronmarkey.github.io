@@ -4,11 +4,11 @@ export default class {
     if (value.constructor.name === "Object") {
       item = JSON.stringify(value)
     }
-    sessionStorage.setItem(key, item)
+    localStorage.setItem(key, item)
   }
 
   getItem(key) {
-    let item = sessionStorage.getItem(key)
+    let item = localStorage.getItem(key)
     try {
       const value = JSON.parse(item)
       item = value

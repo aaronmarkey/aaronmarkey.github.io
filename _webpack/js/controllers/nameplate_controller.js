@@ -6,16 +6,20 @@ export default class extends Controller {
 
   static targets = [
     "byline",
-    "title"
+    "title",
+    "heartLeft",
+    "heartRight"
   ]
 
   static values = {
-    authorNames: Object
+    authorNames: Object,
+    hearts: Array
   }
 
   initialize() {
     this.setRandomByline()
     this.setRandomTitleFonts()
+    this.setRandomHearts()
   }
 
   setRandomByline() {
@@ -47,5 +51,12 @@ export default class extends Controller {
       document.head.appendChild(link)
     })
     this.titleTarget.innerHTML = newTitle
+  }
+
+  setRandomHearts() {
+    const heartLeft = this.heartsValue[utils.randomInt(0, this.heartsValue.length - 1)]
+    const heartRight = this.heartsValue[utils.randomInt(0, this.heartsValue.length - 1)]
+    this.heartLeftTarget.innerText = `${heartLeft}`
+    this.heartRightTarget.innerText = `${heartRight}`
   }
 }

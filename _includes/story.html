@@ -1,11 +1,11 @@
 <div class="story-container border-gradient">
   <div class="story">
-    <h1 class="story-title is-marginless">{{ include.title }}</h1>
+
+    <h1 class="story-title is-marginless">
+      <a class="" href="{{ include.url }}" title="{{ include.title }}">{{ include.title }}</h1></a>
     {% if include.layout == "post" %}
       <p class="is-marginless">
         <span class="date">{{ include.date | date: "%A, %B %-d, %Y" }}</span>
-        <span class="divider">|</span>
-        <a class="flourishless" href="{{ include.url }}" title="{{ include.title }}">&#x22C8</a>
         {% if include.tags %}
         <span class="divider">|</span>
         {% for tag in include.tags %}

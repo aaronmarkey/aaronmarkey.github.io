@@ -1,43 +1,29 @@
 <div
-  class="row text-center"
+  class="row text-center m-t-sm"
   data-controller="nameplate"
   data-nameplate-author-names-value='{{ site.app_context.author.name | jsonify }}'
+  data-nameplate-hearts-value='{{ site.app_context.hearts | jsonify }}'
 >
+  <div class="col-2"></div>
 
-  <div class="col-12">
+  <div class="col-8">
     <a href="{{ "/" | relative_url }}" title="{{ site.title }} homepage" class="header flourishless">
-      <div class="header-logo">
-        <svg
-          viewBox="0 0 270 270"
-          xml:space="preserve"
-          xmlns:serif="http://www.serif.com/"
-          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
-        >
-          <defs>
-            <linearGradient id="logo-grad" x1="20%" y1="20%" x2="80%" y2="80%">
-              <stop class="gradient-start" offset="0%" />
-              <stop class="gradient-end" offset="100%" />
-            </linearGradient>
-          </defs>
-          <circle cx="135" cy="135" r="127" stroke="#ffffff" stroke-width="10" fill="url(#logo-grad)" />
-          <path transform="translate(80, 76)" d="M0,110.105l0,-102.605l113.573,102.558l0.058,-102.467l-77.22,70.803" style="fill:none;stroke:#ffffff;stroke-width:15px;"/>
-          Your browser does not support SVGs. :/
-        </svg>
-      </div>
 
-      <div class="header">
+      <div class="inline-block header-flourish no-grad"><span data-nameplate-target="heartLeft">&#x1f49c;</span></div>
+      <div class="inline-block">
         <div
-          class="header-title text-gradient"
+          class="inline-block header-title text-gradient"
           data-title="{{ site.title }}"
           data-nameplate-target="title"
         >{{ site.title }}
         </div>
+
         <div
           class="byline text-gradient"
-          title="by {{ site.app_context.author.name.first[0] }} {{ site.app_context.author.name.last[0] }}"
+          title="named {{ site.app_context.author.name.first[0] }} {{ site.app_context.author.name.last[0] }}"
         >
           <span>
-            by
+            named
             <span
               class="byline-name"
               data-nameplate-target="byline"
@@ -46,6 +32,8 @@
           </span>
         </div>
       </div>
+      <div class="inline-block header-flourish no-grad"><span data-nameplate-target="heartRight">&#x1f49b;</span></div>
+
     </a>
   </div>
 

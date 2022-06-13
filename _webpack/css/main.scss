@@ -16,6 +16,20 @@
 
 body {
   word-wrap: break-word;
+
+}
+.defocus {
+  filter: blur(2px);
+}
+.content-container {
+  transition:
+    filter .5s;
+  transition-timing-function: ease-in-out;
+}
+.no-grad {
+  text-fill-color: black;
+  -moz-text-fill-color: black;
+  -webkit-text-fill-color: black;
 }
 code {
   padding: .1em .2em;
@@ -23,18 +37,35 @@ code {
 a, a:hover {
   text-decoration: none;
 }
-a:not(.flourishless)::before,
-a:not(.flourishless)::after {
-  content: $flourish;
-  font-size: .75em;
+a:not(.flourishless),
+a:not(.flourishless),
+.flourish {
+  font-size: 1em;
   vertical-align: center;
-  margin: 0px $spacing / 5;
+  margin: 0px calc($spacing / 5);
+
+  &:before {
+    content: $preflourish;
+    padding-right: calc($spacing / 5);
+    font-size: 0.7em;
+    vertical-align: middle;
+  }
+
+  &:after {
+    content: $postflourish;
+    padding-left: calc($spacing / 5);
+    font-size: 0.7em;
+    vertical-align: middle;
+  }
 }
 .divider {
   margin: 0px 5px;
 }
 
 // Misc -- Start
+.inline-block {
+  display: inline-block;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -74,21 +105,22 @@ a:not(.flourishless)::after {
 
 
 // Header -- Start
-.header-logo {
-  display: inline-block;
-  margin-right: $header-height * .15;
-  margin-top: $header-height * .15;
-  width: $header-height * .7;
-}
 .header {
   display: inline-block;
   font-size: $base-font-size * 2;
   height: 100%;
+  line-height: 1.3;
 
   .byline {
-    text-align: right;
+    text-align: center;
     font-size: $base-font-size;
   }
+}
+.header-flourish {
+  font-size: xxx-large;
+  padding: 0px 20px;
+  height: 100%;
+  vertical-align: bottom;
 }
 // Header -- End
 
@@ -110,37 +142,35 @@ a:not(.flourishless)::after {
   max-width: 90%;
   max-height: 90%;
 }
+
 // Overlay -- End
 
 
 // Picker -- Start
 .picker {
   position: fixed;
-  bottom: $spacing;
-  left: $spacing;
-  border: 2px solid $black;
+  bottom: $spacing * 2;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0px auto;
 }
-.picker--item {
+.picker-set {
   width: $spacing * 10;
-  padding: $spacing;
+  padding: calc($spacing / 2);
   cursor: pointer;
   color: $black;
   background: $white;
+  border: 2px solid $black;
 }
-.picker--item:hover {
-  background-color: $gray-light;
-}
-.picker--divider {
-  margin: 0px;
-  border: 0px;
-  border-top: 1px solid $black;
+.picker-item {
+  padding: calc($spacing / 2);
 }
 // Picker -- End
 
 
 // Story -- Start
 .story-container {
-  padding: 0px $spacing;
+  padding: $spacing $spacing * 2;
   margin-bottom: $spacing * 2;
   border: 2px solid $black;
 }
@@ -196,7 +226,6 @@ code {
 .story h6 {
   font-family: serif;
 }
-a,
 .text-gradient {
   background-clip: text;
   -moz-background-clip: text;

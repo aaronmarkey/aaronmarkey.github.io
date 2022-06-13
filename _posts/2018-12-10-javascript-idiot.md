@@ -3,6 +3,7 @@ layout: post
 title: JavaScript, From an Idiot's Perspective
 date: 2018-12-10T13:53:27
 tags: tech
+published: false
 ---
 
 I've made no attempt at hiding my [absolute][1] [distain][2] for JavaScript

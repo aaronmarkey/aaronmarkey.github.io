@@ -4,28 +4,84 @@
   data-picker-target="picker"
   data-picker-is-open-value="false"
   data-picker-hidden-class="is-hidden"
+  data-action="click@window->picker#closeIfNeeded"
 >
+
   <div
-    data-picker-target="options"
-    class="is-hidden"
+    data-picker-target="links"
+    class="is-hidden picker-set m-b-sm"
+    style=""
+  >
+    <a
+      class="flourishless"
+      href="{{ "/about" }}"
+      title="about {{ site.title }}"
+    >
+      <div
+        class="picker-item text-gradient flourish"
+      >
+        about
+      </div>
+    </a>
+
+    <a
+      class="flourishless"
+      href="https://twitter.com/{{ site.author.twitter }}"
+      title="Twitter"
+      target="_blank"
+    >
+      <div
+        class="picker-item text-gradient flourish"
+      >
+        twitter
+      </div>
+    </a>
+    <a
+      class="flourishless"
+      href="https://github.com/{{ site.author.github }}"
+      title="GitHub"
+      target="_blank"
+    >
+      <div
+        class="picker-item text-gradient flourish"
+      >
+        github
+      </div>
+    </a>
+
+  </div>
+
+  <div
+    data-picker-target="palettes"
+    class="is-hidden picker-set m-b-sm"
   >
     {% for palette in site.app_context.palettes.available %}
     <div
+      id="picker-item-{{ palette.id }}"
       data-action="click->picker#changeThemeColors"
-      data-pallete="{{ palette[0] }}"
-      class="picker--item"
-    >{{ palette[1].name }}
+      data-pallete='{{ palette | jsonify }}'
+      class="picker-item"
+    >
+      <span>
+        <span class="no-grad">
+          {{ palette.icon }}
+        </span>
+        {{ palette.name }}
+      </span>
     </div>
     {% endfor %}
-    <hr
-      class="picker--divider"
-    />
   </div>
+
+  {% assign default = site.app_context.palettes.available | where: "id", site.app_context.palettes.default %}
   <div
     data-action="click->picker#toggleMenu"
-    class="picker--item"
-    data-palette="{{ site.app_context.palettes.default }}"
-    data-picker-target="button"
-  >{{ site.app_context.palettes.available[site.app_context.palettes.default].name }}
+    data-palette="{{ default.id }}"
+    class="picker-set text-center no-select"
+  >
+    <div class="picker-item">
+      <span>
+        some stuff
+      </span>
+    </div>
   </div>
 </div>

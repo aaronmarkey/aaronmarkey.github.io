@@ -8,7 +8,8 @@
   >
 
     <div
-      class="container"
+      id="main"
+      class="container content-container"
       data-controller="page"
       data-page-hidden-class="is-hidden"
       data-page-story-content-class="story-content"
@@ -16,8 +17,8 @@
       {% include nameplate.html %}
 
       <div class="row">
-        {% include menu.html %}
-        <div class="col-12 col-8-md">
+        <div class="col-12 col-2-md col-3-lg"></div>
+        <div class="col-12 col-8-md col-6-lg">
 
           {% if page.autopages %}
           <div class="text-left">
@@ -32,7 +33,7 @@
         </div>
       </div>
       <div class="m-b-xl"></div>
-      {% include picker.html %}
+
 
       <div
         class="overlay is-hidden"
@@ -41,6 +42,7 @@
       ></div>
 
     </div>
+    {% include picker.html %}
 
   </body>
 

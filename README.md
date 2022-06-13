@@ -1,4 +1,4 @@
-# mechanicalog Website
+# some person Website
 
 ## Development
 
