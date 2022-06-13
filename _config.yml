@@ -3,14 +3,14 @@ description: some person named aaron markey. I write and complain about things.
 lang: en_US
 logo: /assets/images/logo-1024.png
 twitter:
-  username: mechanicamarkey
+  username: heressomeperson
   card: summary
 url: https://someperson.me
 author:
   email: aaron@someperson.me
   github: aaronmarkey
   name: aaron markey
-  twitter: mechanicamarkey
+  twitter: heressomeperson
 
 
 app_context:
