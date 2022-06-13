@@ -1,7 +1,7 @@
 {
   "name": "aaronmarkey.github.io",
   "version": "1.0.0",
-  "description": "JavaScript scripting for mechanicalog.",
+  "description": "JavaScript scripting for someperson.me.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch | jekyll serve --livereload --incremental",
