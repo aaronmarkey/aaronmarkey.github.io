@@ -33,6 +33,12 @@ export default class extends Controller {
       const body = document.querySelector("body");
       body.className = "";
       body.classList.add(`palette-${palette.id}`)
+
+      document.querySelectorAll(".picker-item").forEach(el => {
+        el.classList.remove("picker-item-selected")
+      })
+      document.querySelector(`#picker-item-${palette.id}`).classList.add("picker-item-selected")
+
     }
   }
 

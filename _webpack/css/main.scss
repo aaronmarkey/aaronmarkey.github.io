@@ -38,7 +38,8 @@ a, a:hover {
   text-decoration: none;
 }
 a:not(.flourishless),
-a:not(.flourishless) {
+a:not(.flourishless),
+.flourish {
   font-size: 1em;
   vertical-align: center;
   margin: 0px calc($spacing / 5);

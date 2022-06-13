@@ -68,5 +68,8 @@
     background: $secondary;
     color: $primaryDark;
   }
+  .picker-item-selected {
+    border-right: calc($spacing / 3) solid $primary
+  }
 }
 
