@@ -78,13 +78,13 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.1)
-  jekyll (~> 4.3)
+  jekyll (~> 4.2)
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap
   mechanica-ui!
   rake (~> 12.0)
-  webrick (~> 1.8)
+  webrick (~> 1.7)
 
 BUNDLED WITH
    2.2.30
