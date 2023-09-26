@@ -16,5 +16,5 @@ jobs:
       - run: npm i -D && ./node_modules/.bin/webpack
       - uses: helaili/jekyll-action@v2.5
         with:
-          token: ${{ secrets.JEKYLL_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'gh-pages'
