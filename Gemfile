@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 gemspec
 
-gem 'jekyll', '~> 4.2'
+gem 'jekyll', '4.2.2'
 
 group :jekyll_plugins do
 	gem 'jekyll-paginate-v2'
