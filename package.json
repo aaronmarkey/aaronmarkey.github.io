@@ -1,7 +1,7 @@
 {
   "name": "aaronmarkey.github.io",
   "version": "1.0.0",
-  "description": "JavaScript scripting for someperson.me.",
+  "description": "someperson.me source.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack --watch | jekyll serve --livereload --incremental",
@@ -30,10 +30,10 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-transform-class-properties": "^7.17.12",
     "@babel/plugin-syntax-class-properties": "^7.12.13",
     "@stimulus/polyfills": "^2.0.0",
-    "chota": "^0.8.0",
-    "stimulus": "^3.0.0"
+    "chota": "^0.9.0",
+    "stimulus": "^3"
   }
 }

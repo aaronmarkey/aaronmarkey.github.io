@@ -5,11 +5,11 @@ title: about
 
 👋 Hey-o internet,
 
-I'm aaron markey, some person in NYC. Hot takes, serial project abandoner, ⌨️ mechanical keyboards, and ⬢ Titan main. Professionally, I write software.
+I'm {{ site.author.name }}, some person in Colorado. Hot takes, serial project abandoner, ⌨️ mechanical keyboards, and ⬢ Titan main. Professionally, I write software.
 
 Feel free to email me at <{{ site.author.email }}>.
 I'll try to respond as quickly as possible, but stuff can slip through
-the cracks. If I don't respond, try [Twitter](https://twitter.com/{{ site.author.twitter }}).
+the cracks. If I don't respond, try [Discord](https://discordapp.com/users/{{ site.author.discord }}) or [Twitter](https://twitter.com/{{ site.author.twitter }}).
 
 ---
 
