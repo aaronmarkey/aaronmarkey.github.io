@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script src="/theme/main.c292d1a26264c3b3faee.js"></script>
+<link href="/theme/main.c292d1a26264c3b3faee.css" rel="stylesheet"/>
+<link href="/favicon.ico" rel="icon"/>
+<title>some person: Some Thoughts on Markdown</title>
+<style data-controller="head"></style>
+<meta content="Some Thoughts on Markdown" property="og:title"/><meta content="en_US" property="og:locale"/><meta content="https://someperson.me/2018/12/04/some-thoughts-on-markdown.html" property="og:url"/><meta content="article" property="og:type"/><meta content="some person" property="og:site_name"/><meta content="John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web …" property="og:description"/><meta content="summary" name="twitter:card"/><meta content="Some Thoughts on Markdown" property="twitter:title"/><meta content="@heressomeperson" name="twitter:site"/><meta content="@heressomeperson" name="twitter:creator"/><meta content="aaron markey" name="author"/><meta content="John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web …" name="description"/><link href="https://someperson.me/2018/12/04/some-thoughts-on-markdown.html" rel="canonical"/><meta content="2018-12-04T01:28:34+00:00" property="article:published_time"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"aaron markey"},"headline":"Some Thoughts on Markdown","description":"John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web \u2026","datePublished":"2018-12-04T01:28:34+00:00","publisher":{"@type":"Organization","name":"some person"},"url":"https://someperson.me/2018/12/04/some-thoughts-on-markdown.html"}</script></head>
+<body class="palette-">
+<div class="container content-container" data-controller="page" data-page-hidden-class="is-hidden" data-page-story-content-class="story-content" id="main">
+<div class="row text-center m-t-sm" data-controller="nameplate" data-nameplate-author-names-value='{"first": ["aaron", "a-a-ron", "erin", "aron", "arin", "airin"], "last": ["markey", "marque", "marky", "markee", "makey", "marke"]}' data-nameplate-emojis-value='["\ud83d\udc98", "\ud83d\udc9d", "\ud83d\udc96", "\ud83d\udc97", "\ud83d\udc93", "\u2764\ufe0f", "\ud83e\udde1", "\ud83d\udc9b", "\ud83d\udc9a", "\ud83d\udc99", "\ud83d\udc9c", "\ud83e\udd0e", "\ud83d\udda4", "\ud83e\udd0d"]'>
+<div class="col-2"></div>
+<div class="col-8">
+<a class="header flourishless" href="/" title="some person homepage">
+<div class="inline-block header-flourish no-grad"><span data-nameplate-target="emojiLeft">💜</span></div>
+<div class="inline-block">
+<div class="inline-block header-title text-gradient" data-nameplate-target="title" data-title="some person">some person
+        </div>
+<div class="byline text-gradient" title="named aaron markey">
+<span>
+            named
+            <span class="byline-name" data-nameplate-target="byline">aaron markey
+            </span>
+</span>
+</div>
+</div>
+<div class="inline-block header-flourish no-grad"><span data-nameplate-target="emojiRight">💛</span></div>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-12 col-2-md col-3-lg"></div>
+<div class="col-12 col-8-md col-6-lg">
+<div class="story-container border-gradient">
+<div class="story">
+<h1 class="story-title is-marginless">
+<a class="" href="/2018/12/04/some-thoughts-on-markdown.html" title="Some Thoughts on Markdown">Some Thoughts on Markdown</a></h1>
+<p class="is-marginless">
+<span class="date">Tuesday, December 4, 2018</span>
+<span class="divider">|</span>
+<a href="/stuff/tech.html">tech</a>
+</p>
+<div class="story-content">
+<p><a href="https://daringfireball.net">John Gruber</a>'s <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+text markup is one of those invisible parts of the web most of us don't think
+about. It powers some of the most well known web services like
+<a href="https://github.com">GitHub</a>, <a href="https://trello.com">Trello</a>, and
+<a href="https://bear.app">Bear</a>; it's something I've spent five years obsessing over.</p>
+<p>I have many opinions on it stemming from my job as a software developer and
+the many side projects (web services, word processors, iOS apps..) I've built
+around it.</p>
+<h2>A Short History</h2>
+<p>Markdown was created in 2004 by John Gruber of Daring Fireball. While starting
+his career as a technology critic, John wrote a small Perl script to make HTML
+content easier to read and write. Essentially what Markdown allowed
+him to do was add simple markup to a text document that could be easily
+converted into HTML for a webpage.</p>
+<p>Examples:</p>
+<ul>
+<li><code>*Italics*</code> -&gt; <code>&lt;em&gt;Italics&lt;/em&gt;</code></li>
+<li><code>**Bold**</code> -&gt; <code>&lt;strong&gt;Bold&lt;/strong&gt;</code></li>
+<li><code>[DuckDuckGo](https://duckduckgo.com)</code> -&gt;
+<code>&lt;a href="https://duckduckgo.com"&gt;DuckDuckGo&lt;/a&gt;</code></li>
+</ul>
+<h2>The Good Parts of Markdown</h2>
+<p>Since its conception, Markdown has taken the writing and software programming
+worlds by storm. There are libraries available for it in every programming
+language. Plugins for every major publishing platform (WordPress, Ghost, etc.),
+and has become the defacto standard for writing software documentation.</p>
+<p>On a technical level, Markdown is very fast at parsing and rendering HTML, easy
+to implement, and is conceptually easy to extend.</p>
+<p>Many people have since altered, forked, and augmented Markdown. There are
+many <a href="https://github.com/commonmark/commonmark/wiki/markdown-flavors">flavors</a>
+of Markdown, each one has it's own additions and special sauce.</p>
+<p>Which lead me to the bad parts of Markdown...</p>
+<h2>The Bad Parts of Markdown</h2>
+<p>First and foremost, the Markdown ecosystem is a wild west of differing
+standards and markup syntax. Meaning nearly every service that uses Markdown
+forces its users to learn its special nuances. (This sounds small, but try using
+GitHub with Jira everyday). This problem isn't terrible in most cases. Every
+flavor of Markdown I've come across supports the basic Markdown syntax, but most
+extend it past John's initial design.</p>
+<p>Some flavors support video links, some defining image sizes, some text underline
+and strikethrough. Which sounds great!</p>
+<p>Until it's not and you <em>need</em> to rely on consistency. Say you're using Trello's
+Markdown and copy your text to a service that doesn't use Trello Markdown? Well
+you may be out of luck.</p>
+<p>Try it, paste some <a href="https://help.trello.com/article/821-using-markdown-in-trello">Trello Markdown</a>
+into a <a href="https://daringfireball.net/projects/markdown/dingus">Vanilla Markdown</a>
+converter:</p>
+<p>Some Trello Markdown: <code>~~crossed out~~</code></p>
+<p>The many flavors presents an issue for developers as well. Many of these
+forks don't have much coverage in third-party language libraries. Want to parse
+or render Trello Markdown in Closure? Good Luck.</p>
+<h2>But..</h2>
+<p>Markdown is an imperfect perfection. I will always think of it fondly and John
+has single-handedly reshaped how information is created and shared on the
+internet. So I guess it can get a pass.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="m-b-xl"></div>
+<div class="overlay is-hidden" data-action="click-&gt;page#hideOverlay" data-page-target="overlay"></div>
+</div>
+<div class="picker" data-action="click@window-&gt;picker#closeIfNeeded" data-controller="picker" data-picker-hidden-class="is-hidden" data-picker-is-open-value="false" data-picker-target="picker">
+<div class="is-hidden picker-set m-b-sm" data-picker-target="links" style="">
+<a class="flourishless" href="/about" title="about some person">
+<div class="picker-item text-gradient flourish">
+        about
+      </div>
+</a>
+</div>
+<div class="is-hidden picker-set m-b-sm" data-picker-target="palettes">
+<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83d\udd2e", "id": "hyper", "name": "Hyper"}' id="picker-item-hyper">
+<span>
+<span class="no-grad">
+          🔮
+        </span>
+        Hyper
+      </span>
+</div>
+<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83c\udf41", "id": "october", "name": "October"}' id="picker-item-october">
+<span>
+<span class="no-grad">
+          🍁
+        </span>
+        October
+      </span>
+</div>
+<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83c\udf39", "id": "roses", "name": "Roses"}' id="picker-item-roses">
+<span>
+<span class="no-grad">
+          🌹
+        </span>
+        Roses
+      </span>
+</div>
+</div>
+<div class="picker-set text-center no-select" data-action="click-&gt;picker#toggleMenu" data-palette="roses">
+<div class="picker-item">
+<span>
+        some stuff
+      </span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>some person</title><link href="https://someperson.me/" rel="alternate"></link><link href="https://someperson.me/feeds/index.atom.xml" rel="self"></link><id>https://someperson.me/</id><updated>2023-09-26T01:31:00-06:00</updated><entry><title>Lucid, LTT, and Studio Neat</title><link href="https://someperson.me/2023/09/26/lucid-ltt-and-studio-neat.html" rel="alternate"></link><published>2023-09-26T01:31:00-06:00</published><updated>2023-09-26T01:31:00-06:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2023-09-26:/2023/09/26/lucid-ltt-and-studio-neat.html</id><summary type="html">&lt;p&gt;Few things can inspire in a world of commodity and "value". Here's some of those things.&lt;/p&gt;
+&lt;h2&gt;A Screwdriver&lt;/h2&gt;
+&lt;p&gt;Three years and every detail is perfect. Great weight distribution, a satisfying …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Few things can inspire in a world of commodity and "value". Here's some of those things.&lt;/p&gt;
+&lt;h2&gt;A Screwdriver&lt;/h2&gt;
+&lt;p&gt;Three years and every detail is perfect. Great weight distribution, a satisfying bit holder mechanism, and an absolutely perfectly pitched ratchet mechanism.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/2K5Gqp1cEcM?si=00zK6rmiMt3qXMQ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;An Electric Car&lt;/h2&gt;
+&lt;p&gt;Yes, a Lucid Air Sapphire is an astronomical $250,000. Mark and Jack dissect every part of this car and it's engineering. Love is still in the American auto industry. It's just hard to find.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/emkj_fOBovY?si=kPKqtJUvBrLOsICN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;A Box Cutter&lt;/h2&gt;
+&lt;p&gt;This isn't out yet (and it's a Kickstarter, so who knows), but it looks to be everything one would want in a perfect box cutter. A $99 box cutter begs us to examine our relationship with commodity items. I worked at a box store for ~four years. And lost countless box cutters. Probably because I didn't think anything of them.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.kickstarter.com/projects/danprovost/keen-a-compact-durable-and-retractable-utility-knife"&gt;Studio Neat's Keen&lt;/a&gt;&lt;/p&gt;</content><category term="misc"></category><category term="shokunin"></category></entry><entry><title>Design Gatekeeping, Initial Thoughts</title><link href="https://someperson.me/2019/02/06/design-gatekeeping-initial-thoughts.html" rel="alternate"></link><published>2019-02-06T14:00:00-07:00</published><updated>2019-02-06T14:00:00-07:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2019-02-06:/2019/02/06/design-gatekeeping-initial-thoughts.html</id><summary type="html">&lt;p&gt;I've been thinking a lot about "gatekeeping" in the workplace lately. As
+someone working in the software world, I have plenty of experience with
+co-workers &lt;em&gt;directly&lt;/em&gt; judging my work (pull …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've been thinking a lot about "gatekeeping" in the workplace lately. As
+someone working in the software world, I have plenty of experience with
+co-workers &lt;em&gt;directly&lt;/em&gt; judging my work (pull requests anyone?). But even so,
+I have a hard time understanding the level of gatekeeping and pretentiousness of
+the design community.&lt;/p&gt;
+&lt;p&gt;Anecdotally, it seems the entirety of the professional design community
+is incapable of open-mindedness or personal satisfaction. I don't think I've
+met a designer, of any kind, that has done all(or most) of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Like those before them&lt;/li&gt;
+&lt;li&gt;Like those around them&lt;/li&gt;
+&lt;li&gt;Been a positive influence to those below them&lt;/li&gt;
+&lt;li&gt;Felt secure in their own performance and value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the view of someone adjacent to designers everyday, it feels like a whole
+group of people actively working against the success of their own peers. They
+also seem to completely disregard any one who isn't a "designer", and actively
+work against people entering into their industry. (See some of the links listed
+below)&lt;/p&gt;
+&lt;p&gt;It's such a foreign way to work for me. The software world is  built around a core
+concept of free and open software. Software &lt;em&gt;anyone&lt;/em&gt;, &lt;em&gt;anywhere&lt;/em&gt; can contribute to
+and build upon. Think Linux, or Android, or Postgres, or Vue.  Our industry
+is also leading the way in introducing people to the field with bootcamps,
+mentorship programs, and falling education "requirements".&lt;/p&gt;
+&lt;p&gt;Again, this is all anecdotal experiences. I'm 100% sure there are great members
+of the profession design community out there. In fact, I've worked with plenty
+of great and competent designers, I just wouldn't call them an inclusive bunch.&lt;/p&gt;
+&lt;p&gt;To sum up, whether it's design, software, or flipping burgers, a diverse and
+open community will always produce better, more unique, and more desirable
+results.&lt;/p&gt;
+&lt;p&gt;Some articles that sum up some of my points much better than I:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/the-mission/to-get-more-creative-become-less-judgemental-14413a575fa9"&gt;To Get More Creative, Become Less Judgemental&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.linkedin.com/pulse/stop-gatekeeping-user-experience-emily-baldi/"&gt;Stop Gatekeeping User Experience&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.quora.com/Why-are-people-in-design-so-pretentious"&gt;Why are people in design so pretentious?&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Final (and off topic) note:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To all digital product designers:&lt;/strong&gt; there are more design systems out there
+than just Google's Material Design and Apple's Human Interface Guidelines. To
+name a few:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/design/fluent/"&gt;Microsoft's Fluent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.carbondesignsystem.com/"&gt;IBM's Carbon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dropbox.design/"&gt;Dropbox's Branding &amp;amp; Design&lt;/a&gt; (not a UI system)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/primer/primer"&gt;GitHub's Primer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please stop treating every product as if you need sign off from  Matias Duarte
+or Jony Ive.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I'm sure some follow up is required. Maybe in another post. ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯&lt;/p&gt;</content><category term="misc"></category><category term="tech"></category></entry><entry><title>Some Thoughts on Markdown</title><link href="https://someperson.me/2018/12/04/some-thoughts-on-markdown.html" rel="alternate"></link><published>2018-12-04T01:28:34-07:00</published><updated>2018-12-04T01:28:34-07:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2018-12-04:/2018/12/04/some-thoughts-on-markdown.html</id><summary type="html">&lt;p&gt;&lt;a href="https://daringfireball.net"&gt;John Gruber&lt;/a&gt;'s &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;
+text markup is one of those invisible parts of the web most of us don't think
+about. It powers some of the most well known web …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://daringfireball.net"&gt;John Gruber&lt;/a&gt;'s &lt;a href="https://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;
+text markup is one of those invisible parts of the web most of us don't think
+about. It powers some of the most well known web services like
+&lt;a href="https://github.com"&gt;GitHub&lt;/a&gt;, &lt;a href="https://trello.com"&gt;Trello&lt;/a&gt;, and
+&lt;a href="https://bear.app"&gt;Bear&lt;/a&gt;; it's something I've spent five years obsessing over.&lt;/p&gt;
+&lt;p&gt;I have many opinions on it stemming from my job as a software developer and
+the many side projects (web services, word processors, iOS apps..) I've built
+around it.&lt;/p&gt;
+&lt;h2&gt;A Short History&lt;/h2&gt;
+&lt;p&gt;Markdown was created in 2004 by John Gruber of Daring Fireball. While starting
+his career as a technology critic, John wrote a small Perl script to make HTML
+content easier to read and write. Essentially what Markdown allowed
+him to do was add simple markup to a text document that could be easily
+converted into HTML for a webpage.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*Italics*&lt;/code&gt; -&amp;gt; &lt;code&gt;&amp;lt;em&amp;gt;Italics&amp;lt;/em&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;**Bold**&lt;/code&gt; -&amp;gt; &lt;code&gt;&amp;lt;strong&amp;gt;Bold&amp;lt;/strong&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[DuckDuckGo](https://duckduckgo.com)&lt;/code&gt; -&amp;gt;
+&lt;code&gt;&amp;lt;a href="https://duckduckgo.com"&amp;gt;DuckDuckGo&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Good Parts of Markdown&lt;/h2&gt;
+&lt;p&gt;Since its conception, Markdown has taken the writing and software programming
+worlds by storm. There are libraries available for it in every programming
+language. Plugins for every major publishing platform (WordPress, Ghost, etc.),
+and has become the defacto standard for writing software documentation.&lt;/p&gt;
+&lt;p&gt;On a technical level, Markdown is very fast at parsing and rendering HTML, easy
+to implement, and is conceptually easy to extend.&lt;/p&gt;
+&lt;p&gt;Many people have since altered, forked, and augmented Markdown. There are
+many &lt;a href="https://github.com/commonmark/commonmark/wiki/markdown-flavors"&gt;flavors&lt;/a&gt;
+of Markdown, each one has it's own additions and special sauce.&lt;/p&gt;
+&lt;p&gt;Which lead me to the bad parts of Markdown...&lt;/p&gt;
+&lt;h2&gt;The Bad Parts of Markdown&lt;/h2&gt;
+&lt;p&gt;First and foremost, the Markdown ecosystem is a wild west of differing
+standards and markup syntax. Meaning nearly every service that uses Markdown
+forces its users to learn its special nuances. (This sounds small, but try using
+GitHub with Jira everyday). This problem isn't terrible in most cases. Every
+flavor of Markdown I've come across supports the basic Markdown syntax, but most
+extend it past John's initial design.&lt;/p&gt;
+&lt;p&gt;Some flavors support video links, some defining image sizes, some text underline
+and strikethrough. Which sounds great!&lt;/p&gt;
+&lt;p&gt;Until it's not and you &lt;em&gt;need&lt;/em&gt; to rely on consistency. Say you're using Trello's
+Markdown and copy your text to a service that doesn't use Trello Markdown? Well
+you may be out of luck.&lt;/p&gt;
+&lt;p&gt;Try it, paste some &lt;a href="https://help.trello.com/article/821-using-markdown-in-trello"&gt;Trello Markdown&lt;/a&gt;
+into a &lt;a href="https://daringfireball.net/projects/markdown/dingus"&gt;Vanilla Markdown&lt;/a&gt;
+converter:&lt;/p&gt;
+&lt;p&gt;Some Trello Markdown: &lt;code&gt;~~crossed out~~&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The many flavors presents an issue for developers as well. Many of these
+forks don't have much coverage in third-party language libraries. Want to parse
+or render Trello Markdown in Closure? Good Luck.&lt;/p&gt;
+&lt;h2&gt;But..&lt;/h2&gt;
+&lt;p&gt;Markdown is an imperfect perfection. I will always think of it fondly and John
+has single-handedly reshaped how information is created and shared on the
+internet. So I guess it can get a pass.&lt;/p&gt;</content><category term="misc"></category><category term="tech"></category></entry><entry><title>And We're Back</title><link href="https://someperson.me/2018/10/01/and-were-back.html" rel="alternate"></link><published>2018-10-01T04:49:00-06:00</published><updated>2018-10-01T04:49:00-06:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2018-10-01:/2018/10/01/and-were-back.html</id><content type="html">&lt;p&gt;Hello World. It looks like mechanicalog is back. Look forward to ramblings,
+insights, and op-eds.&lt;/p&gt;</content><category term="misc"></category><category term="misc"></category></entry><entry><title>A Journey to Less</title><link href="https://someperson.me/2017/02/01/a-journey-to-less.html" rel="alternate"></link><published>2017-02-01T02:16:00-07:00</published><updated>2017-02-01T02:16:00-07:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2017-02-01:/2017/02/01/a-journey-to-less.html</id><summary type="html">&lt;p&gt;For the last few years I have tried to practice the 'less is more' approach. Meaning that I have been trying to own less, buy less, and worry about less …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last few years I have tried to practice the 'less is more' approach. Meaning that I have been trying to own less, buy less, and worry about less, i.e. minimalism.  Taco meat&lt;/p&gt;
+&lt;p&gt;Rewind a few years. Right out of high school and early into my college years, I spent all of my time trying to earn money, and all of money buying stuff. I bought computers, video games, clothes, food, drinks, phones, phones, and more phones. I was consumed with things, always having the newest thing.&lt;/p&gt;
+&lt;p&gt;The summer of 2012 was truly an eye opener for me. I had just finished junior college and was moving on to university. Moving to a new town and a new home was stressful. I had so much stuff, I didn't know how to move it all myself. Combine that with my ever growing stress level, I wasn't happy.&lt;/p&gt;
+&lt;p&gt;This is when I decided to scale it down. A couple of weeks before the move, I decided I would get rid of enough possessions so that I could move everything I owned in a Ford Escort, minus my bed. I donated, sold, and threw out more than half of my things. And at the end, I met that goal. Two weeks later, I moved in just my Escort and a shared moving truck with three others.&lt;/p&gt;
+&lt;p&gt;That experience began the last five years of my life, at least that's what it feels like. I've tried to continuously live by that mantra. Every time I've moved, I've aimed at moving in just the car that I owned, and whatever my bed went in (thanks uHaul). I've moved a lot. Sometimes three times year. Some of those moves I've succeeded in that goal, some I've failed.&lt;/p&gt;
+&lt;p&gt;Then this last year I decided I was going to move to New York. I decided I was only going to take what I could fit in my car, nothing else. No bed, or dresser, no desk, no chairs. Just the things I could fit into the doors of the car. I told my friends and family. They wanted to know a lot of things, asked many questions. But one of the most asked was: "How are you going to get everything there"? Telling them I was moving in just my car always brought the same response: "I could never move with just a car".&lt;/p&gt;
+&lt;p&gt;I found it a freeing experience. In fact one of the greatest opportunities in my life. Months before moving out east, I began the process of slimming down. I really got the chance to examine every individual item I owned and decided if I &lt;em&gt;really&lt;/em&gt; needed it in my life. When the day came to move, I only had the following to bring with me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4 boxes of stuff (filled with all kinds of things)&lt;/li&gt;
+&lt;li&gt;1 tote&lt;/li&gt;
+&lt;li&gt;2 backpacks&lt;/li&gt;
+&lt;li&gt;1 desktop computer&lt;/li&gt;
+&lt;li&gt;2 monitors&lt;/li&gt;
+&lt;li&gt;2 bags of clothes&lt;/li&gt;
+&lt;li&gt;1 cat&lt;/li&gt;
+&lt;li&gt;1 litter box&lt;/li&gt;
+&lt;li&gt;Every thing in my pockets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That was it. And it was amazing. And since then I've remove about a quarter of the clothes, one box of stuff, and one monitor that I had brought with me to New York. I have acquired some things as well (mainly a bed and frame), but for the most part I probably own a tenth of the stuff I had near the end of my years in junior college.&lt;/p&gt;
+&lt;p&gt;This is all to say that I am one of the lucky few who has been capable of increasing happiness and decreasing stress by just owning less. I know that this isn't something that most are interested in trying. The appeal of owning a lot and having everything you want is strong. But I urge everyone to try walking a journey of less.&lt;/p&gt;</content><category term="misc"></category><category term="misc"></category></entry><entry><title>Mechanica Manifesto</title><link href="https://someperson.me/2015/11/30/mechanica-manifesto.html" rel="alternate"></link><published>2015-11-30T00:14:00-07:00</published><updated>2015-11-30T00:14:00-07:00</updated><author><name>aaron markey</name></author><id>tag:someperson.me,2015-11-30:/2015/11/30/mechanica-manifesto.html</id><summary type="html">&lt;h2&gt;an introduction&lt;/h2&gt;
+&lt;p&gt;Hello World. I've decided to put pen to paper in an effort to collect, sort, and interpret an ocean of ever growing thoughts. This place exists solely to …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;an introduction&lt;/h2&gt;
+&lt;p&gt;Hello World. I've decided to put pen to paper in an effort to collect, sort, and interpret an ocean of ever growing thoughts. This place exists solely to start a conversation and to explore future topics.&lt;/p&gt;
+&lt;p&gt;A bit about myself: My name is Aaron. I am a master’s student, a teacher’s assistant, and a web developer. My background is in film production, web development, graphic design, and a tad-bit of journalism.&lt;/p&gt;
+&lt;p&gt;I consider myself a student of minimalism, efficiency, and beauty. These three concepts are the founding principles I will try to instill in an effort to convey meaning.&lt;/p&gt;
+&lt;h2&gt;content&lt;/h2&gt;
+&lt;p&gt;Readers can expect most of my writing to consist of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;technology - Seven years ago I started following the tech industry regularly. It’s been a long, fast, and ever-changing road that I’d go down again if asked. My love for all things tech reaches from gadgets to media, and big companies to startups. I follow everything and have opinions on it all.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;design - We have created everything. Cars, phones, computers, coffee cups, software, you name it. Somewhere down the line a human designed it. This reality has had me come to the conclusion that design may be the single most important aspect of our world. I think the world is generally an ugly place. Not figuratively, but literally. Therefore, expect many articles dedicated to the topic, and don’t be surprised if it finds its way into everything else.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;media - Film, TV, music, news, and other consumables. My film production background has inspired me to look at every piece of media critically. Sometimes I’ll review a movie, sometimes I’ll just write about an actor/actress I’m into that week.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fitness, the financial market, coffee, taco trucks - The point being I will write about anything and readers should expect a myriad of topics.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Topics may be all well and good, but I really want to stress the importance of how I’ll look at things more so than what I’m looking at. I prioritize design and experience over technical specs. I won’t fall into the trap of bigger is always better. Readers can expect writing reflecting how a topic effects the everyday. If reviewing a phone I’ll talk about user experience and the feel of use more so than the number of cores, or gigabytes of anything. My thoughts always revolve around how technology, design, and media can make our lives better, easier, and more enjoyable. I write with intent to examine that philosophy.&lt;/p&gt;
+&lt;p&gt;One more thing:&lt;/p&gt;
+&lt;p&gt;I am based in the U.S. Most of my articles will be centered around U.S. topics. I am always trying to expand my horizons and will try to incorporate international issues into mechanica log.&lt;/p&gt;
+&lt;h2&gt;presentation&lt;/h2&gt;
+&lt;p&gt;Mechanica log is built from the ground up to be minimal and lean. Writing, publishing, and reading are meant to be fast and easy. I deployed, setup, and designed mechanica log in under three hours. This was in reaction to previous attempts to start writing portals that were always bogged down by my own perfectionism.&lt;/p&gt;
+&lt;p&gt;Mechanica log is barebones and it won’t be as feature full as many other online publications anytime in the near future. Don’t expect comments, tag clouds, or anything else gaudy to show up.&lt;/p&gt;
+&lt;p&gt;I promise you that I will present articles in a straight forward manner. Things like lists, top tens, etc, will always be one page. Headlines will try to convey meaning, not be clickbaity SEO monsters. Articles will be structured as to optimize readability and easy of use.&lt;/p&gt;
+&lt;p&gt;Lastly, mechanica log is an evolving experiment. I don’t have answers to everything and will be solving problems as I go.&lt;/p&gt;
+&lt;p&gt;Here’s to trying.&lt;/p&gt;</content><category term="misc"></category><category term="misc"></category></entry></feed>
