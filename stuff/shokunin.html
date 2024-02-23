@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<script src="/theme/main.c292d1a26264c3b3faee.js"></script>
-<link href="/theme/main.c292d1a26264c3b3faee.css" rel="stylesheet"/>
+<script src="/theme/main.4602e5729175518c4b45.js"></script>
+<link href="/theme/main.4602e5729175518c4b45.css" rel="stylesheet"/>
 <link href="/favicon.ico" rel="icon"/>
 <title>some person</title>
 <style data-controller="head"></style>
@@ -67,7 +67,7 @@
 <div class="m-b-xl"></div>
 <div class="overlay is-hidden" data-action="click-&gt;page#hideOverlay" data-page-target="overlay"></div>
 </div>
-<div class="picker" data-action="click@window-&gt;picker#closeIfNeeded" data-controller="picker" data-picker-hidden-class="is-hidden" data-picker-is-open-value="false" data-picker-target="picker">
+<div class="picker" data-action="click@window-&gt;picker#closeIfNeeded" data-controller="picker" data-picker-default-palette-id-value="roses" data-picker-hidden-class="is-hidden" data-picker-is-open-value="false" data-picker-target="picker">
 <div class="is-hidden picker-set m-b-sm" data-picker-target="links" style="">
 <a class="flourishless" href="/about" title="about some person">
 <div class="picker-item text-gradient flourish">
@@ -76,7 +76,7 @@
 </a>
 </div>
 <div class="is-hidden picker-set m-b-sm" data-picker-target="palettes">
-<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83d\udd2e", "id": "hyper", "name": "Hyper"}' id="picker-item-hyper">
+<div class="picker-item" data-action="click-&gt;picker#paletteSelected" data-palette-id="hyper" id="picker-item-hyper">
 <span>
 <span class="no-grad">
           🔮
@@ -84,7 +84,7 @@
         Hyper
       </span>
 </div>
-<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83c\udf41", "id": "october", "name": "October"}' id="picker-item-october">
+<div class="picker-item" data-action="click-&gt;picker#paletteSelected" data-palette-id="october" id="picker-item-october">
 <span>
 <span class="no-grad">
           🍁
@@ -92,7 +92,7 @@
         October
       </span>
 </div>
-<div class="picker-item" data-action="click-&gt;picker#changeThemeColors" data-pallete='{"icon": "\ud83c\udf39", "id": "roses", "name": "Roses"}' id="picker-item-roses">
+<div class="picker-item" data-action="click-&gt;picker#paletteSelected" data-palette-id="roses" id="picker-item-roses">
 <span>
 <span class="no-grad">
           🌹
