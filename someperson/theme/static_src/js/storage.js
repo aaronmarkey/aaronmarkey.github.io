@@ -14,6 +14,6 @@ export default class {
       item = value
      } catch(e) {
     }
-    return item
+    return item || null;
   }
 }

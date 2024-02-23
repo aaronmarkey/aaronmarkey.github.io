@@ -3,6 +3,7 @@
   data-controller="picker"
   data-picker-target="picker"
   data-picker-is-open-value="false"
+  data-picker-default-palette-id-value="{{ SOME_PERSON.theme.palette.id }}"
   data-picker-hidden-class="is-hidden"
   data-action="click@window->picker#closeIfNeeded"
 >
@@ -32,8 +33,8 @@
     {% for palette in SOME_PERSON.theme.palettes %}
     <div
       id="picker-item-{{ palette.id }}"
-      data-action="click->picker#changeThemeColors"
-      data-pallete='{{ palette.serialized|tojson }}'
+      data-action="click->picker#paletteSelected"
+      data-palette-id='{{ palette.id }}'
       class="picker-item"
     >
       <span>
