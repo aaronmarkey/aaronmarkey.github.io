@@ -1,0 +1,40 @@
+<div
+  class="row text-center m-t-sm"
+  data-controller="nameplate"
+  data-nameplate-author-names-value='{{ SOME_PERSON.author.names|tojson }}'
+  data-nameplate-emojis-value='{{ SOME_PERSON.theme.emojis|tojson }}'
+>
+  <div class="col-2"></div>
+
+  <div class="col-8">
+    <a href="/" title="{{ SITENAME }} homepage" class="header flourishless">
+
+      <div class="inline-block header-flourish no-grad"><span data-nameplate-target="emojiLeft">&#x1f49c;</span></div>
+      <div class="inline-block">
+        <div
+          class="inline-block header-title text-gradient"
+          data-title="{{ SITENAME }}"
+          data-nameplate-target="title"
+        >{{ SITENAME }}
+        </div>
+
+        <div
+          class="byline text-gradient"
+          title="named {{ SOME_PERSON.author.name_parts[0] }} {{ SOME_PERSON.author.name_parts[1] }}"
+        >
+          <span>
+            named
+            <span
+              class="byline-name"
+              data-nameplate-target="byline"
+            >{{ SOME_PERSON.author.name_parts[0] }} {{ SOME_PERSON.author.name_parts[1] }}
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="inline-block header-flourish no-grad"><span data-nameplate-target="emojiRight">&#x1f49b;</span></div>
+
+    </a>
+  </div>
+
+</div>

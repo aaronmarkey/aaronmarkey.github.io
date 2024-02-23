@@ -1,11 +1,6 @@
-*.gem
-.bundle
-.jekyll-cache
-.sass-cache
-_site
-
 .DS_Store
-
-node_modules
-.jekyll-metadata
-assets/
+node_modules/
+__pycache__/
+*pyc
+output/
+someperson/theme/static/

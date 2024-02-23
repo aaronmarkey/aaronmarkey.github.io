@@ -1,0 +1,15 @@
+{% if dates_previous_page %}
+  <a
+    href="/{{ dates_previous_page.url }}"
+    class="pull-left text-gradient flourishless"
+  ><span class="no-grad">👈</span> Past
+  </a>
+{% endif %}
+
+{% if dates_next_page %}
+  <a
+    href="/{{ dates_next_page.url }}"
+    class="pull-right text-gradient flourishless"
+  >Next <span class="no-grad">👉</span>
+  </a>
+{% endif %}

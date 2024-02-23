@@ -1,0 +1,11 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+    {% for article in dates_page.object_list %}
+        {% include "components/story.html" %}
+    {% endfor %}
+
+    {% if dates_previous_page or dates_next_page %}
+        {% include "components/pagination.html" %}
+    {% endif %}
+{% endblock %}

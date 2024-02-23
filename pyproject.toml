@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "aaronmarkey-github-io"
+version = "0.1.0"
+description = ""
+authors = ["aaronmarkey <markey@hey.com>"]
+readme = "README.md"
+packages = [{include = "someperson"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pelican = {extras = ["markdown"], version = "^4.9.1"}
+pelican-sitemap = "^1.1.0"
+pelican-seo = "^1.2.2"
+beautifulsoup4 = "^4.12.3"
+pelican-yaml-metadata = "^2.1.2"
+pydantic = "^2.6.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+lint.select = [
+    "ALL", # include all the rules, including new ones
+]
+lint.ignore = [
+    #### modules
+    "ANN",  # flake8-annotations
+    "COM",  # flake8-commas
+    "C90",  # mccabe complexity
+    "DJ",   # django
+    "EXE",  # flake8-executable
+    "T10",  # debugger
+    "TID",  # flake8-tidy-imports
+
+    #### specific rules
+    "D100",  # ignore missing docs
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D200",
+    "D205",
+    "D211",
+    "D212",
+    "D415",
+    "E402",  # false positives for local imports
+    "PLR0913",  # Too many arguments in function definition
+    "TRY003",  # external messages in exceptions are too verbose
+    "TD002",
+    "TD003",
+    "FIX002",  # too verbose descriptions of todos
+]

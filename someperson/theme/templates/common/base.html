@@ -1,0 +1,45 @@
+{% if "someperson" is not plugin_enabled %}
+  Some Person plugin not enabled. Enable by adding <code>"someperson"</code> to the <code>PLUGINS</code> list in <code>pelicanconf.py</code>
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include "components/head.html" %}
+
+  <body
+    class="palette-{{ SOME_PERSON.theme.default_palette }}"
+  >
+
+    <div
+      id="main"
+      class="container content-container"
+      data-controller="page"
+      data-page-hidden-class="is-hidden"
+      data-page-story-content-class="story-content"
+    >
+      {% include "components/nameplate.html" %}
+
+      <div class="row">
+        <div class="col-12 col-2-md col-3-lg"></div>
+        <div class="col-12 col-8-md col-6-lg">
+
+          {% block content %}
+          {% endblock %}
+
+        </div>
+      </div>
+      <div class="m-b-xl"></div>
+
+      <div
+        class="overlay is-hidden"
+        data-page-target="overlay"
+        data-action="click->page#hideOverlay"
+      ></div>
+
+    </div>
+    {% include "components/picker.html" %}
+
+  </body>
+
+</html>
+{% endif %}
