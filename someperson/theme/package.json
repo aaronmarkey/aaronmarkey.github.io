@@ -4,8 +4,8 @@
   "description": "someperson.me source.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack --watch & poetry run pelican ../../content -s ../../pelicanconf.py -o ../../output -drlv",
-    "build": "./node_modules/.bin/webpack | jekyll build"
+    "start": "./node_modules/.bin/webpack --watch | poetry run pelican ../../content -s ../../pelicanconf.py -o ../../output -drlv",
+    "build": "./node_modules/.bin/webpack && poetry run pelican ../../content -s ../../publishconf.py -o ../../output"
   },
   "repository": {
     "type": "git",
