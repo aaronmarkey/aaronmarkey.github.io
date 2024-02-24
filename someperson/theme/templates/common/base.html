@@ -13,9 +13,13 @@
     <div
       id="main"
       class="container content-container"
+      data-action="picker:toggled@window->page#pickerWasToggled"
       data-controller="page"
+      data-page-defocused-class="is-defocused"
+      data-page-disabled-class="is-disabled"
       data-page-hidden-class="is-hidden"
       data-page-story-content-class="story-content"
+      data-page-target="self"
     >
       {% include "components/nameplate.html" %}
 
