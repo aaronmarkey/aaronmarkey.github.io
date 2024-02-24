@@ -3,12 +3,15 @@ import { Controller } from "stimulus";
 export default class extends Controller {
 
     static classes = [
+        "defocused",
+        "disabled",
         "hidden",
         "storyContent"
     ];
 
     static targets = [
-        "overlay"
+        "overlay",
+        "self"
     ];
 
     initialize() {
@@ -29,5 +32,15 @@ export default class extends Controller {
     hideOverlay() {
         this.overlayTarget.innerHTML = "";
         this.overlayTarget.classList.add(this.hiddenClass);
+    }
+
+    pickerWasToggled({detail: {isOpen}}) {
+        if (isOpen) {
+            this.selfTarget.classList.add(this.disabledClass);
+            this.selfTarget.classList.add(this.defocusedClass);
+        } else {
+            this.selfTarget.classList.remove(this.disabledClass);
+            this.selfTarget.classList.remove(this.defocusedClass);
+        }
     }
 }

@@ -54,14 +54,12 @@ export default class extends Controller {
         this.isOpenValue = true;
         this.linksTarget.classList.remove(this.hiddenClass);
         this.palettesTarget.classList.remove(this.hiddenClass);
-        document.querySelector("div#main").classList.add("defocus");
     }
 
     closeMenu() {
         this.isOpenValue = false;
         this.linksTarget.classList.add(this.hiddenClass);
         this.palettesTarget.classList.add(this.hiddenClass);
-        document.querySelector("div#main").classList.remove("defocus");
     }
 
     toggleMenu() {
@@ -70,11 +68,12 @@ export default class extends Controller {
         } else {
             this.closeMenu();
         }
+        this.dispatch("toggled", {detail: {isOpen: this.isOpenValue}});
     }
 
     closeIfNeeded(event) {
         if (!(this.element.contains(event.target)) && this.isOpenValue) {
-            this.closeMenu();
+            this.toggleMenu();
         }
     }
 }
