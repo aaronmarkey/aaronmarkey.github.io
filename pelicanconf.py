@@ -5,6 +5,7 @@ from someperson import (
     Theme,
     Twitter,
 )
+from someperson.plugins.markdown import MarkdownPlugin
 from someperson.plugins.seo import SeoPlugin
 from someperson.plugins.theme import ThemePlugin
 
@@ -56,7 +57,7 @@ SOME_PERSON = SomePersonConfig(
         ],
         default_palette_id="roses",
     ),
-    plugins=[ThemePlugin(), SeoPlugin()],
+    plugins=[ThemePlugin(), MarkdownPlugin(), SeoPlugin()],
 )
 ################################
 # Theme - End
@@ -71,6 +72,14 @@ EXTRA_PATH_METADATA = {
     "extra/favicon.ico": {"path": "favicon.ico"},
 }
 LOCALE = ("en_US",)
+MARKDOWN = {
+    "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+    },
+    "output_format": "html5",
+}
 OUTPUT_PATH = "output/"
 OUTPUT_SOURCES = False
 SITENAME = "some person"

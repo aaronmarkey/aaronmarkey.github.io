@@ -5,6 +5,7 @@ from pelican import Pelican, signals
 from pydantic import BaseModel
 
 from someperson.plugins.base import Plugin, PluginHandler
+from someperson.plugins.markdown import MarkdownPlugin
 from someperson.plugins.seo import SeoPlugin
 from someperson.plugins.theme import ThemePlugin
 
@@ -82,7 +83,7 @@ class SomePersonConfig(BaseModel):
 
 
 class SomePerson:
-    _supported_plugins: tuple[type[Plugin], ...] = (ThemePlugin, SeoPlugin)
+    _supported_plugins: tuple[type[Plugin], ...] = (ThemePlugin, MarkdownPlugin, SeoPlugin)
     _supported_signals: tuple[str, ...] = ("initialized", "content_written", "generator_init")
 
     def __init__(
