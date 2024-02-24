@@ -15,7 +15,9 @@
 // Chota Overrides -- End
 
 html {
-  min-width: 30rem;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
 }
 body {
   word-wrap: break-word;
@@ -173,7 +175,7 @@ a:not(.flourishless),
 // Story -- Start
 .story-container {
   padding: $spacing $spacing * 2;
-  margin-bottom: $spacing * 2;
+  margin-bottom: $spacing * 6;
   border: 4px solid $black;
 }
 .story {
