@@ -7,7 +7,6 @@ if TYPE_CHECKING:
 
 
 class PluginHandler:
-
     def __init__(self, config: "Plugin") -> None:
         self._pelican_settings = None
         self.theme_config: "SomePersonConfig" | None = None

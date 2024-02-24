@@ -30,7 +30,6 @@ class Tag:
 
 
 class TagCollection:
-
     def __init__(self) -> None:
         self.tags: list[Tag] = []
 

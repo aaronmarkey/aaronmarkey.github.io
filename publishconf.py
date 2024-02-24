@@ -7,3 +7,4 @@ sys.path.append(os.curdir)
 from pelicanconf import *  # noqa: F403
 
 DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_PATH = "dist/"

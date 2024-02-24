@@ -82,16 +82,8 @@ class SomePersonConfig(BaseModel):
 
 
 class SomePerson:
-
-    _supported_plugins: tuple[type[Plugin], ...] = (
-        ThemePlugin,
-        SeoPlugin
-    )
-    _supported_signals: tuple[str, ...] = (
-        "initialized",
-        "content_written",
-        "generator_init"
-    )
+    _supported_plugins: tuple[type[Plugin], ...] = (ThemePlugin, SeoPlugin)
+    _supported_signals: tuple[str, ...] = ("initialized", "content_written", "generator_init")
 
     def __init__(
         self,
@@ -109,6 +101,7 @@ class SomePerson:
             def _reciever(*args, **kwargs):
                 if (method := getattr(handler, f"sig_{signal_name}", None)) and handler.config.enabled:
                     method(*args, **kwargs)
+
             return _reciever
 
         self._handlers: dict[str, PluginHandler] = {}
@@ -121,7 +114,7 @@ class SomePerson:
                 setattr(
                     self,
                     f"_r_{hcls.__name__}_{signal_name}",
-                    receiver(signal_name, self._handlers[plugin_cls.__name__])
+                    receiver(signal_name, self._handlers[plugin_cls.__name__]),
                 )
 
     def _r_initialized(self, app: Pelican) -> bool:
@@ -134,9 +127,8 @@ class SomePerson:
         self.signals.initialized.connect(self._r_initialized)
         for handler in self._handlers.values():
             for signal_name in self._supported_signals:
-                if (
-                    (method := getattr(self, f"_r_{type(handler).__name__}_{signal_name}", None))
-                    and (signal := getattr(self.signals, signal_name, None))
+                if (method := getattr(self, f"_r_{type(handler).__name__}_{signal_name}", None)) and (
+                    signal := getattr(self.signals, signal_name, None)
                 ):
                     signal.connect(method)
 

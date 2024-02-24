@@ -11,7 +11,6 @@ RULE_TYPE = tuple[tuple[str, tuple[str]], ...]
 
 @dataclass
 class Robots:
-
     siteurl: str
     """The fully qualified domain of the website."""
 

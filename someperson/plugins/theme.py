@@ -9,7 +9,6 @@ from someperson.utils import PACKAGE_DIR
 
 
 class ThemePluginHandler(PluginHandler):
-
     def _get_static_hash(self) -> str:
         filename = self.config.theme_json_filename
         path = PACKAGE_DIR.joinpath("theme/static").joinpath(filename)

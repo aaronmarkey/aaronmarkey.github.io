@@ -19,7 +19,6 @@ def get_content_description(content: Content) -> str:
 
 
 class SeoSocialTagGenerator:
-
     def get_open_graph_tags(
         self,
         *,
@@ -29,7 +28,7 @@ class SeoSocialTagGenerator:
         url: str,
         locales: list[str],
         type_: type[Content] | None,
-        description: str
+        description: str,
     ) -> TagCollection:
         tags = TagCollection()
 
@@ -41,15 +40,10 @@ class SeoSocialTagGenerator:
             tags.append(Tag(name="meta", aproperty="og:locale", acontent=locales[0]))
 
         # URL
-        tags.append(
-            Tag(name="meta", aproperty="og:url", acontent=urljoin(siteurl, url))
-        )
+        tags.append(Tag(name="meta", aproperty="og:url", acontent=urljoin(siteurl, url)))
 
         # Type
-        ctype = {
-            Article: "article",
-            Page: "page"
-        }.get(type_) or "website"
+        ctype = {Article: "article", Page: "page"}.get(type_) or "website"
         if ctype:
             tags.append(Tag(name="meta", aproperty="og:type", acontent=ctype))
 
@@ -93,9 +87,7 @@ class SeoSocialTagGenerator:
 
         # Canonical URL
         if url := url.strip():
-            tags.append(
-                Tag(name="link", arel="canonical", ahref=urljoin(siteurl, url))
-            )
+            tags.append(Tag(name="link", arel="canonical", ahref=urljoin(siteurl, url)))
 
         # Publish Time
         if date:
@@ -104,14 +96,7 @@ class SeoSocialTagGenerator:
         return tags
 
     def for_pelican_content(
-        self,
-        content: Content,
-        *,
-        author: str,
-        sitename: str,
-        siteurl: str,
-        locales: list[str],
-        twitter_handle: str
+        self, content: Content, *, author: str, sitename: str, siteurl: str, locales: list[str], twitter_handle: str
     ) -> TagCollection:
         url = content.metadata.get("save_as", content.url)
         desc = get_content_description(content)
@@ -121,13 +106,7 @@ class SeoSocialTagGenerator:
 
         return (
             self.get_open_graph_tags(
-                title=title,
-                sitename=sitename,
-                siteurl=siteurl,
-                url=url,
-                locales=locales,
-                type_=type_,
-                description=desc
+                title=title, sitename=sitename, siteurl=siteurl, url=url, locales=locales, type_=type_, description=desc
             )
             + self.get_twitter_tags(title=title, twitter_handle=twitter_handle)
             + self.get_generic_tags(author=author, description=desc, siteurl=siteurl, url=url, date=date)
@@ -143,7 +122,7 @@ class SeoSocialTagGenerator:
         sitedescription: str,
         url: str,
         locales: list[str],
-        twitter_handle: str
+        twitter_handle: str,
     ) -> TagCollection:
         title = ""
         if st := soup.find("title"):
@@ -157,7 +136,7 @@ class SeoSocialTagGenerator:
                 url=url,
                 locales=locales,
                 type_=None,
-                description=sitedescription
+                description=sitedescription,
             )
             + self.get_twitter_tags(title=title, twitter_handle=twitter_handle)
             + self.get_generic_tags(author=author, description=sitedescription, siteurl=siteurl, url=url, date=None)
@@ -165,7 +144,6 @@ class SeoSocialTagGenerator:
 
 
 class ArticleSchemaGenerator:
-
     def _generate(
         self,
         *,
@@ -178,7 +156,7 @@ class ArticleSchemaGenerator:
         org_name: str,
         org_logo: str,
         siteurl: str,
-        url: str
+        url: str,
     ) -> Tag:
         schema = {
             "@context": "https://schema.org",
@@ -218,17 +196,9 @@ class ArticleSchemaGenerator:
 
         return Tag(name="script", atype="application/ld+json", vcontent=json.dumps(schema, separators=(",", ":")))
 
-
     def for_pelican_content(
-        self,
-        content: Content,
-        *,
-        image: str,
-        siteurl: str,
-        org_name: str,
-        org_logo: str
+        self, content: Content, *, image: str, siteurl: str, org_name: str, org_logo: str
     ) -> TagCollection:
-
         type_ = {
             Article: "Article",
         }.get(type(content)) or "WebPage"
@@ -253,7 +223,7 @@ class ArticleSchemaGenerator:
                 org_name=name,
                 org_logo=logo,
                 siteurl=siteurl,
-                url=url
+                url=url,
             )
         )
         return tags
@@ -267,7 +237,7 @@ class ArticleSchemaGenerator:
         url: str,
         sitedescription: str,
         org_name: str,
-        org_logo: str
+        org_logo: str,
     ) -> TagCollection:
         type_ = "WebPage"
         title = ""
@@ -289,7 +259,7 @@ class ArticleSchemaGenerator:
                 org_name=name,
                 org_logo=logo,
                 siteurl=siteurl,
-                url=url
+                url=url,
             )
         )
         return tags

@@ -29,7 +29,7 @@ SOME_PERSON = SomePersonConfig(
             "makey",
             "marke",
         ],
-        twitter=Twitter(username="heressomeperson")
+        twitter=Twitter(username="heressomeperson"),
     ),
     description="some person named aaron markey. I write and complain about things.",
     theme=Theme(
@@ -50,28 +50,13 @@ SOME_PERSON = SomePersonConfig(
             "🤍",
         ],
         palettes=[
-            Palette(
-                id="hyper",
-                icon="🔮",
-                name="Hyper"
-            ),
-            Palette(
-                id="october",
-                icon="🍁",
-                name="October"
-            ),
-            Palette(
-                id="roses",
-                icon="🌹",
-                name="Roses"
-            )
+            Palette(id="hyper", icon="🔮", name="Hyper"),
+            Palette(id="october", icon="🍁", name="October"),
+            Palette(id="roses", icon="🌹", name="Roses"),
         ],
         default_palette_id="roses",
     ),
-    plugins=[
-        ThemePlugin(),
-        SeoPlugin()
-    ]
+    plugins=[ThemePlugin(), SeoPlugin()],
 )
 ################################
 # Theme - End
@@ -86,6 +71,7 @@ EXTRA_PATH_METADATA = {
     "extra/favicon.ico": {"path": "favicon.ico"},
 }
 LOCALE = ("en_US",)
+OUTPUT_PATH = "output/"
 OUTPUT_SOURCES = False
 SITENAME = "some person"
 SITEURL = "https://someperson.me"
@@ -122,7 +108,7 @@ AUTHORS_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 CATEGORIES_SAVE_AS = ""
 CATEGORY_URL = ""
-CATEGORY_SAVE_AS=""
+CATEGORY_SAVE_AS = ""
 PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
 PATH = "content"
@@ -157,16 +143,8 @@ PLUGINS = [
 # pelican.plugins.sitemap
 SITEMAP = {
     "format": "xml",
-    "priorities": {
-        "articles": 0.5,
-        "indexes": 0.5,
-        "pages": 0.5
-    },
-    "changefreqs": {
-        "articles": "monthly",
-        "indexes": "daily",
-        "pages": "monthly"
-    }
+    "priorities": {"articles": 0.5, "indexes": 0.5, "pages": 0.5},
+    "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
 }
 ################################
 # Plugins- End

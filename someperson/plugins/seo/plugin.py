@@ -10,7 +10,6 @@ from someperson.plugins.seo.tag_collection import TagCollection
 
 
 class SeoPluginHandler(PluginHandler):
-
     def _write_tags_to_html(self, soup: BeautifulSoup, tags: TagCollection) -> None:
         for tag in tags.tags:
             soup.head.append(tag.as_bs_tag(soup.builder))
@@ -31,44 +30,34 @@ class SeoPluginHandler(PluginHandler):
             twitter_handle = self.theme_config.author.twitter.username
 
             if content := context.get("article") or context.get("page"):
-                tags = (
-                    social_generator.for_pelican_content(
-                        content,
-                        author=author,
-                        sitename=sitename,
-                        siteurl=siteurl,
-                        locales=locales,
-                        twitter_handle=twitter_handle
-                    )
-                    + schema_generator.for_pelican_content(
-                        content,
-                        image="",
-                        siteurl=siteurl,
-                        org_name=sitename,
-                        org_logo=""
-                    )
+                tags = social_generator.for_pelican_content(
+                    content,
+                    author=author,
+                    sitename=sitename,
+                    siteurl=siteurl,
+                    locales=locales,
+                    twitter_handle=twitter_handle,
+                ) + schema_generator.for_pelican_content(
+                    content, image="", siteurl=siteurl, org_name=sitename, org_logo=""
                 )
             else:
-                tags = (
-                    social_generator.for_html(
-                        soup,
-                        author=author,
-                        sitename=sitename,
-                        siteurl=siteurl,
-                        sitedescription=sitedescription,
-                        url=context.get("output_file", ""),
-                        locales=locales,
-                        twitter_handle=twitter_handle
-                    )
-                    + schema_generator.for_html(
-                        soup,
-                        author=author,
-                        siteurl=siteurl,
-                        url=context.get("output_file", ""),
-                        sitedescription=sitedescription,
-                        org_name=sitename,
-                        org_logo=""
-                    )
+                tags = social_generator.for_html(
+                    soup,
+                    author=author,
+                    sitename=sitename,
+                    siteurl=siteurl,
+                    sitedescription=sitedescription,
+                    url=context.get("output_file", ""),
+                    locales=locales,
+                    twitter_handle=twitter_handle,
+                ) + schema_generator.for_html(
+                    soup,
+                    author=author,
+                    siteurl=siteurl,
+                    url=context.get("output_file", ""),
+                    sitedescription=sitedescription,
+                    org_name=sitename,
+                    org_logo="",
                 )
 
             if tags:
@@ -102,8 +91,6 @@ class SeoPlugin(Plugin):
     handler: ClassVar[type[PluginHandler]] = SeoPluginHandler
     enable_metatags: bool = True
     enabled_robots: bool = True
-    robots_allow: tuple[tuple[str, str], ...] = (
-        ("/", "*"),
-    )
+    robots_allow: tuple[tuple[str, str], ...] = (("/", "*"),)
     robots_disallow: tuple[tuple[str, str], ...] = ()
     sitemap_path: str = "sitemap.xml"
