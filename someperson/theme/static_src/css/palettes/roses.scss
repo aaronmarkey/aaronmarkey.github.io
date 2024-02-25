@@ -1,13 +1,12 @@
 .palette-roses {
-  $backgroundOne: rgb(255, 230, 247);
-  $backgroundTwo: rgb(255, 230, 247);
-  $foreground: rgb(128, 0, 0);
+  $background-one: rgb(255 230 247);
+  $background-two: rgb(255 230 247);
+  $foreground: rgb(128 0 0);
+  $primary: rgb(204 0 0);
+  $primary-dark: rgb(153 0 102);
+  $secondary-dark: rgb(255 102 204);
+  $secondary: rgb(255 204 204);
 
-  $primary: rgb(204, 0, 0);
-  $primaryDark: rgb(153, 0, 102);
-  $secondaryDark: rgb(255, 102, 204);
-  $secondary: rgb(255, 204, 204);
-
-  @include base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
+  @include base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark);
 
 }

@@ -1,13 +1,12 @@
 .palette-night {
-      $backgroundOne: #120458;
-      $backgroundTwo: #120458;
+      $background-one: #120458;
+      $background-two: #120458;
       $foreground: #fe75fe;
-
       $primary: #ff00a0;
-      $primaryDark: rgb(246, 239, 1);
-      $secondaryDark:  rgb(0, 248, 248);
+      $primary-dark: rgb(246 239 1);
+      $secondary-dark: rgb(0 248 248);
       $secondary: #8853b9;
 
-      @include base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark);
+      @include base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark);
 
     }

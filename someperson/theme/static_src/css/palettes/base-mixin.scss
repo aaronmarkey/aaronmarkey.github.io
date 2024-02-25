@@ -1,15 +1,18 @@
-@mixin base-palette($foreground, $backgroundOne, $backgroundTwo, $primary, $primaryDark, $secondary, $secondaryDark) {
+@mixin base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark) {
   $deg: 315deg;
-  $backgroundDeg: 0deg;
+  $background-deg: -45deg;
 
-  background: -webkit-linear-gradient($backgroundDeg, $backgroundOne, $backgroundTwo);
+  body {
+    background: linear-gradient($background-deg, $background-one, $background-two);
+  }
+
+  meta[name="theme-color"] {
+    color: $background-one;
+  }
 
   .page-header {
-    background: -webkit-linear-gradient($deg, $secondaryDark, $primary);
+    background: linear-gradient($deg, $secondary-dark, $primary);
     background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
@@ -17,59 +20,66 @@
   .story {
     color: $foreground
   }
+
   .story blockquote {
-    border-left-color: $primaryDark
+    border-left-color: $primary-dark
   }
+
   .story h1,
   .story h2,
   .story h3,
   .story h4,
   .story h5,
   .story h6 {
-    color: $primaryDark;
+    color: $primary-dark;
   }
+
   .story hr {
-    background: $primaryDark;
+    background: $primary-dark;
   }
+
   .story code,
   .story pre {
     background: $secondary;
-    color: $primaryDark;
+    color: $primary-dark;
   }
+
   .story .date {
-    color: $primaryDark;
+    color: $primary-dark;
   }
+
   .story a,
   .text-gradient {
-    background: -webkit-linear-gradient($deg, $primary, $secondaryDark);
+    background: linear-gradient($deg, $primary, $secondary-dark);
     background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
+
   .border-gradient {
-    -webkit-border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
-    border-image: -webkit-linear-gradient($deg, $primary, $secondaryDark) 10;
+    border-image: linear-gradient($deg, $primary, $secondary-dark) 10;
   }
+
   .hr-gradient {
-    background-image: linear-gradient($deg, $primary, $secondaryDark);
+    background-image: linear-gradient($deg, $primary, $secondary-dark);
   }
+
   .gradient-start {
     stop-color: $primary;
   }
+
   .gradient-end {
-    stop-color: $secondaryDark;
+    stop-color: $secondary-dark;
   }
+
   .picker-set {
     border: 2px solid $primary;
     box-shadow: calc($spacing / 3) calc($spacing / 3) $primary;
     background: $secondary;
-    color: $primaryDark;
+    color: $primary-dark;
   }
+
   .picker-item-selected {
     border-right: calc($spacing / 3) solid $primary
   }
 }
-

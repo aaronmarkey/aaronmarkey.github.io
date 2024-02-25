@@ -26,17 +26,27 @@ export default class extends Controller {
     }
 
     setPalette() {
+        // Get correct palette ID
+        // If one is set in storage, use that. Else, use the default.
         const known = this.storage.getItem("paletteId");
         const paletteId = known === null ? this.defaultPaletteIdValue : known;
 
-        const body = document.querySelector("body");
-        body.className = "";
-        body.classList.add(`palette-${paletteId}`);
+        // Set palette class on html element
+        const html = document.querySelector("html");
+        html.className = "";
+        html.classList.add(`palette-${paletteId}`);
 
+        // Set currently selected picker item
         document.querySelectorAll(".picker-item").forEach(el => {
             el.classList.remove("picker-item-selected");
         });
         document.querySelector(`#picker-item-${paletteId}`).classList.add("picker-item-selected");
+
+        // Set meta tag theme-color content via it's "color" attribute set by CSS.
+        const themeColor = document.querySelector("meta[name='theme-color']");
+        const style = getComputedStyle(themeColor);
+        themeColor.setAttribute("content", style.color);
+
         return paletteId;
     }
 

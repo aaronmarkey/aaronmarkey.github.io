@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import
   "variables",
   "palettes/base-mixin",
@@ -12,6 +11,7 @@
 .col-12 {
   max-width: calc(100% - var(--grid-gutter));
 }
+
 // Chota Overrides -- End
 
 html {
@@ -21,52 +21,61 @@ html {
   width: 100vw;
 
 }
+
 body {
+  font-family: sans-serif;
   word-wrap: break-word;
 }
+
 .content-container {
   transition:
     filter .5s;
   transition-timing-function: ease-in-out;
 }
+
 .no-grad {
-  text-fill-color: black;
   -moz-text-fill-color: black;
   -webkit-text-fill-color: black;
 }
+
 code {
+  font-family: monospace;
   padding: .1em .2em;
 }
+
 a, a:hover {
   text-decoration: none;
 }
-a:not(.flourishless),
+
 a:not(.flourishless),
 .flourish {
   font-size: 1em;
   vertical-align: center;
-  margin: 0px calc($spacing / 5);
+  margin: 0 calc($spacing / 5);
 
-  &:before {
+  &::before {
     content: $preflourish;
     padding-right: calc($spacing / 5);
     font-size: 0.7em;
     vertical-align: middle;
   }
 
-  &:after {
+  &::after {
     content: $postflourish;
     padding-left: calc($spacing / 5);
     font-size: 0.7em;
     vertical-align: middle;
   }
 }
+
 .divider {
-  margin: 0px 5px;
+  margin: 0 5px;
 }
+
 .is-defocused {
   filter: blur(8px);
 }
+
 .is-disabled {
   pointer-events: none;
   touch-action: none;
@@ -76,41 +85,48 @@ a:not(.flourishless),
 .inline-block {
   display: inline-block;
 }
+
 .cursor-pointer {
   cursor: pointer;
 }
+
 .noselect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
+
 .m-b-md {
   margin-bottom: $spacing * 2;
 }
+
 .m-b-sm {
   margin-bottom: $spacing;
 }
+
 .m-b-xl {
   margin-bottom: $spacing * 8;
 }
+
 .m-t-sm, {
   margin-top: $spacing;
 }
+
 .m-auto {
-  margin: 0px auto;
+  margin: 0 auto;
 }
+
 // Misc -- End
 
 
 // Error -- Start
 .error-code {
   font-size: 9em;
-  margin-bottom: 0px
+  margin-bottom: 0
 }
+
 .error-msg {
   font-size: 1.5em;
 }
+
 // Error -- End
 
 
@@ -126,28 +142,31 @@ a:not(.flourishless),
     font-size: $base-font-size;
   }
 }
+
 .header-flourish {
   font-size: xxx-large;
-  padding: 0px 20px;
+  padding: 0 20px;
   height: 100%;
   vertical-align: bottom;
 }
+
 // Header -- End
 
 
 // Overlay -- Start
 .overlay {
   z-index: 2;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgb(0 0 0 / 75%);
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
   padding-top: $spacing * 2;
   cursor: pointer;
 }
+
 .overlay > img {
   max-width: 90%;
   max-height: 90%;
@@ -163,6 +182,7 @@ a:not(.flourishless),
   position: fixed;
   transform: translate(-50%, 0%);
 }
+
 .picker-set {
   width: $spacing * 10;
   padding: calc($spacing / 2);
@@ -171,9 +191,11 @@ a:not(.flourishless),
   background: $white;
   border: 2px solid $black;
 }
+
 .picker-item {
   padding: calc($spacing / 2);
 }
+
 // Picker -- End
 
 
@@ -183,25 +205,31 @@ a:not(.flourishless),
   margin-bottom: $spacing * 6;
   border: 4px solid $black;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (width <= 600px) {
     padding: $spacing
   }
 }
+
 .story {
   blockquote {
-    padding: 0 1em;
+    border-left: 0.25em solid $pink-dark;
     font-size: .85em;
+    padding: 0 1em;
   }
+
   h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
     margin-top: $spacing * 2;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   img {
     max-width: 100%;
     margin-top: $spacing;
     margin-bottom: $spacing;
     cursor: pointer
   }
+
   pre {
     font-family: monospace;
     padding: 5px 10px;
@@ -211,9 +239,11 @@ a:not(.flourishless),
     white-space: -o-pre-wrap;
     word-wrap: break-word;
   }
+
   .story-content {
     margin-top: $spacing * 2;
   }
+
   .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -228,36 +258,19 @@ a:not(.flourishless),
     }
   }
 }
+
 // Story -- End
 
 
 // RMG -- Start
-body {
-  font-family: sans-serif;
-}
-code {
-  font-family: monospace;
-}
 .page-header {
   display: inline-block;
 }
-.story blockquote {
-  border-left: 0.25em solid $pink-dark;
-}
-.story h1,
-.story h2,
-.story h3,
-.story h4,
-.story h5,
-.story h6 {
-  font-family: serif;
-}
+
 .text-gradient {
   background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
 // RMG -- End

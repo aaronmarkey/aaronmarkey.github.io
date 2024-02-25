@@ -1,17 +1,19 @@
 // Colors -- Start
-$black: rgb(0, 0, 0);
-$gray: rgb(224, 224, 224);
-$gray-light: rgb(230, 230, 230);
-$pink: rgb(235, 87, 237);
-$pink-dark: rgb(255, 20, 147);
-$orange: rgb(255, 143, 0);
-$orange-light: rgb(255, 237, 204);
-$white: rgb(255, 255, 255);
+$black: rgb(0 0 0);
+$gray: rgb(224 224 224);
+$gray-light: rgb(230 230 230);
+$pink: rgb(235 87 237);
+$pink-dark: rgb(255 20 147);
+$orange: rgb(255 143 0);
+$orange-light: rgb(255 237 204);
+$white: rgb(255 255 255);
+
 // Colors -- End
 
 
 // Font -- Start
 $base-font-size: 16px !default;
+
 // Font -- End
 
 
@@ -19,9 +21,11 @@ $base-font-size: 16px !default;
 $preflourish: "\2665";
 $postflourish: "\2665";
 $header-height: 100px;
+
 // Misc -- End
 
 
 // Spacing -- Start
 $spacing: 15px;
+
 // Spacing -- End
