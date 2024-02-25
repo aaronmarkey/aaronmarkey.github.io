@@ -1,21 +1,18 @@
 <div class="story-container border-gradient">
-  <div class="story">
-
-    <h1 class="story-title is-marginless">
-      <a class="" href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</h1></a>
-      <p class="is-marginless">
-        {% if article.date %}
-          <span class="date">{{ article.date|strftime("%A, %B %-d, %Y") }}</span>
-        {% endif %}
-        {% if article.tags %}
-        <span class="divider">|</span>
-        {% for tag in article.tags %}
-          <a href="/stuff/{{ tag }}.html">{{ tag }}</a>
-        {% endfor %}
-        {% endif %}
-      </p>
-    <div class="story-content">
-      {{ article.content }}
+    <div class="story">
+        <h1 class="story-title is-marginless">
+            <a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}
+            </h1>
+        </a>
+        <p class="is-marginless">
+            {% if article.date %}
+                <span class="date">{{ article.date|strftime("%A, %B %-d, %Y") }}</span>
+            {% endif %}
+            {% if article.tags %}
+                <span class="divider">|</span>
+                {% for tag in article.tags %}<a href="/stuff/{{ tag }}.html">{{ tag }}</a>{% endfor %}
+            {% endif %}
+        </p>
+        <div class="story-content">{{ article.content }}</div>
     </div>
-  </div>
 </div>

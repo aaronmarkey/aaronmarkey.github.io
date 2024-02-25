@@ -1,71 +1,37 @@
-<div
-  class="picker"
-  data-controller="picker"
-  data-picker-target="picker"
-  data-picker-is-open-value="false"
-  data-picker-default-palette-id-value="{{ SOME_PERSON.theme.palette.id }}"
-  data-picker-hidden-class="is-hidden"
-  data-action="click@window->picker#closeIfNeeded touchstart@window->picker#closeIfNeeded"
->
-
-  <div
-    data-picker-target="links"
-    class="is-hidden picker-set m-b-sm text-center"
-  >
-  <div>
-    <a
-      class="flourishless"
-      href="{{ '/' }}"
-      title="{{ SITENAME }} home"
-    >
-      <div class="picker-item text-gradient flourish">
-        home
-      </div>
-    </a>
+<div class="picker"
+     data-controller="picker"
+     data-picker-target="picker"
+     data-picker-is-open-value="false"
+     data-picker-default-palette-id-value="{{ SOME_PERSON.theme.palette.id }}"
+     data-picker-hidden-class="is-hidden"
+     data-action="click@window->picker#closeIfNeeded touchstart@window->picker#closeIfNeeded">
+    <div data-picker-target="links"
+         class="is-hidden picker-set m-b-sm text-center">
+        <div>
+            <a class="flourishless" href="{{ '/' }}" title="{{ SITENAME }} home">
+                <div class="picker-item text-gradient flourish">home</div>
+            </a>
+        </div>
+        <div>
+            <a class="flourishless"
+               href="{{ '/about' }}"
+               title="about {{ SITENAME }}">
+                <div class="picker-item text-gradient flourish">about</div>
+            </a>
+        </div>
     </div>
-    <div>
-    <a
-      class="flourishless"
-      href="{{ '/about' }}"
-      title="about {{ SITENAME }}"
-    >
-      <div class="picker-item text-gradient flourish">
-        about
-      </div>
-    </a>
+    <div data-picker-target="palettes" class="is-hidden picker-set m-b-sm">
+        {% for palette in SOME_PERSON.theme.palettes %}
+            <div id="picker-item-{{ palette.id }}" data-action="click->picker#paletteSelected" data-palette-id="{{ palette.id }}"" class="picker-item"> <span> <span class="no-grad">{{ palette.icon }}</span> {{ palette.name }} </span>
+            </div>
+        {% endfor %}
     </div>
-  </div>
-
-  <div
-    data-picker-target="palettes"
-    class="is-hidden picker-set m-b-sm"
-  >
-    {% for palette in SOME_PERSON.theme.palettes %}
-    <div
-      id="picker-item-{{ palette.id }}"
-      data-action="click->picker#paletteSelected"
-      data-palette-id='{{ palette.id }}'
-      class="picker-item"
-    >
-      <span>
-        <span class="no-grad">
-          {{ palette.icon }}
-        </span>
-        {{ palette.name }}
-      </span>
+    <div data-action="click->
+        picker#toggleMenu"
+        data-palette="{{ SOME_PERSON.theme.palette.id }}"
+        class="picker-set text-center no-select">
+        <div class="picker-item">
+            <span>directory</span>
+        </div>
     </div>
-    {% endfor %}
-  </div>
-
-  <div
-    data-action="click->picker#toggleMenu"
-    data-palette="{{ SOME_PERSON.theme.palette.id }}"
-    class="picker-set text-center no-select"
-  >
-    <div class="picker-item">
-      <span>
-        directory
-      </span>
-    </div>
-  </div>
 </div>

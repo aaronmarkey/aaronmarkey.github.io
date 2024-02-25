@@ -16,17 +16,41 @@ Generally always use the scripts available in `package.json`. Use `poetry` and `
 
 ### Lint & Syntax
 
-#### Python
+#### All/Everything At Once
 
-All linting and formatting is done via `ruff`. The `ruff` config can be found in `pyproject.toml`.
+`npm run allcheck` and `npm run allformat` will check and auto-fix syntax/lint issues in all available file types, respectively.
 
-`npm run pycheck` and `npm run pyformat` will check and auto-fix syntax/lint issues, respectively.
+#### CSS
+
+All linting and formatting is done via `stylelint`. The `stylelint` config can be found in `.stylelintrc.json`.
+
+`npm run csscheck` and `npm run cssformat` will check and auto-fix syntax/lint issues, respectively.
+
+#### HTML
+
+All linting and formatting is done via `djlint`. The `djlint` config can be found in `pyproject.toml`.
+
+`npm run htmlcheck` and `npm run htmlformat` will check and auto-fix syntax/lint issues, respectively.
 
 #### JS
 
 All linting and formatting is done via `eslint`. The `eslint` config can be found in `.eslintrc.yml`.
 
 `npm run jscheck` and `npm run jsformat` will check and auto-fix syntax/lint issues, respectively.
+
+#### Markdown
+
+All linting is done via `pymarkdown`. The `pymarkdown` config can be found in `.pymarkdown`.
+
+`npm run mdcheck` to check lint issues.
+
+**There is no auto-formatting available for Markdown files.**
+
+#### Python
+
+All linting and formatting is done via `ruff`. The `ruff` config can be found in `pyproject.toml`.
+
+`npm run pycheck` and `npm run pyformat` will check and auto-fix syntax/lint issues, respectively.
 
 ### Publishing
 

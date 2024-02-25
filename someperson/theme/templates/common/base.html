@@ -1,49 +1,33 @@
 {% if "someperson" is not plugin_enabled %}
-  Some Person plugin not enabled. Enable by adding <code>"someperson"</code> to the <code>PLUGINS</code> list in <code>pelicanconf.py</code>
+    Some Person plugin not enabled. Enable by adding <code>"someperson"</code> to the <code>PLUGINS</code> list in <code>pelicanconf.py</code>
 {% else %}
-<!DOCTYPE html>
-<html lang="en">
-
-  {% include "components/head.html" %}
-
-  <body
-    class="palette-{{ SOME_PERSON.theme.default_palette }}"
-  >
-
-    <div
-      id="main"
-      class="container content-container"
-      data-action="picker:toggled@window->page#pickerWasToggled"
-      data-controller="page"
-      data-page-defocused-class="is-defocused"
-      data-page-disabled-class="is-disabled"
-      data-page-hidden-class="is-hidden"
-      data-page-story-content-class="story-content"
-      data-page-target="self"
-    >
-      {% include "components/nameplate.html" %}
-
-      <div class="row m-t-sm">
-        <div class="col-12 col-1-md col-2-lg"></div>
-        <div class="col-12 col-10-md col-8-lg">
-
-          {% block content %}
-          {% endblock %}
-
-        </div>
-      </div>
-      <div class="m-b-xl"></div>
-
-      <div
-        class="overlay is-hidden"
-        data-page-target="overlay"
-        data-action="click->page#hideOverlay"
-      ></div>
-
-    </div>
-    {% include "components/picker.html" %}
-
-  </body>
-
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+        {% include "components/head.html" %}
+        <body class="palette-{{ SOME_PERSON.theme.default_palette }}">
+            <div id="main"
+                 class="container content-container"
+                 data-action="picker:toggled@window->page#pickerWasToggled"
+                 data-controller="page"
+                 data-page-defocused-class="is-defocused"
+                 data-page-disabled-class="is-disabled"
+                 data-page-hidden-class="is-hidden"
+                 data-page-story-content-class="story-content"
+                 data-page-target="self">
+                {% include "components/nameplate.html" %}
+                <div class="row m-t-sm">
+                    <div class="col-12 col-1-md col-2-lg"></div>
+                    <div class="col-12 col-10-md col-8-lg">
+                        {% block content %}
+                        {% endblock content %}
+                    </div>
+                </div>
+                <div class="m-b-xl"></div>
+                <div class="overlay is-hidden"
+                     data-page-target="overlay"
+                     data-action="click->page#hideOverlay"></div>
+            </div>
+            {% include "components/picker.html" %}
+        </body>
+    </html>
 {% endif %}
