@@ -22,14 +22,17 @@
     </div>
     <div data-picker-target="palettes" class="is-hidden picker-set m-b-sm">
         {% for palette in SOME_PERSON.theme.palettes %}
-            <div id="picker-item-{{ palette.id }}" data-action="click->picker#paletteSelected" data-palette-id="{{ palette.id }}"" class="picker-item"> <span> <span class="no-grad">{{ palette.icon }}</span> {{ palette.name }} </span>
+            <div id="picker-item-{{ palette.id }}"
+                 data-action="click->picker#paletteSelected"
+                 data-palette-id="{{ palette.id }}"
+                 class="picker-item">
+                <span> <span class="no-grad">{{ palette.icon }}</span> {{ palette.name }} </span>
             </div>
         {% endfor %}
     </div>
-    <div data-action="click->
-        picker#toggleMenu"
-        data-palette="{{ SOME_PERSON.theme.palette.id }}"
-        class="picker-set text-center no-select">
+    <div class="picker-set text-center no-select"
+         data-action="click->picker#toggleMenu"
+         data-palette="{{ SOME_PERSON.theme.palette.id }}">
         <div class="picker-item">
             <span>directory</span>
         </div>

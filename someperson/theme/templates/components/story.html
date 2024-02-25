@@ -1,9 +1,8 @@
 <div class="story-container border-gradient">
     <div class="story">
         <h1 class="story-title is-marginless">
-            <a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}
-            </h1>
-        </a>
+            <a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a>
+        </h1>
         <p class="is-marginless">
             {% if article.date %}
                 <span class="date">{{ article.date|strftime("%A, %B %-d, %Y") }}</span>
