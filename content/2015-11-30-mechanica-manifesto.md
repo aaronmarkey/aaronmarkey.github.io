@@ -12,7 +12,6 @@ A bit about myself: My name is Aaron. I am a master’s student, a teacher’s a
 
 I consider myself a student of minimalism, efficiency, and beauty. These three concepts are the founding principles I will try to instill in an effort to convey meaning.
 
-
 ## content
 
 Readers can expect most of my writing to consist of the following:
@@ -30,7 +29,6 @@ Topics may be all well and good, but I really want to stress the importance of h
 One more thing:
 
 I am based in the U.S. Most of my articles will be centered around U.S. topics. I am always trying to expand my horizons and will try to incorporate international issues into mechanica log.
-
 
 ## presentation
 

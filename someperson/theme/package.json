@@ -8,6 +8,7 @@
     "jscheck": "./node_modules/.bin/eslint .",
     "jsformat": "./node_modules/.bin/eslint --fix .",
     "jstest": "echo \"Error: no test specified\" && exit 1",
+    "mdcheck": "poetry run pymarkdown --config ../../.pymarkdown scan -r ../../content ../../README.md",
     "publish": "git push origin gh-pages",
     "pycheck": "poetry run ruff check ../..",
     "pyformat": "poetry run ruff format ../..",

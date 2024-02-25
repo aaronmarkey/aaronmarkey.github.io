@@ -73,7 +73,8 @@ loaded into your browser. Here's [Polygon][5]
 ![Polygon is a shitshow.][4]
 
 Terrible scoping:
-```
+
+```js
 function lookAtMeMichael(name) {
     if(name === 'Jackie') {
         var h = 'Hello'
@@ -85,8 +86,6 @@ function lookAtMeMichael(name) {
 
 [TypeScript][7] exists solely to get past the insane shitstorm that is JS
 typing. 'strings' are `string's but not Strings. What? Why?
-
-
 
 [1]: https://twitter.com/mechanicamarkey/status/1034188202821787649
 [2]: https://twitter.com/mechanicamarkey/status/866716811856928768

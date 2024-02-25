@@ -6,7 +6,6 @@ tags: shokunin
 
 Few things can inspire in a world of commodity and "value". Here's some of those things.
 
-
 ## A Screwdriver
 
 Three years and every detail is perfect. Great weight distribution, a satisfying bit holder mechanism, and an absolutely perfectly pitched ratchet mechanism.

@@ -15,6 +15,7 @@ beautifulsoup4 = "^4.12.3"
 pelican-yaml-metadata = "^2.1.2"
 pydantic = "^2.6.1"
 ghp-import = "^2.1.0"
+pymarkdownlnt = "^0.9.17"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.2.1"
