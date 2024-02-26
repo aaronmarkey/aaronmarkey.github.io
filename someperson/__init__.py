@@ -23,6 +23,11 @@ class Twitter(SocialAccount):
     link_format: str = "https://twitter.com/{username}"
 
 
+class Link(BaseModel):
+    title: str
+    href: str
+
+
 class Author(BaseModel):
     first_names: list[str]
     last_names: list[str]
@@ -75,6 +80,7 @@ class SomePersonConfig(BaseModel):
     author: Author
     description: str
     theme: Theme
+    menu: list[Link] = []
     plugins: list[Plugin]
 
 

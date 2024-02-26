@@ -106,7 +106,7 @@ a:not(.flourishless),
   margin-bottom: $spacing * 8;
 }
 
-.m-t-sm, {
+.m-t-sm {
   margin-top: $spacing;
 }
 
@@ -185,15 +185,41 @@ a:not(.flourishless),
 
 .picker-set {
   width: $spacing * 10;
-  padding: calc($spacing / 2);
   cursor: pointer;
   color: $black;
   background: $white;
   border: 2px solid $black;
+
+  .first {
+    padding: calc($spacing);
+    padding-bottom: calc($spacing / 2);
+  }
+
+  .last {
+    padding: calc($spacing);
+    padding-top: calc($spacing / 2);
+  }
+
+  .middle {
+    padding: calc($spacing);
+  }
 }
 
 .picker-item {
+  display: inline-block;
+  width: 100%
+}
+
+.picker-button {
   padding: calc($spacing / 2);
+  padding-top: calc($spacing);
+  padding-bottom: calc($spacing);
+}
+
+.picker-option {
+  a:hover {
+    opacity: 1 !important;
+  }
 }
 
 // Picker -- End

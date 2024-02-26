@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark) {
   $deg: 315deg;
   $background-deg: -45deg;
@@ -7,7 +9,7 @@
   }
 
   meta[name="theme-color"] {
-    color: $background-one;
+    color: $background-two;
   }
 
   .page-header {
@@ -77,6 +79,18 @@
     box-shadow: calc($spacing / 3) calc($spacing / 3) $primary;
     background: $secondary;
     color: $primary-dark;
+  }
+
+  .picker-button {
+    &:hover {
+      background: color.adjust($secondary, $lightness: -10%);
+    }
+  }
+
+  .picker-option {
+    &:hover {
+      background: color.adjust($secondary, $lightness: -10%);
+    }
   }
 
   .picker-item-selected {

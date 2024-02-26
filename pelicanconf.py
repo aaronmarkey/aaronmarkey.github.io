@@ -1,5 +1,6 @@
 from someperson import (
     Author,
+    Link,
     Palette,
     SomePersonConfig,
     Theme,
@@ -38,7 +39,7 @@ SOME_PERSON = SomePersonConfig(
             Palette(
                 id="hyper",
                 icon="🌠",
-                name="Hyper",
+                name="Orbit",
                 emojis=[
                     "🌑",
                     "🌕",
@@ -84,7 +85,7 @@ SOME_PERSON = SomePersonConfig(
             Palette(
                 id="roses",
                 icon="💟",
-                name="Center",
+                name="Oxygen",
                 emojis=[
                     "💜",
                     "💛",
@@ -107,6 +108,10 @@ SOME_PERSON = SomePersonConfig(
         ],
         default_palette_id="roses",
     ),
+    menu=[
+        Link(title="home", href="/"),
+        Link(title="about", href="/about")
+    ],
     plugins=[ThemePlugin(), MarkdownPlugin(), SeoPlugin()],
 )
 ################################

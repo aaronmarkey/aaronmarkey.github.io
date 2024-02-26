@@ -5,34 +5,38 @@
      data-picker-hidden-class="is-hidden"
      data-action="click@window->picker#closeIfNeeded touchstart@window->picker#closeIfNeeded">
     <div class="is-hidden" data-picker-target="menu">
-        <div class="picker-set m-b-sm text-center">
-            <div>
-                <a class="flourishless" href="{{ '/' }}" title="{{ SITENAME }} home">
-                    <div class="picker-item text-gradient flourish">home</div>
-                </a>
+        {% if SOME_PERSON.menu|length > 0 %}
+            <div class="picker-set m-b-sm text-center">
+                {% for link in SOME_PERSON.menu %}
+                    <div class="picker-option {% if loop.first %}first{% elif loop.last %}last{% else %}middle{% endif %}">
+                        <a class="flourishless" href="{{ link.href }}">
+                            <div class="text-gradient flourish">{{ link.title }}</div>
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
-            <div>
-                <a class="flourishless"
-                   href="{{ '/about' }}"
-                   title="about {{ SITENAME }}">
-                    <div class="picker-item text-gradient flourish">about</div>
-                </a>
-            </div>
-        </div>
+        {% endif %}
         <div class="picker-set m-b-sm">
             {% for palette in SOME_PERSON.theme.palettes %}
-                <div id="picker-item-{{ palette.id }}"
-                     data-action="click->picker#paletteSelected"
-                     data-palette='{{ palette.serialized|tojson }}'
-                     class="picker-item">
-                    <span> <span class="no-grad">{{ palette.icon }}</span> {{ palette.name }} </span>
+                <div data-action="click->picker#paletteSelected" data-palette='{{ palette.serialized|tojson }}' class="picker-option
+                    {% if loop.first %}
+                        first
+                    {% elif loop.last %}
+                        last
+                    {% else %}
+                        middle
+                    {% endif %}
+                    ">
+                    <span id="picker-item-{{ palette.id }}" class="picker-item">
+                        <span class="no-grad">{{ palette.icon }}</span> {{ palette.name }}
+                    </span>
                 </div>
             {% endfor %}
         </div>
     </div>
     <div class="picker-set text-center no-select"
          data-action="click->picker#toggleMenu">
-        <div class="picker-item">
+        <div class="picker-button">
             <span>directory</span>
         </div>
     </div>

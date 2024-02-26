@@ -6,8 +6,9 @@
     <script src="/theme/main.{{SOME_PERSON.theme.hash}}.js"></script>
     <link rel="stylesheet" href="/theme/main.{{ SOME_PERSON.theme.hash }}.css">
     <link rel="icon" href="/favicon.ico">
-    <title>{{ SITENAME }}
-        {% if article %}: {{ article.title }}{% endif %}
+    <title>
+        {% if article %}{{ article.title }} |{% endif %}
+        {{ SITENAME }}
     </title>
     <style data-controller="head"></style>
 </head>
