@@ -9,75 +9,51 @@ export default class extends Controller {
     ];
 
     static targets = [
-        "links",
-        "palettes",
-        "picker",
+        "menu",
     ];
 
     static values = {
         isOpen: Boolean,
-        defaultPaletteId: String
+        defaultPalette: Object
     };
 
     initialize() {
         this.storage = new Storage();
-        const paletteId = this.setPalette();
-        this.savePaletteId(paletteId);
+        const userPalette = this.storage.getItem("palette");
+        const defaultPalette = this.defaultPaletteValue;
+        this.setPalette(userPalette || defaultPalette);
     }
 
-    setPalette() {
-        // Get correct palette ID
-        // If one is set in storage, use that. Else, use the default.
-        const known = this.storage.getItem("paletteId");
-        const paletteId = known === null ? this.defaultPaletteIdValue : known;
-
-        // Set palette class on html element
-        const html = document.querySelector("html");
-        html.className = "";
-        html.classList.add(`palette-${paletteId}`);
+    setPalette(palette) {
+        this.storage.setItem("palette", palette);
 
         // Set currently selected picker item
         document.querySelectorAll(".picker-item").forEach(el => {
             el.classList.remove("picker-item-selected");
         });
-        document.querySelector(`#picker-item-${paletteId}`).classList.add("picker-item-selected");
+        document.querySelector(`#picker-item-${palette.id}`).classList.add("picker-item-selected");
 
-        // Set meta tag theme-color content via it's "color" attribute set by CSS.
-        const themeColor = document.querySelector("meta[name='theme-color']");
-        const style = getComputedStyle(themeColor);
-        themeColor.setAttribute("content", style.color);
-
-        return paletteId;
-    }
-
-    savePaletteId(paletteId) {
-        this.storage.setItem("paletteId", paletteId);
+        // Emit event for palette change
+        this.dispatch("paletteUpdated", {detail: { palette }});
     }
 
     paletteSelected(event) {
-        const paletteId = event.currentTarget.dataset.paletteId || null;
-        this.savePaletteId(paletteId);
-        this.setPalette();
+        const palette = JSON.parse(event.currentTarget.dataset.palette);
+        this.setPalette(palette);
     }
 
     openMenu() {
         this.isOpenValue = true;
-        this.linksTarget.classList.remove(this.hiddenClass);
-        this.palettesTarget.classList.remove(this.hiddenClass);
+        this.menuTarget.classList.remove(this.hiddenClass);
     }
 
     closeMenu() {
         this.isOpenValue = false;
-        this.linksTarget.classList.add(this.hiddenClass);
-        this.palettesTarget.classList.add(this.hiddenClass);
+        this.menuTarget.classList.add(this.hiddenClass);
     }
 
     toggleMenu() {
-        if (!this.isOpenValue) {
-            this.openMenu();
-        } else {
-            this.closeMenu();
-        }
+        this.isOpenValue ? this.closeMenu() : this.openMenu();
         this.dispatch("toggled", {detail: {isOpen: this.isOpenValue}});
     }
 

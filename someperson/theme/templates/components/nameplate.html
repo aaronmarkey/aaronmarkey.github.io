@@ -1,12 +1,13 @@
 <div class="row text-center m-t-sm"
      data-controller="nameplate"
      data-nameplate-author-names-value='{{ SOME_PERSON.author.names|tojson }}'
-     data-nameplate-emojis-value='{{ SOME_PERSON.theme.emojis|tojson }}'>
+     data-nameplate-default-emojis-value='{{ SOME_PERSON.theme.default_palette.emojis|tojson }}'
+     data-action="picker:paletteUpdated@window->nameplate#paletteWasUpdated">
     <div class="col-12 col-1-md col-2-lg"></div>
     <div class="col-12 col-10-md col-8-lg">
         <a href="/" title="{{ SITENAME }} homepage" class="header flourishless">
             <div class="inline-block header-flourish no-grad">
-                <span data-nameplate-target="emojiLeft">💜</span>
+                <span data-nameplate-target="emojiLeft">{{ SOME_PERSON.theme.default_palette.emojis[0] }}</span>
             </div>
             <div class="inline-block">
                 <div class="inline-block header-title text-gradient"
@@ -22,7 +23,7 @@
                 </div>
             </div>
             <div class="inline-block header-flourish no-grad">
-                <span data-nameplate-target="emojiRight">💛</span>
+                <span data-nameplate-target="emojiRight">{{ SOME_PERSON.theme.default_palette.emojis[1] }}</span>
             </div>
         </a>
     </div>

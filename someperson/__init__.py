@@ -50,6 +50,7 @@ class Palette(BaseModel):
     id: str
     icon: str
     name: str
+    emojis: list[str] = []
 
     @property
     def serialized(self) -> dict[str, str]:
@@ -57,22 +58,17 @@ class Palette(BaseModel):
 
 
 class Theme(BaseModel):
-    emojis: list[str]
     palettes: list[Palette]
     default_palette_id: str
     hash: str = ""
 
     @cached_property
-    def palette(self) -> Palette:
+    def default_palette(self) -> Palette:
         palettes = {p.id: p for p in self.palettes}
         if default := palettes.get(self.default_palette_id):
             return default
         err = f"No palette for default ID '{self.default_palette_id}'."
         raise ValueError(err)
-
-    @property
-    def rand_emoji(self) -> str:
-        return choice(self.emojis) or ""
 
 
 class SomePersonConfig(BaseModel):

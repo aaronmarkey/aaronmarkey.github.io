@@ -13,13 +13,13 @@ export default class extends Controller {
 
     static values = {
         authorNames: Object,
-        emojis: Array
+        defaultEmojis: Array
     };
 
     initialize() {
         this.setRandomByline();
         this.setRandomTitleFonts();
-        this.setRandomEmojis();
+        this.setRandomEmojis(new Array(0));
     }
 
     setRandomByline() {
@@ -53,10 +53,15 @@ export default class extends Controller {
         this.titleTarget.innerHTML = newTitle;
     }
 
-    setRandomEmojis() {
-        const emojiLeft = this.emojisValue[utils.randomInt(0, this.emojisValue.length - 1)];
-        const emojiRight = this.emojisValue[utils.randomInt(0, this.emojisValue.length - 1)];
+    setRandomEmojis(emojis) {
+        const choices = emojis.length > 0 ? emojis : this.defaultEmojisValue;
+        const emojiLeft = choices[utils.randomInt(0, choices.length - 1)];
+        const emojiRight = choices[utils.randomInt(0, choices.length - 1)];
         this.emojiLeftTarget.innerText = `${emojiLeft}`;
         this.emojiRightTarget.innerText = `${emojiRight}`;
+    }
+
+    paletteWasUpdated({ detail: {palette}}) {
+        this.setRandomEmojis(palette.emojis);
     }
 }

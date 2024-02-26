@@ -35,12 +35,20 @@ export default class extends Controller {
     }
 
     pickerWasToggled({detail: {isOpen}}) {
-        if (isOpen) {
-            this.selfTarget.classList.add(this.disabledClass);
-            this.selfTarget.classList.add(this.defocusedClass);
-        } else {
-            this.selfTarget.classList.remove(this.disabledClass);
-            this.selfTarget.classList.remove(this.defocusedClass);
-        }
+        isOpen
+            ? this.selfTarget.classList.add(this.disabledClass, this.defocusedClass)
+            : this.selfTarget.classList.remove(this.disabledClass, this.defocusedClass);
+    }
+
+    paletteWasUpdated({ detail: {palette}}) {
+        // Set palette class on html element
+        const html = document.querySelector("html");
+        html.className = "";
+        html.classList.add(`palette-${palette.id}`);
+
+        // Set meta tag theme-color content via it's "color" attribute set by CSS.
+        const themeColor = document.querySelector("meta[name='theme-color']");
+        const style = getComputedStyle(themeColor);
+        themeColor.setAttribute("content", style.color);
     }
 }
