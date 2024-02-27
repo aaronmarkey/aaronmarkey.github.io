@@ -472,7 +472,7 @@ const fonts = {
 };
 
 function linkForFont(fontName, text) {
-    let url = `https://fonts.googleapis.com/css?family=${fontName.replace(" ", "+")}`;
+    let url = `https://fonts.googleapis.com/css?family=${fontName.replace(" ", "+")}&display=swap`;
     if (text) {
         url += `&text=${text}`;
     }

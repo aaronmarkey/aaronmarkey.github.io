@@ -10,13 +10,13 @@ Few things can inspire in a world of commodity and "value". Here's some of those
 
 Three years and every detail is perfect. Great weight distribution, a satisfying bit holder mechanism, and an absolutely perfectly pitched ratchet mechanism.
 
-@[YouTube video player](https://www.youtube.com/embed/2K5Gqp1cEcM?si=00zK6rmiMt3qXMQ2)
+@[YouTube video player](https://www.youtube.com/watch?v=2K5Gqp1cEcM)
 
 ## An Electric Car
 
 Yes, a Lucid Air Sapphire is an astronomical $250,000. Mark and Jack dissect every part of this car and it's engineering. Love is still in the American auto industry. It's just hard to find.
 
-@[YouTube video player](https://www.youtube.com/embed/emkj_fOBovY?si=kPKqtJUvBrLOsICN)
+@[YouTube video player](https://www.youtube.com/watch?v=emkj_fOBovY)
 
 ## A Box Cutter
 

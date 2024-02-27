@@ -112,7 +112,7 @@ SOME_PERSON = SomePersonConfig(
         Link(title="home", href="/"),
         Link(title="about", href="/about")
     ],
-    plugins=[ThemePlugin(), MarkdownPlugin(), SeoPlugin()],
+    plugins=[ThemePlugin(), MarkdownPlugin(youtube_use_lite=True), SeoPlugin()],
 )
 ################################
 # Theme - End

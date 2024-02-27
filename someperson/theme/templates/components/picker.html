@@ -8,11 +8,10 @@
         {% if SOME_PERSON.menu|length > 0 %}
             <div class="picker-set m-b-sm text-center">
                 {% for link in SOME_PERSON.menu %}
-                    <div class="picker-option {% if loop.first %}first{% elif loop.last %}last{% else %}middle{% endif %}">
-                        <a class="flourishless" href="{{ link.href }}">
-                            <div class="text-gradient flourish">{{ link.title }}</div>
-                        </a>
-                    </div>
+                    <a class="block flourishless picker-option {% if loop.first %}first{% elif loop.last %}last{% else %}middle{% endif %}"
+                       href="{{ link.href }}">
+                        <div class="text-gradient flourish">{{ link.title }}</div>
+                    </a>
                 {% endfor %}
             </div>
         {% endif %}
