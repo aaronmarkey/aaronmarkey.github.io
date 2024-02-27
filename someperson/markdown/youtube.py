@@ -10,18 +10,19 @@ IMAGE_LINK_RE = r"\@\["
 
 class YoutubeInlineProcessor(LinkInlineProcessor):
 
-    def __init__(self, pattern: str, md: Markdown | None = None, config: dict = dict()):
-        self.config = config
+    def __init__(self, pattern: str, md: Markdown | None = None, config: dict | None = None):
+        self.config = config or {}
         super().__init__(pattern, md)
 
     def _video_id(self, src: str) -> str:
         try:
             query = dict(parse_qsl(urlsplit(src).query))
             return query["v"]
-        except Exception:
-            raise ValueError("Cannot derive video ID from link.")
+        except Exception as e:  # noqa: BLE001
+            msg = "Cannot derive video ID from link."
+            raise ValueError(msg) from e
 
-    def _generic_link(self, href: str, title: str) -> Element:  # noqa: N802
+    def _generic_link(self, href: str, title: str) -> Element:
         el = Element("a")
         el.text = f"YouTube video: {title}"
 
@@ -30,13 +31,13 @@ class YoutubeInlineProcessor(LinkInlineProcessor):
 
         return el
 
-    def _lite_frame(self, video_id: str) -> Element:  # noqa: N802
+    def _lite_frame(self, video_id: str) -> Element:
         el = Element("lite-youtube")
         el.set("videoid", video_id)
 
         return el
 
-    def _regular_frame(self, video_id: str, title: str) -> Element:  # noqa: N802
+    def _regular_frame(self, video_id: str, title: str) -> Element:
         src = f"https://www.youtube.com/embed/{video_id}"
 
         el = Element("iframe")
