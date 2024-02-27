@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizePlugin = require("optimize-plugin");
 const fs = require("fs");
 const path = require("path");
+
 
 
 class SomePersonPlugin {
@@ -32,32 +34,33 @@ module.exports = {
     watch: false,
     entry: path.join(__dirname, "static_src", "js/main.js"),
     output: {
+        module: true,
         clean: true,
         filename: "[name].[fullhash].js",
         path: path.resolve(__dirname, "static"),
     },
+    experiments: {
+        outputModule: true
+    },
+    target: ["web", "es2022"],
     module: {
         rules: [
             {
-                test: /.js$/,
-                exclude: [
-                    path.resolve(__dirname, "node_modules"),
-                    path.resolve(__dirname, "bower_components"),
-                ],
-                loader: "babel-loader",
+                test: /\.js$/,
+                loader: "esbuild-loader",
                 options: {
-                    presets: ["@babel/preset-env"],
-                    plugins: ["@babel/plugin-syntax-class-properties", "@babel/plugin-transform-class-properties"]
-                },
+                    target: "es2022"
+                }
             },
             {
                 test:/\.(s*)css$/,
-                use:[MiniCssExtractPlugin.loader,"css-loader", "sass-loader"]
+                use:[MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             }
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({filename: "[name].[fullhash].css"}),
+        new OptimizePlugin({concurrency: false}),
         new SomePersonPlugin({filename: "main.json"})
     ],
 };

@@ -1,5 +1,4 @@
 import "@justinribeiro/lite-youtube";
-import "@stimulus/polyfills";
 import { Application } from "stimulus";
 import { definitionsFromContext } from "stimulus/webpack-helpers";
 
