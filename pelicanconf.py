@@ -108,10 +108,7 @@ SOME_PERSON = SomePersonConfig(
         ],
         default_palette_id="roses",
     ),
-    menu=[
-        Link(title="home", href="/"),
-        Link(title="about", href="/about")
-    ],
+    menu=[Link(title="home", href="/"), Link(title="about", href="/about")],
     plugins=[ThemePlugin(), MarkdownPlugin(youtube_use_lite=True), SeoPlugin()],
 )
 ################################

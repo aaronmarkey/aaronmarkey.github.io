@@ -9,10 +9,18 @@ IMAGE_LINK_RE = r"\@\["
 
 
 class YoutubeInlineProcessor(LinkInlineProcessor):
-
     def __init__(self, pattern: str, md: Markdown | None = None, config: dict | None = None):
         self.config = config or {}
         super().__init__(pattern, md)
+
+    def _wrap(self, el: Element) -> Element:
+        el.set("class", self.config.get("player_class"))
+
+        parent = Element("div")
+        parent.set("class", self.config.get("container_class"))
+        parent.append(el)
+
+        return parent
 
     def _video_id(self, src: str) -> str:
         try:
@@ -31,11 +39,14 @@ class YoutubeInlineProcessor(LinkInlineProcessor):
 
         return el
 
-    def _lite_frame(self, video_id: str) -> Element:
+    def _lite_frame(self, video_id: str, title: str) -> Element:
         el = Element("lite-youtube")
         el.set("videoid", video_id)
+        el.set("videotitle", title)
+        el.set("autoload", "autoload")
+        el.set("posterloading", "eager")
 
-        return el
+        return self._wrap(el)
 
     def _regular_frame(self, video_id: str, title: str) -> Element:
         src = f"https://www.youtube.com/embed/{video_id}"
@@ -50,11 +61,7 @@ class YoutubeInlineProcessor(LinkInlineProcessor):
         )
         el.set("allowfullscreen", "")
 
-        parent = Element("div")
-        parent.set("class", "video-container")
-        parent.append(el)
-
-        return parent
+        return self._wrap(el)
 
     def handleMatch(self, m: re.Match[str], data: str) -> tuple[Element | None, int | None, int | None]:  # noqa: N802
         text, index, handled = self.getText(data, m.end(0))
@@ -72,16 +79,21 @@ class YoutubeInlineProcessor(LinkInlineProcessor):
         except ValueError:
             el = self._generic_link(src, title)
         else:
-            el = self._lite_frame(video_id) if self.config.get("use_lite") else self._regular_frame(video_id, title)
+            el = (
+                self._lite_frame(video_id, title)
+                if self.config.get("use_lite")
+                else self._regular_frame(video_id, title)
+            )
 
         return el, m.start(0), index
 
 
 class YouTubeExtension(Extension):
-
     def __init__(self, **kwargs) -> None:
         self.config = {
-            "use_lite": [False, "Use the lite-youtube JS library to lazy load YT links"]
+            "use_lite": [False, "Use the lite-youtube JS library to lazy load YT links"],
+            "container_class": ["video-container", "CSS class added to the container div of the video."],
+            "player_class": ["video-player", "CSS class added to the video player element itself."],
         }
         super().__init__(**kwargs)
 
