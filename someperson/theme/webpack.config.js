@@ -4,17 +4,20 @@ const fs = require("fs");
 const path = require("path");
 
 
+const generateBuildOutput = (hash, youtube_use_lite) => {
+    return { hash, youtube_use_lite };
+};
+
 
 class SomePersonPlugin {
-    constructor({filename}) {
+    constructor({filename, youtube_use_lite}) {
         this.filename = filename;
+        this.youtube_use_lite = youtube_use_lite;
     }
 
     apply(compiler) {
         compiler.hooks.done.tap(this.constructor.name, stats => {
-            const info = {
-                hash: stats.hash,
-            };
+            const info = generateBuildOutput(stats.hash, this.youtube_use_lite)
             const json = JSON.stringify(info);
             return new Promise((resolve, reject) => {
                 fs.writeFile(path.join(compiler.outputPath, this.filename), json, "utf8", error => {
@@ -61,6 +64,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({filename: "[name].[fullhash].css"}),
         new OptimizePlugin({concurrency: false}),
-        new SomePersonPlugin({filename: "main.json"})
+        new SomePersonPlugin({filename: "main.json", youtube_use_lite: true})
     ],
 };
