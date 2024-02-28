@@ -82,7 +82,7 @@ class SeoPluginHandler(PluginHandler):
     def sig_content_written(self, path: str, context: dict) -> bool:
         if self.config.enable_metatags:
             self._add_meta_tags(path, context)
-        if self.config.enabled_robots:
+        if self.config.enable_robots:
             self._write_robots()
         return True
 
@@ -90,7 +90,7 @@ class SeoPluginHandler(PluginHandler):
 class SeoPlugin(Plugin):
     handler: ClassVar[type[PluginHandler]] = SeoPluginHandler
     enable_metatags: bool = True
-    enabled_robots: bool = True
+    enable_robots: bool = True
     robots_allow: tuple[tuple[str, str], ...] = (("/", "*"),)
     robots_disallow: tuple[tuple[str, str], ...] = ()
     sitemap_path: str = "sitemap.xml"
