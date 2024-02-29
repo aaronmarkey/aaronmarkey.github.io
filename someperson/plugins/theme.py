@@ -21,16 +21,16 @@ class ThemePluginHandler(PluginHandler):
             pass
         return hash_
 
-    def sig_initialized(self, app: Pelican) -> bool:
+    def signal_initialized(self, app: Pelican) -> None:
         theme_path = PACKAGE_DIR.joinpath("theme")
-        app.settings["AUTHOR"] = self.theme_config.author.name
+        app.settings["AUTHOR"] = self.framework_config.author.name
 
         # Both THEME and app.theme need to be set for Pelican to autoreload things correctly.
         app.settings["THEME"] = theme_path
         app.theme = theme_path
 
-    def sig_generator_init(self, _) -> bool:
-        self.theme_config.theme.hash = self._get_static_hash()
+    def signal_generator_init(self, _) -> None:
+        self.framework_config.theme.hash = self._get_static_hash()
 
 
 class ThemePlugin(Plugin):

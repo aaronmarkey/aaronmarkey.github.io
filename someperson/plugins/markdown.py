@@ -6,7 +6,7 @@ from someperson.plugins.base import Plugin, PluginHandler
 
 
 class MarkdownPluginHandler(PluginHandler):
-    def sig_initialized(self, app: Pelican) -> bool:
+    def signal_initialized(self, app: Pelican) -> None:
         if self.config.youtube:
             app.settings["MARKDOWN"]["extension_configs"]["someperson.markdown.youtube"] = {
                 key.split("_", 1)[1]: value

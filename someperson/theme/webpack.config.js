@@ -17,7 +17,7 @@ class SomePersonPlugin {
 
     apply(compiler) {
         compiler.hooks.done.tap(this.constructor.name, stats => {
-            const info = generateBuildOutput(stats.hash, this.youtube_use_lite)
+            const info = generateBuildOutput(stats.hash, this.youtube_use_lite);
             const json = JSON.stringify(info);
             return new Promise((resolve, reject) => {
                 fs.writeFile(path.join(compiler.outputPath, this.filename), json, "utf8", error => {

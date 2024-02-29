@@ -1,19 +1,17 @@
 from someperson import (
     Author,
+    Configuration,
     Link,
     Palette,
-    SomePersonConfig,
     Theme,
     Twitter,
 )
-from someperson.plugins.markdown import MarkdownPlugin
-from someperson.plugins.seo import SeoPlugin
-from someperson.plugins.theme import ThemePlugin
+from someperson.plugins import MarkdownPlugin, SeoPlugin, ThemePlugin
 
 ################################
 # Theme - Start
 ################################
-SOME_PERSON = SomePersonConfig(
+SOME_PERSON = Configuration(
     author=Author(
         first_names=[
             "aaron",
@@ -124,14 +122,6 @@ EXTRA_PATH_METADATA = {
     "extra/favicon.ico": {"path": "favicon.ico"},
 }
 LOCALE = ("en_US",)
-MARKDOWN = {
-    "extension_configs": {
-        "markdown.extensions.codehilite": {"css_class": "highlight"},
-        "markdown.extensions.extra": {},
-        "markdown.extensions.meta": {},
-    },
-    "output_format": "html5",
-}
 OUTPUT_PATH = "output/"
 OUTPUT_SOURCES = False
 SITENAME = "some person"

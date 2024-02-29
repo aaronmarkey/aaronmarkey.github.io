@@ -1,24 +1,27 @@
 from typing import TYPE_CHECKING, Any, ClassVar
 
+from blinker import NamedSignal
 from pydantic import BaseModel
 
+from someperson.utils import Settings, get_signal_name
+
 if TYPE_CHECKING:
-    from someperson import SomePersonConfig
+    from someperson.configuration import Configuration
 
 
 class PluginHandler:
-    def __init__(self, config: "Plugin") -> None:
-        self._pelican_settings = None
-        self.theme_config: "SomePersonConfig" | None = None
-        self.config: "Plugin" = config
+    def __init__(self, config: "Plugin", pelican_config: Settings, framework_config: "Configuration") -> None:
+        self.pelican_config = pelican_config
+        self.framework_config = framework_config
+        self.config = config
 
     def get_pelican_setting(self, name: str) -> Any | None:
-        return self._pelican_settings.get(name, None)
+        return self.pelican_config.get(name, None)
 
-    def connect(self, pelican_settings, theme_config: "SomePersonConfig", config: "Plugin") -> None:
-        self.config = type(self.config)(**{**self.config.model_dump(), **config.model_dump()})
-        self.theme_config = theme_config
-        self._pelican_settings = pelican_settings
+    @staticmethod
+    def receiver_name(signal: NamedSignal) -> str:
+        name = get_signal_name(signal)
+        return f"signal_{name}"
 
 
 class Plugin(BaseModel):

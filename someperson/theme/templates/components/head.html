@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>
-        {% if article %}{{ article.title }} |{% endif %}
-        {{ SITENAME }}
+        {%- if article -%}
+            {{ article.title }} | {{ SITENAME }}
+        {%- else -%}
+            {{ SITENAME }}
+        {%- endif -%}
     </title>
     <style data-controller="head"></style>
 </head>

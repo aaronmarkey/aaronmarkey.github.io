@@ -8,20 +8,25 @@ RULE_TYPE = tuple[tuple[str, tuple[str]], ...]
 """A tuple of tuples. Each tuple contains a string representing the path to a document, """
 """and a sibling tuple of bot names."""
 
+@dataclass
+class Sitemap:
+    enabled: bool
+    filename: str
+
 
 @dataclass
 class Robots:
     siteurl: str
     """The fully qualified domain of the website."""
 
+    sitemap: Sitemap
+    """The URL path part pointing to the site's sitemap file."""
+
     allow_paths: RULE_TYPE = ()
     """A rule type for allowed bots."""
 
     disallow_paths: RULE_TYPE = ()
     """A rule type for disallowed bots."""
-
-    sitemap_path: str = ""
-    """The URL path part pointing to the site's sitemap file."""
 
     @property
     def as_str(self) -> str:
@@ -42,8 +47,8 @@ class Robots:
             raise ValueError(err)
 
         string = StringIO()
-        if self.sitemap_path:
-            sitemap = urljoin(self.siteurl, self.sitemap_path)
+        if self.sitemap.enabled:
+            sitemap = urljoin(self.siteurl, self.sitemap.filename)
             string.write(f"Sitemap: {sitemap}{linesep}")
 
         rules = defaultdict(list)
