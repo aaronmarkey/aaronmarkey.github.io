@@ -1,4 +1,5 @@
 from collections.abc import Sequence
+from copy import deepcopy
 from typing import TYPE_CHECKING
 
 from blinker import NamedSignal
@@ -7,7 +8,9 @@ from pelican import Pelican
 if TYPE_CHECKING:
     from someperson.configuration import Configuration
 
-from someperson.plugins.base import PluginHandler
+from someperson.plugins.base import Plugin, PluginHandler
+from someperson.plugins.markdown import MarkdownPlugin
+from someperson.plugins.theme import ThemePlugin
 from someperson.utils import Settings, get_signal_name
 
 
@@ -29,16 +32,13 @@ class Framework:
         for signal in self._supported_signals.values():
             setattr(self, Framework.receiver_name(signal), self._receiver_factory(signal))
 
-    def configure(self) -> None:
-        self._supported_signals["initialized"].connect(self._signal_initialized)
-        for signal in self._supported_signals.values():
-            if method := getattr(self, Framework.receiver_name(signal), None):
-                signal.connect(method)
-
     def _signal_initialized(self, app: Pelican) -> None:
+        self.plugins = []
         self.pelican_config = app.settings
         self.framework_config = app.settings.get(self._settings_key)
-        for plugin in self.framework_config.plugins:
+
+        plugins = self._validate_plugins()
+        for plugin in plugins:
             handler = plugin.handler(plugin, self.pelican_config, self.framework_config)
             self.plugins.append(handler)
 
@@ -49,3 +49,21 @@ class Framework:
                     method(*args, **kwargs)
 
         return receiver
+
+    def _validate_plugins(self) -> list[Plugin]:
+        configured_plugins = [type(plugin) for plugin in self.framework_config.plugins]
+        plugins = deepcopy(self.framework_config.plugins)
+
+        if ThemePlugin not in configured_plugins:
+            plugins.insert(0, ThemePlugin())
+
+        if MarkdownPlugin not in configured_plugins:
+            plugins.append(MarkdownPlugin())
+
+        return plugins
+
+    def configure(self) -> None:
+        self._supported_signals["initialized"].connect(self._signal_initialized)
+        for signal in self._supported_signals.values():
+            if method := getattr(self, Framework.receiver_name(signal), None):
+                signal.connect(method)

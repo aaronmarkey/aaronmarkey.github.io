@@ -19,5 +19,5 @@ class MarkdownPlugin(Plugin):
     handler: ClassVar[type[PluginHandler]] = MarkdownPluginHandler
     youtube: bool = True
     youtube_use_lite: bool = False
-    youtube_container_class: str = "container_class"
-    youtube_player_class: str = "player_class"
+    youtube_container_class: str = "video-container"
+    youtube_player_class: str = "video-player"
