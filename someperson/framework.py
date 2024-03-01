@@ -33,10 +33,10 @@ class Framework:
             setattr(self, Framework.receiver_name(signal), self._receiver_factory(signal))
 
     def _signal_initialized(self, app: Pelican) -> None:
-        self.plugins = []
         self.pelican_config = app.settings
         self.framework_config = app.settings.get(self._settings_key)
 
+        self.plugins = []
         plugins = self._validate_plugins()
         for plugin in plugins:
             handler = plugin.handler(plugin, self.pelican_config, self.framework_config)

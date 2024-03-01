@@ -4,15 +4,17 @@ const fs = require("fs");
 const path = require("path");
 
 
+// eslint-disable-next-line no-unused-vars
 const generateBuildOutput = (hash, youtube_use_lite) => {
-    return { hash, youtube_use_lite };
+    // TODO: pass use of youtube lite to output when ready to consume in Pelican.
+    return { hash };
 };
 
 
 class SomePersonPlugin {
-    constructor({filename, youtube_use_lite}) {
+    constructor({filename}) {
         this.filename = filename;
-        this.youtube_use_lite = youtube_use_lite;
+        // this.youtube_use_lite = youtube_use_lite;
     }
 
     apply(compiler) {

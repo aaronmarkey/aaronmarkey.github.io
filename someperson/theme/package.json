@@ -18,7 +18,7 @@
     "publish": "git push origin gh-pages",
     "pycheck": "poetry run ruff check ../..",
     "pyformat": "poetry run ruff format ../..",
-    "start": "./node_modules/.bin/webpack --watch | poetry run pelican ../../content -s ../../pelicanconf.py -o ../../output -drlv -b 0.0.0.0"
+    "start": "./node_modules/.bin/webpack --watch & poetry run pelican ../../content -s ../../pelicanconf.py -o ../../output -drlv -b 0.0.0.0"
   },
   "repository": {
     "type": "git",
