@@ -8,6 +8,7 @@ RULE_TYPE = tuple[tuple[str, tuple[str]], ...]
 """A tuple of tuples. Each tuple contains a string representing the path to a document, """
 """and a sibling tuple of bot names."""
 
+
 @dataclass
 class Sitemap:
     enabled: bool

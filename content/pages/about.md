@@ -1,15 +1,19 @@
-Title: about
+---
+title: about
+---
 
 👋 Hey-o internet,
 
-I'm aaron markey, some person in Colorado. Hot takes, serial project abandoner, ⌨️ mechanical keyboards, and ⬢ Titan main. Professionally, I write software.
+Some Person is a product of aaron Markey.
 
-Feel free to email me at <markey@hey.com>.
-I'll try to respond as quickly as possible, but stuff can slip through
-the cracks. If I don't respond, try [Discord](https://discordapp.com/users/hashlib) or [Twitter](https://twitter.com/heressomeperson).
+## contact
 
----
+Feel free to email me at <markey@hey.com>. I'll try to respond as quickly as possible, but stuff can slip through the cracks. If I don't respond, try [Discord](https://discordapp.com/users/hashlib) or [Twitter](https://twitter.com/heressomeperson).
 
-## geek stuff
+## feeds
 
-some person is [Jekyll](https://jekyllrb.com/) with a bit of [Stimulus](https://stimulus.hotwire.dev/) magic.
+An RSS feed is available at <https://someperson.me/feeds/index.atom.xml>.
+
+## technical
+
+Some Person uses [Pelican](https://getpelican.com/) and [Stimulus](https://stimulus.hotwired.dev/). If you'd like, please take a look at the [source](https://github.com/aaronmarkey/aaronmarkey.github.io/tree/gh-pages).
