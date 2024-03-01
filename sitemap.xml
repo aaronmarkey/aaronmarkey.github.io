@@ -6,7 +6,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://someperson.me/</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -55,35 +55,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://someperson.me/404.html</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://someperson.me/about.html</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://someperson.me/stuff/misc.html</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://someperson.me/stuff/shokunin.html</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://someperson.me/stuff/tech.html</loc>
-<lastmod>2024-02-29T18:22:18-00:00</lastmod>
+<lastmod>2024-03-01T10:47:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
