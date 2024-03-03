@@ -34,6 +34,15 @@ export default class extends Controller {
         this.overlayTarget.classList.add(this.hiddenClass);
     }
 
+    /**
+     * Set meta tag theme-color content via it's "color" attribute set by CSS.
+     */
+    setMetaThemeColor() {
+        const themeColor = document.querySelector("meta[name='theme-color']");
+        const style = getComputedStyle(themeColor);
+        themeColor.setAttribute("content", style.color);
+    }
+
     pickerWasToggled({detail: {isOpen}}) {
         isOpen
             ? this.selfTarget.classList.add(this.disabledClass, this.defocusedClass)
@@ -46,9 +55,6 @@ export default class extends Controller {
         html.className = "";
         html.classList.add(`palette-${palette.id}`);
 
-        // Set meta tag theme-color content via it's "color" attribute set by CSS.
-        const themeColor = document.querySelector("meta[name='theme-color']");
-        const style = getComputedStyle(themeColor);
-        themeColor.setAttribute("content", style.color);
+        this.setMetaThemeColor();
     }
 }
