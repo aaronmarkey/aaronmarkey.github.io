@@ -1,12 +1,15 @@
 .palette-october {
-  $background-one: rgb(255 246 229);
-  $background-two: rgb( 230 208 208 );
-  $foreground: rgb( 161 65 53 );
-  $primary: rgb( 185 27 8 );
-  $primary-dark: rgb( 97 14 4 );
-  $secondary-dark: rgb(255 143 0);
-  $secondary: rgb(255 237 204);
+  $bg-grad-start: rgb(255 246 229);
+  $bg-grad-end: rgb(230 208 208);
+  $border-color: rgb(185 27 8);
+  $chrome-element-color: rgb(97 14 4);
+  $chrome-font-color: rgb(97 14 4);
+  $chrome-grad-start: rgb( 85 27 8);
+  $chrome-grad-end: rgb(255 143 0);
+  $code-bg: rgb(255 237 204);
+  $font-color: rgb( 161 65 53 );
+  $picker-bg: rgb(255 237 204);
 
-  @include base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark);
+  @include base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-font-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg);
 
 }

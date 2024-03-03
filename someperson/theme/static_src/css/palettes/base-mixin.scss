@@ -1,30 +1,30 @@
 @use "sass:color";
 
-@mixin base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark) {
-  $deg: 315deg;
+@mixin base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-element-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg) {
+  $chrome-grad-deg: 315deg;
   $background-deg: -45deg;
 
   body {
-    background: linear-gradient($background-deg, $background-one, $background-two);
+    background: linear-gradient($background-deg, $bg-grad-start, $bg-grad-end);
   }
 
   meta[name="theme-color"] {
-    color: $background-two;
+    color: $bg-grad-end;
   }
 
   .page-header {
-    background: linear-gradient($deg, $secondary-dark, $primary);
+    background: linear-gradient($chrome-grad-deg, $chrome-grad-start, $chrome-grad-end);
     background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
 
   .story {
-    color: $foreground
+    color: $font-color;
   }
 
   .story blockquote {
-    border-left-color: $primary-dark
+    border-left-color: $chrome-element-color;
   }
 
   .story h1,
@@ -33,67 +33,67 @@
   .story h4,
   .story h5,
   .story h6 {
-    color: $primary-dark;
+    color: $chrome-font-color;
   }
 
   .story hr {
-    background: $primary-dark;
+    background: $chrome-element-color;
   }
 
   .story code,
   .story pre {
-    background: $secondary;
-    color: $primary-dark;
+    background: $code-bg;
+    color: $chrome-font-color;
   }
 
   .story .date {
-    color: $primary-dark;
+    color: $chrome-font-color;
   }
 
   .story a,
   .text-gradient {
-    background: linear-gradient($deg, $primary, $secondary-dark);
+    background: linear-gradient($chrome-grad-deg, $chrome-grad-start, $chrome-grad-end);
     background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
 
   .border-gradient {
-    border-image: linear-gradient($deg, $primary, $secondary-dark) 10;
+    border-image: linear-gradient($chrome-grad-deg, $chrome-grad-start, $chrome-grad-end) 10;
   }
 
   .hr-gradient {
-    background-image: linear-gradient($deg, $primary, $secondary-dark);
+    background-image: linear-gradient($chrome-grad-deg, $chrome-grad-start, $chrome-grad-end);
   }
 
   .gradient-start {
-    stop-color: $primary;
+    stop-color: $chrome-grad-start;
   }
 
   .gradient-end {
-    stop-color: $secondary-dark;
+    stop-color: $chrome-grad-end;
   }
 
   .picker-set {
-    border: 2px solid $primary;
-    box-shadow: calc($spacing / 3) calc($spacing / 3) $primary;
-    background: $secondary;
-    color: $primary-dark;
+    border: 2px solid $border-color;
+    box-shadow: calc($spacing / 3) calc($spacing / 3) $border-color;
+    background: $picker-bg;
+    color: $chrome-font-color;
   }
 
   .picker-button {
     &:hover {
-      background: color.adjust($secondary, $lightness: -10%);
+      background: color.adjust($picker-bg, $lightness: -10%);
     }
   }
 
   .picker-option {
     &:hover {
-      background: color.adjust($secondary, $lightness: -10%);
+      background: color.adjust($picker-bg, $lightness: -10%);
     }
   }
 
   .picker-item-selected {
-    border-right: calc($spacing / 3) solid $primary
+    border-right: calc($spacing / 3) solid $border-color
   }
 }

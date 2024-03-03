@@ -3,7 +3,6 @@
   "variables",
   "palettes/base-mixin",
   "palettes/hyper",
-  "palettes/night",
   "palettes/october",
   "palettes/roses";
 
@@ -242,7 +241,7 @@ a:not(.flourishless),
 
 .story {
   blockquote {
-    border-left: 0.25em solid $pink-dark;
+    border-left: 0.25em solid $black;
     font-size: .85em;
     padding: 0 1em;
   }

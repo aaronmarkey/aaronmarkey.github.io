@@ -1,12 +1,15 @@
 .palette-roses {
-  $background-one: rgb(255 230 247);
-  $background-two: rgb(255 230 247);
-  $foreground: rgb(128 0 0);
-  $primary: rgb(204 0 0);
-  $primary-dark: rgb(153 0 102);
-  $secondary-dark: rgb(255 102 204);
-  $secondary: rgb(255 204 204);
+  $bg-grad-start: rgb(255 230 247);
+  $bg-grad-end: rgb(255 230 247);
+  $border-color: rgb(204 0 0);
+  $chrome-element-color: rgb(153 0 102);
+  $chrome-font-color: rgb(153 0 102);
+  $chrome-grad-start: rgb(204 0 0);
+  $chrome-grad-end: rgb(255 102 204);
+  $code-bg: rgb(255 204 204);
+  $font-color: rgb(128 0 0);
+  $picker-bg: rgb(255 204 204);
 
-  @include base-palette($foreground, $background-one, $background-two, $primary, $primary-dark, $secondary, $secondary-dark);
+  @include base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-font-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg);
 
 }

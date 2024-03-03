@@ -10,7 +10,6 @@ from someperson.utils import PACKAGE_DIR
 
 
 class ThemePluginHandler(PluginHandler):
-
     def _get_frontend_manifest_path(self) -> Path:
         filename = self.config.theme_json_filename
         return PACKAGE_DIR.joinpath("theme/static").joinpath(filename)
