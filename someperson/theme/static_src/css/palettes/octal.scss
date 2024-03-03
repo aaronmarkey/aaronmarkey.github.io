@@ -1,0 +1,15 @@
+.palette-octal {
+    $bg-grad-start: rgb(204 241 255);
+    $bg-grad-end: rgb(208 204 255);
+    $border-color: rgb(150 0 255);
+    $chrome-element-color: rgb(112 63 255);
+    $chrome-font-color: rgb(112 63 255);
+    $chrome-grad-start: rgb(150 0 255);
+    $chrome-grad-end: rgb(37 191 255);
+    $code-bg: rgb(175 255 255);
+    $font-color: rgb(110 0 148);
+    $picker-bg: rgb(175 255 255);
+
+    @include base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-font-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg);
+
+  }

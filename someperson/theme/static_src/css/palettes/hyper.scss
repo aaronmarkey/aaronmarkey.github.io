@@ -1,14 +1,14 @@
 .palette-hyper {
-	  $bg-grad-start: rgb(204 241 255);
-	  $bg-grad-end: rgb(208 204 255);
-	  $border-color: rgb(150 0 255);
-	  $chrome-element-color: rgb(112 63 255);
-	  $chrome-font-color: rgb(112 63 255);
-	  $chrome-grad-start: rgb(150 0 255);
-	  $chrome-grad-end: rgb(37 191 255);
-	  $code-bg: rgb(175 255 255);
-	  $font-color: rgb(110 0 148);
-	  $picker-bg: rgb(175 255 255);
+	$bg-grad-start: rgb(53 0 36);
+    $bg-grad-end: rgb(22 53 63);
+    $border-color: rgb(172 84 178);
+    $chrome-element-color: rgb(153 0 102);
+    $chrome-font-color: rgb(166 129 166);
+    $chrome-grad-start: rgb(55 144 188);
+    $chrome-grad-end: rgb(209 93 161);
+    $code-bg: rgb(143 226 232);
+    $font-color: rgb(212 212 212);
+    $picker-bg: rgb(22 56 66);
 
 	  @include base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-font-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg);
 
