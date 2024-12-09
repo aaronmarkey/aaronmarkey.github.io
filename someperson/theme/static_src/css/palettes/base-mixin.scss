@@ -6,6 +6,7 @@
 
   body {
     background: linear-gradient($background-deg, $bg-grad-start, $bg-grad-end);
+    background-attachment: fixed;
   }
 
   meta[name="theme-color"] {

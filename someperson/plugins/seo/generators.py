@@ -58,15 +58,15 @@ class SeoSocialTagGenerator:
     def get_twitter_tags(self, *, title: str, twitter_handle: str) -> TagCollection:
         tags = TagCollection()
 
-        # Card
-        tags.append(Tag(name="meta", aname="twitter:card", acontent="summary"))
-
-        # Title
-        if title := title.strip():
-            tags.append(Tag(name="meta", aproperty="twitter:title", acontent=title))
-
-        # Site and Creator Handles
         if handle := twitter_handle:
+            # Card
+            tags.append(Tag(name="meta", aname="twitter:card", acontent="summary"))
+
+            # Title
+            if title := title.strip():
+                tags.append(Tag(name="meta", aproperty="twitter:title", acontent=title))
+
+            # Site and Creator Handles
             handle = handle if handle[0] == "@" else f"@{handle}"
             tags.append(Tag(name="meta", aname="twitter:site", acontent=handle))
             tags.append(Tag(name="meta", aname="twitter:creator", acontent=handle))

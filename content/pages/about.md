@@ -1,19 +1,21 @@
 ---
-title: about
+title: About
 ---
 
-👋 Hey-o internet,
+👋 Hey,
 
-Some Person is a product of aaron Markey.
+I'm just some person attempting to educate myself — really that's about it. I'm interested in philosophy, specifically
+society's relationship with work and my relationship with happiness. I spend my time reading, mostly
+fantasy/sci-fi and psychology books.
+
+I've a Masters of Science in Computer Science from Northern Illinois University and have spent more than a decade in
+the New York start-up scene. I'm a software developer with experience in the cannabis, digital advertising, and
+aviation industries.
+
+At some point I moved to Colorado and realized I'm more interested in books than technology, in writing fiction than
+writing code.
 
 ## contact
 
-Feel free to email me at <markey@hey.com>. I'll try to respond as quickly as possible, but stuff can slip through the cracks. If I don't respond, try [Discord](https://discordapp.com/users/hashlib) or [Twitter](https://twitter.com/heressomeperson).
-
-## feeds
-
-An RSS feed is available at <https://someperson.me/feeds/index.atom.xml>.
-
-## technical
-
-Some Person uses [Pelican](https://getpelican.com/) and [Stimulus](https://stimulus.hotwired.dev/). If you'd like, please take a look at the [source](https://github.com/aaronmarkey/aaronmarkey.github.io/tree/gh-pages).
+- 🦋 [BlueSky](https://bsky.app/profile/aaronmarkey.bsky.social)
+- ✉️ <markey@hey.com>

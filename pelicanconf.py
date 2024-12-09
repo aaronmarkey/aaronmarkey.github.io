@@ -1,5 +1,6 @@
 from someperson import (
     Author,
+    BlueSky,
     Configuration,
     Link,
     Palette,
@@ -14,24 +15,25 @@ from someperson.plugins import MarkdownPlugin, SeoPlugin, ThemePlugin
 SOME_PERSON = Configuration(
     author=Author(
         first_names=[
-            "aaron",
-            "a-a-ron",
-            "erin",
-            "aron",
-            "arin",
-            "airin",
+            "Aaron",
+            "A-a-ron",
+            "Erin",
+            "Aron",
+            "Arin",
+            "Airin",
         ],
         last_names=[
-            "markey",
-            "marque",
-            "marky",
-            "markee",
-            "makey",
-            "marke",
+            "Markey",
+            "Marque",
+            "Marky",
+            "Markee",
+            "Makey",
+            "Marke",
         ],
-        twitter=Twitter(username="heressomeperson"),
+        blue_sky=BlueSky(username="aaronmarkey.bsky.social"),
+        twitter=Twitter(username=""),
     ),
-    description="some person named aaron markey. I write and complain about things.",
+    description="Some person named Aaron Markey. I write about current events, books, writing, and F-tier philosophy.",
     theme=Theme(
         palettes=[
             Palette(
@@ -127,9 +129,12 @@ SOME_PERSON = Configuration(
                 ],
             ),
         ],
-        default_palette_id="roses",
+        default_palette_id="hyper",
     ),
-    menu=[Link(title="home", href="/"), Link(title="about", href="/about")],
+    menu=[
+        Link(title="Home", href="/"),
+        Link(title="About", href="/about"),
+        Link(title="Blog", href="/blog")],
     plugins=[ThemePlugin(), MarkdownPlugin(youtube_use_lite=True), SeoPlugin()],
 )
 ################################
@@ -147,7 +152,7 @@ EXTRA_PATH_METADATA = {
 LOCALE = ("en_US",)
 OUTPUT_PATH = "output/"
 OUTPUT_SOURCES = False
-SITENAME = "some person"
+SITENAME = "Some Person"
 SITEURL = "https://someperson.me"
 STATIC_PATHS = [
     "extra",
@@ -174,20 +179,21 @@ TRANSLATION_FEED_ATOM = None
 ################################
 # URL, Output, & Pathing - Start
 ################################
-ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
+ARTICLE_URL = "blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
 ARCHIVES_SAVE_AS = ""
-ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
+ARTICLE_SAVE_AS = "blog/{date:%Y}/{date:%m}/{date:%d}/{slug}.html"
 AUTHOR_URL = ""
 AUTHORS_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 CATEGORIES_SAVE_AS = ""
 CATEGORY_URL = ""
 CATEGORY_SAVE_AS = ""
+DIRECT_TEMPLATES = ["index", "blog", "authors", "categories", "tags", "archives"]
 PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
 PATH = "content"
-TAG_URL = "stuff/{slug}.html"
-TAG_SAVE_AS = "stuff/{slug}.html"
+TAG_URL = "blog/stuff/{slug}.html"
+TAG_SAVE_AS = "blog/stuff/{slug}.html"
 TAGS_SAVE_AS = ""
 ################################
 # URL, Output, & Pathing - End
@@ -196,11 +202,12 @@ TAGS_SAVE_AS = ""
 ################################
 # Pagination - Start
 ################################
-DEFAULT_PAGINATION = 20
+DEFAULT_PAGINATION = 5
 PAGINATION_PATTERNS = (
     (1, "{name}{extension}", "{name}{extension}"),
     (2, "{base_name}/page/{number}{extension}", "{base_name}/page/{number}{extension}"),
 )
+PAGINATED_TEMPLATES = {"index": None, "blog": None, "tag": None, "category": None, "author": None}
 ################################
 # Pagination - End
 ################################

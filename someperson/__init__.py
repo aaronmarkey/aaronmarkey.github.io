@@ -2,6 +2,7 @@ from pelican.plugins.signals import content_written, finalized, generator_init, 
 
 from someperson.configuration import (  # noqa: F401
     Author,
+    BlueSky,
     Configuration,
     Link,
     Palette,

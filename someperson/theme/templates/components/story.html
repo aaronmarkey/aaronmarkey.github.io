@@ -9,7 +9,7 @@
             {% endif %}
             {% if article.tags %}
                 <span class="divider">|</span>
-                {% for tag in article.tags %}<a href="/stuff/{{ tag }}.html">{{ tag }}</a>{% endfor %}
+                {% for tag in article.tags %}<a href="/blog/stuff/{{ tag }}.html">{{ tag }}</a>{% endfor %}
             {% endif %}
         </p>
         <div class="story-content">{{ article.content }}</div>

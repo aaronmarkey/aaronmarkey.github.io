@@ -20,8 +20,13 @@ class SocialAccount(BaseModel):
         return self.link_format.format(username=self.username)
 
 
+class BlueSky(SocialAccount):
+    link_format: str = "https://bsky.app/profile/{username}"
+
+
 class Twitter(SocialAccount):
     link_format: str = "https://twitter.com/{username}"
+
 
 
 class Link(BaseModel):
@@ -32,7 +37,8 @@ class Link(BaseModel):
 class Author(BaseModel):
     first_names: list[str]
     last_names: list[str]
-    twitter: Twitter
+    blue_sky: BlueSky | None
+    twitter: Twitter | None
 
     @property
     def name_parts(self) -> tuple[str, str]:
