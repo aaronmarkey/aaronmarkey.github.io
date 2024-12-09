@@ -13,9 +13,9 @@
 <link href="/favicon.ico" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<title>Some Person</title>
+<title>Some Thoughts on Markdown | Some Person</title>
 <style data-controller="head"></style>
-<meta content="Not Found" property="og:title"/><meta content="en_US" property="og:locale"/><meta content="https://someperson.me/404.html" property="og:url"/><meta content="page" property="og:type"/><meta content="Some Person" property="og:site_name"/><meta content="" property="og:description"/><meta content="Aaron Markey" name="author"/><link href="https://someperson.me/404.html" rel="canonical"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Aaron Markey"},"headline":"Not Found","publisher":{"@type":"Organization","name":"Some Person"},"url":"https://someperson.me/404.html"}</script></head> <body>
+<meta content="Some Thoughts on Markdown" property="og:title"/><meta content="en_US" property="og:locale"/><meta content="https://someperson.me/blog/2018/12/04/some-thoughts-on-markdown.html" property="og:url"/><meta content="article" property="og:type"/><meta content="Some Person" property="og:site_name"/><meta content="John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web …" property="og:description"/><meta content="Aaron Markey" name="author"/><meta content="John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web …" name="description"/><link href="https://someperson.me/blog/2018/12/04/some-thoughts-on-markdown.html" rel="canonical"/><meta content="2018-12-04T01:28:34+00:00" property="article:published_time"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Aaron Markey"},"headline":"Some Thoughts on Markdown","description":"John Gruber's Markdown text markup is one of those invisible parts of the web most of us don't think about. It powers some of the most well known web \u2026","datePublished":"2018-12-04T01:28:34+00:00","publisher":{"@type":"Organization","name":"Some Person"},"url":"https://someperson.me/blog/2018/12/04/some-thoughts-on-markdown.html"}</script></head> <body>
 <div class="container content-container" data-action=" picker:toggled@window-&gt;page#pickerWasToggled picker:paletteUpdated@window-&gt;page#paletteWasUpdated " data-controller="page" data-page-defocused-class="is-defocused" data-page-disabled-class="is-disabled" data-page-hidden-class="is-hidden" data-page-story-content-class="story-content" data-page-target="self" id="main">
 <div class="row text-center m-t-sm" data-action="picker:paletteUpdated@window-&gt;nameplate#paletteWasUpdated" data-controller="nameplate" data-nameplate-author-names-value='{"first": ["Aaron", "A-a-ron", "Erin", "Aron", "Arin", "Airin"], "last": ["Markey", "Marque", "Marky", "Markee", "Makey", "Marke"]}' data-nameplate-default-emojis-value='["\ud83c\udf11", "\ud83c\udf15", "\ud83d\udef8", "\ud83c\udf13", "\ud83c\udf17", "\ud83c\udf19", "\ud83e\ude90", "\u2b50", "\u2600\ufe0f", "\ud83c\udf1f", "\ud83d\ude80", "\ud83d\udef0\ufe0f", "\ud83c\udf0e", "\ud83d\udd96", "\ud83d\udc7e", "\u2604\ufe0f"]'>
 <div class="col-12 col-1-md col-2-lg"></div>
@@ -42,11 +42,72 @@
 </div> <div class="row m-t-sm">
 <div class="col-12 col-1-md col-2-lg"></div>
 <div class="col-12 col-10-md col-8-lg">
-<div class="error text-center">
-<h1 class="error-code text-gradient">404</h1>
-<p class="error-msg text-gradient">Page not found. :/</p>
+<div class="story-container border-gradient">
+<div class="story">
+<h1 class="story-title is-marginless">
+<a href="/blog/2018/12/04/some-thoughts-on-markdown.html" title="Some Thoughts on Markdown">Some Thoughts on Markdown</a>
+</h1>
+<p class="is-marginless">
+<span class="date">Tuesday, December 4, 2018</span>
+<span class="divider">|</span>
+<a href="/blog/stuff/tech.html">tech</a> </p>
+<div class="story-content"><p><a href="https://daringfireball.net">John Gruber</a>'s <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+text markup is one of those invisible parts of the web most of us don't think
+about. It powers some of the most well known web services like
+<a href="https://github.com">GitHub</a>, <a href="https://trello.com">Trello</a>, and
+<a href="https://bear.app">Bear</a>; it's something I've spent five years obsessing over.</p>
+<p>I have many opinions on it stemming from my job as a software developer and
+the many side projects (web services, word processors, iOS apps..) I've built
+around it.</p>
+<h2>A Short History</h2>
+<p>Markdown was created in 2004 by John Gruber of Daring Fireball. While starting
+his career as a technology critic, John wrote a small Perl script to make HTML
+content easier to read and write. Essentially what Markdown allowed
+him to do was add simple markup to a text document that could be easily
+converted into HTML for a webpage.</p>
+<p>Examples:</p>
+<ul>
+<li><code>*Italics*</code> -&gt; <code>&lt;em&gt;Italics&lt;/em&gt;</code></li>
+<li><code>**Bold**</code> -&gt; <code>&lt;strong&gt;Bold&lt;/strong&gt;</code></li>
+<li><code>[DuckDuckGo](https://duckduckgo.com)</code> -&gt;
+<code>&lt;a href="https://duckduckgo.com"&gt;DuckDuckGo&lt;/a&gt;</code></li>
+</ul>
+<h2>The Good Parts of Markdown</h2>
+<p>Since its conception, Markdown has taken the writing and software programming
+worlds by storm. There are libraries available for it in every programming
+language. Plugins for every major publishing platform (WordPress, Ghost, etc.),
+and has become the defacto standard for writing software documentation.</p>
+<p>On a technical level, Markdown is very fast at parsing and rendering HTML, easy
+to implement, and is conceptually easy to extend.</p>
+<p>Many people have since altered, forked, and augmented Markdown. There are
+many <a href="https://github.com/commonmark/commonmark/wiki/markdown-flavors">flavors</a>
+of Markdown, each one has it's own additions and special sauce.</p>
+<p>Which lead me to the bad parts of Markdown...</p>
+<h2>The Bad Parts of Markdown</h2>
+<p>First and foremost, the Markdown ecosystem is a wild west of differing
+standards and markup syntax. Meaning nearly every service that uses Markdown
+forces its users to learn its special nuances. (This sounds small, but try using
+GitHub with Jira everyday). This problem isn't terrible in most cases. Every
+flavor of Markdown I've come across supports the basic Markdown syntax, but most
+extend it past John's initial design.</p>
+<p>Some flavors support video links, some defining image sizes, some text underline
+and strikethrough. Which sounds great!</p>
+<p>Until it's not and you <em>need</em> to rely on consistency. Say you're using Trello's
+Markdown and copy your text to a service that doesn't use Trello Markdown? Well
+you may be out of luck.</p>
+<p>Try it, paste some <a href="https://help.trello.com/article/821-using-markdown-in-trello">Trello Markdown</a>
+into a <a href="https://daringfireball.net/projects/markdown/dingus">Vanilla Markdown</a>
+converter:</p>
+<p>Some Trello Markdown: <code>~~crossed out~~</code></p>
+<p>The many flavors presents an issue for developers as well. Many of these
+forks don't have much coverage in third-party language libraries. Want to parse
+or render Trello Markdown in Closure? Good Luck.</p>
+<h2>But..</h2>
+<p>Markdown is an imperfect perfection. I will always think of it fondly and John
+has single-handedly reshaped how information is created and shared on the
+internet. So I guess it can get a pass.</p></div>
 </div>
-</div>
+</div> </div>
 </div>
 <div class="m-b-xl"></div>
 <div class="overlay is-hidden" data-action="click-&gt;page#hideOverlay" data-page-target="overlay"></div>
