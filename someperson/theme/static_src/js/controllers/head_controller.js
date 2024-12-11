@@ -1,5 +1,6 @@
 import { Controller } from "stimulus";
 import fonts from "../fonts";
+import { Routes } from "../routes";
 
 export default class extends Controller {
 
@@ -22,6 +23,19 @@ export default class extends Controller {
     injectFont(font) {
         const el = fonts.elementForFont(font);
         this.element.parentNode.insertBefore(el, this.element);
+    }
+
+    keyPress (event) {
+        const key = event.key.toLowerCase();
+        const keyMap = {
+            a: Routes.about,
+            b: Routes.blog,
+            h: Routes.home
+        };
+
+        if (key in keyMap) {
+            window.location.href = keyMap[key];
+        }
     }
 
     setPageFonts() {

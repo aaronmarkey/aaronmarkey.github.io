@@ -4,10 +4,10 @@
   $border-color: rgb(185 27 8);
   $chrome-element-color: rgb(97 14 4);
   $chrome-font-color: rgb(97 14 4);
-  $chrome-grad-start: rgb( 85 27 8);
+  $chrome-grad-start: rgb(85 27 8);
   $chrome-grad-end: rgb(255 143 0);
   $code-bg: rgb(255 237 204);
-  $font-color: rgb( 161 65 53 );
+  $font-color: rgb(161 65 53);
   $picker-bg: rgb(255 237 204);
 
   @include base-palette($bg-grad-start, $bg-grad-end, $border-color, $chrome-font-color, $chrome-font-color, $chrome-grad-start, $chrome-grad-end, $code-bg, $font-color, $picker-bg);
