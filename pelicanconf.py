@@ -30,7 +30,7 @@ SOME_PERSON = Configuration(
             "Makey",
             "Marke",
         ],
-        blue_sky=BlueSky(username="aaronmarkey.bsky.social"),
+        blue_sky=BlueSky(username="aaronmarkey.com"),
         twitter=Twitter(username=""),
     ),
     description="Some person named Aaron Markey. I write about current events, books, writing, and F-tier philosophy.",

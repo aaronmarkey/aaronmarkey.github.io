@@ -17,5 +17,5 @@ writing code.
 
 ## contact
 
-- 🦋 [BlueSky](https://bsky.app/profile/aaronmarkey.bsky.social)
+- 🦋 [BlueSky](https://bsky.app/profile/aaronmarkey.com)
 - ✉️ <markey@hey.com>

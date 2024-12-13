@@ -57,7 +57,7 @@ All linting and formatting is done via `ruff`. The `ruff` config can be found in
 Publishing is a three step process, all done locally.
 
 1. Use `npm run build` to build the static site. This will be placed in `dist/` at the root of the project.
-2. Use `npm run commitpage` to commit the static site to the `gh-pages` branch.
+2. Use `npm run commitpages` to commit the static site to the `gh-pages` branch.
    1. Some Person is a static site hosted on GitHub Pages. `gh-page` is the branch I've configured to host.
    2. This command will take the current contents of `dist/` and commit them with an auto-generated commit message.
 3. Use `npm run publish` to push the updated `gh-pages` branch to GitHub.
