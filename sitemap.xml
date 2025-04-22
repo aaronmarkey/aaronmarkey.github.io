@@ -5,113 +5,113 @@ xmlns:xhtml="http://www.w3.org/1999/xhtml"
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://someperson.me/</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/404.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/404.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/about.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/about.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/blog.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2015/11/30/mechanica-manifesto.html</loc>
+<loc>https://aaronmarkey.com/blog/2015/11/30/mechanica-manifesto.html</loc>
 <lastmod>2015-11-30T00:14:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2017/02/01/a-journey-to-less.html</loc>
+<loc>https://aaronmarkey.com/blog/2017/02/01/a-journey-to-less.html</loc>
 <lastmod>2017-02-01T02:16:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2018/10/01/and-were-back.html</loc>
+<loc>https://aaronmarkey.com/blog/2018/10/01/and-were-back.html</loc>
 <lastmod>2018-10-01T04:49:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2018/12/04/some-thoughts-on-markdown.html</loc>
+<loc>https://aaronmarkey.com/blog/2018/12/04/some-thoughts-on-markdown.html</loc>
 <lastmod>2018-12-04T01:28:34-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2019/02/06/design-gatekeeping-initial-thoughts.html</loc>
+<loc>https://aaronmarkey.com/blog/2019/02/06/design-gatekeeping-initial-thoughts.html</loc>
 <lastmod>2019-02-06T14:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/2023/09/26/lucid-ltt-and-studio-neat.html</loc>
+<loc>https://aaronmarkey.com/blog/2023/09/26/lucid-ltt-and-studio-neat.html</loc>
 <lastmod>2023-09-26T01:31:00-06:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/page/2.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/blog/page/2.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/stuff/misc.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/blog/stuff/misc.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/stuff/shokunin.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/blog/stuff/shokunin.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/blog/stuff/tech.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/blog/stuff/tech.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://someperson.me/page/2.html</loc>
-<lastmod>2024-12-12T20:17:21-00:00</lastmod>
+<loc>https://aaronmarkey.com/page/2.html</loc>
+<lastmod>2025-04-22T12:27:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

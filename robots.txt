@@ -1,4 +1,4 @@
-Sitemap: https://someperson.me/sitemap.xml
+Sitemap: https://aaronmarkey.com/sitemap.xml
 
 User-agent: *
 Allow: /
