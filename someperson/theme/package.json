@@ -1,7 +1,7 @@
 {
   "name": "aaronmarkey.github.io",
   "version": "1.0.0",
-  "description": "someperson.me source.",
+  "description": "aaronmarkety.com source.",
   "scripts": {
     "allcheck": "npm run csscheck && npm run htmlcheck && npm run jscheck && npm run mdcheck && npm run pycheck",
     "allformat": "npm run cssformat && npm run htmlformat && npm run jsformat && npm run pyformat",

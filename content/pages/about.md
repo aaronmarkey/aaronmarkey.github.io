@@ -18,4 +18,4 @@ writing code.
 ## contact
 
 - 🦋 [BlueSky](https://bsky.app/profile/aaronmarkey.com)
-- ✉️ <markey@hey.com>
+- ✉️ <markeyaaron@pm.me>

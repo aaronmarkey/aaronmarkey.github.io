@@ -153,7 +153,7 @@ LOCALE = ("en_US",)
 OUTPUT_PATH = "output/"
 OUTPUT_SOURCES = False
 SITENAME = "Some Person"
-SITEURL = "https://someperson.me"
+SITEURL = "https://aaronmarkey.com"
 STATIC_PATHS = [
     "extra",
 ]

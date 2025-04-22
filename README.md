@@ -61,4 +61,4 @@ Publishing is a three step process, all done locally.
    1. Some Person is a static site hosted on GitHub Pages. `gh-page` is the branch I've configured to host.
    2. This command will take the current contents of `dist/` and commit them with an auto-generated commit message.
 3. Use `npm run publish` to push the updated `gh-pages` branch to GitHub.
-4. [Automated] GitHub will publish to <https://someperson.me>.
+4. [Automated] GitHub will publish to <https://aaronmarkey.com>.
