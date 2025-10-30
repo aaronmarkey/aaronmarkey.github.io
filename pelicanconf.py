@@ -133,8 +133,9 @@ SOME_PERSON = Configuration(
     ),
     menu=[
         Link(title="Home", href="/"),
-        Link(title="About", href="/about"),
-        Link(title="Blog", href="/blog")],
+        Link(title="Writings", href="https://aaronmarkey.substack.com"),
+        Link(title="Archive", href="/blog"),
+    ],
     plugins=[ThemePlugin(), MarkdownPlugin(youtube_use_lite=True), SeoPlugin()],
 )
 ################################
