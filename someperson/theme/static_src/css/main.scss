@@ -171,11 +171,10 @@ a:not(.flourishless),
 
 // Picker -- Start
 .picker {
-    bottom: 30px;
+    bottom: $spacing * 2;
     left: 50%;
-    max-width: fit-content;
-    position: sticky;
-    translate: -50%;
+    position: fixed;
+    transform: translate(-50%, 0%);
 }
 
 .picker-set {

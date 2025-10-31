@@ -27,7 +27,7 @@ class SeoPluginHandler(PluginHandler):
             sitename = self.get_pelican_setting("SITENAME")
             siteurl = self.get_pelican_setting("SITEURL")
             locales = self.get_pelican_setting("LOCALE") or []
-            twitter_handle = self.framework_config.author.twitter.username
+            twitter_handle = ""
 
             if content := context.get("article") or context.get("page"):
                 tags = social_generator.for_pelican_content(

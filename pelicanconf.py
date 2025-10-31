@@ -1,11 +1,10 @@
 from someperson import (
     Author,
-    BlueSky,
     Configuration,
     Link,
     Palette,
+    SocialAccount,
     Theme,
-    Twitter,
 )
 from someperson.plugins import MarkdownPlugin, SeoPlugin, ThemePlugin
 
@@ -30,8 +29,12 @@ SOME_PERSON = Configuration(
             "Makey",
             "Marke",
         ],
-        blue_sky=BlueSky(username="aaronmarkey.com"),
-        twitter=Twitter(username=""),
+        socials=[
+            SocialAccount(
+                username="aaronmarkey.com",
+                link_format="https://bsky.app/profile/{username}",
+            ),
+        ],
     ),
     description="Some person named Aaron Markey. I write about current events, books, writing, and F-tier philosophy.",
     theme=Theme(
@@ -145,6 +148,7 @@ SOME_PERSON = Configuration(
 ################################
 # General - Start
 ################################
+AUTHOR = "Aaron Markey"
 DEFAULT_LANG = "en"
 EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},

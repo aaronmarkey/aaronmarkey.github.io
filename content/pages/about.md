@@ -4,7 +4,7 @@ title: About
 
 👋 Hey,
 
-I'm just some person attempting to educate myself — really that's about it. I'm interested in philosophy, specifically
+I'm just some person named Aaron Markey. Attempting to educate myself—really that's about it. I'm interested in philosophy, specifically
 society's relationship with work and my relationship with happiness. I spend my time reading, mostly
 fantasy/sci-fi, economic history, and technology books.
 

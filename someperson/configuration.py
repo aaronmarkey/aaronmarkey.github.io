@@ -1,5 +1,4 @@
 from functools import cached_property
-from secrets import choice
 
 from pydantic import BaseModel
 
@@ -20,15 +19,6 @@ class SocialAccount(BaseModel):
         return self.link_format.format(username=self.username)
 
 
-class BlueSky(SocialAccount):
-    link_format: str = "https://bsky.app/profile/{username}"
-
-
-class Twitter(SocialAccount):
-    link_format: str = "https://twitter.com/{username}"
-
-
-
 class Link(BaseModel):
     title: str
     href: str
@@ -37,21 +27,7 @@ class Link(BaseModel):
 class Author(BaseModel):
     first_names: list[str]
     last_names: list[str]
-    blue_sky: BlueSky | None
-    twitter: Twitter | None
-
-    @property
-    def name_parts(self) -> tuple[str, str]:
-        return self.first_names[0] or "", self.last_names[0] or ""
-
-    @property
-    def name(self) -> str:
-        first, last = self.name_parts
-        return f"{first} {last}".strip()
-
-    @property
-    def rand_name_parts(self) -> tuple[str, str]:
-        return choice(self.first_names) or "", choice(self.last_names[0]) or ""
+    socials: list[SocialAccount]
 
     @property
     def names(self) -> dict[str, list[str]]:

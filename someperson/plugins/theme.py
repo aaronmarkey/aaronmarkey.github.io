@@ -26,7 +26,6 @@ class ThemePluginHandler(PluginHandler):
 
     def _set_pelican_stuff(self, app: Pelican) -> None:
         theme_path = PACKAGE_DIR.joinpath("theme")
-        app.settings["AUTHOR"] = self.framework_config.author.name
 
         # Both THEME and app.theme need to be set for Pelican to autoreload things correctly.
         app.settings["THEME"] = theme_path
